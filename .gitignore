@@ -1,0 +1,88 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# IDE
+.idea/
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Local / sensitive configuration
+.env
+sensor_protocol.py
+*_local.py
+*_secret.py
+
+# Logs
+*.log
+
+# Temporary / generated files
+*.tmp
+*.bak
+
+# Public release allowlist: preserve the exclusions above; new files need review.
+/*
+!/.gitignore
+!/README.md
+!/requirements.txt
+!/SENSOR_CRITERIA.md
+!/sensor_connection_example.py
+!/sensor_protocol_example.py
+!/air_quality_analyzer.py
+!/check_demo.py
+!/dashboard.py
+!/main.py
+!/port_discovery.py
+!/qt_compat.py
+!/repeated_error_log.py
+!/robot_led.py
+!/robot_ui.py
+!/sensor_data.py
+!/sensor_status.py
+!/sensor_worker.py
+!/serial_source.py
+!/service_watchdog.py
+!/single_instance.py
+!/widgets.py
+!/test_air_quality_analyzer.py
+!/test_port_discovery.py
+!/test_repeated_error_log.py
+!/test_robot_led.py
+!/test_sensor_status.py
+!/test_sensor_worker.py
+!/test_serial_source.py
+!/test_service_watchdog.py
+!/test_shutdown_signals.py
+!/test_single_instance.py
+!/test_public_templates.py
+!/demo_robot_home.png
+!/demo_preview.png
+
+# Private implementation, packet fixtures and copies in local records/archives.
+sensor_protocol.py
+sensor_connection_local.py
+test_sensor_protocol.py
+.env.*
+*.zip
+*.db
+*.sqlite*
+*.pem
+*.key
+backups/
+private_publish_backup/
+control_fix/
+Check_images/
+HANDOFF.md
+RASPBERRY_PI.md
+V1_*.md
+UI_V1_NATIVE.md
+PUBLISH_CHECKPOINT.md

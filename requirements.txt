@@ -1,0 +1,4 @@
+# Raspberry Pi Buster: install PySide2 and python3-serial using apt (see README).
+# Windows development only:
+PySide6>=6.8,<7; sys_platform == 'win32'
+pyserial>=3.4,<4
