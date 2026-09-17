@@ -34,7 +34,7 @@ python -m venv .venv
 없는 파일만 생성하고 기존 장비 설정은 덮어쓰지 않습니다.
 
 ```powershell
-if (!(Test-Path sensor_protocol.py)) { Copy-Item sensor_protocol_example.py sensor_protocol.py }
+if (!(Test-Path sensor_protocol.py)) { Copy-Item sensor_protocol_template.py sensor_protocol.py }
 if (!(Test-Path sensor_connection_local.py)) { Copy-Item sensor_connection_example.py sensor_connection_local.py }
 ```
 

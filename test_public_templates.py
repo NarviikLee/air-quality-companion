@@ -1,7 +1,7 @@
 import inspect
 import unittest
 from unittest.mock import Mock
-import sensor_protocol_example as template
+import sensor_protocol_template as template
 import sensor_connection_example as settings
 
 

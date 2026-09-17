@@ -36,7 +36,7 @@ sensor_protocol.py
 !/requirements.txt
 !/SENSOR_CRITERIA.md
 !/sensor_connection_example.py
-!/sensor_protocol_example.py
+!/sensor_protocol_template.py
 !/air_quality_analyzer.py
 !/check_demo.py
 !/dashboard.py
