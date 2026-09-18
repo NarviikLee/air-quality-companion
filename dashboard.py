@@ -33,6 +33,7 @@ class MainWindow(QWidget):
         self.mode_label = 'DEMO' if SOURCE_MODE == 'demo' else 'SENSOR'
         self.setWindowTitle('Air Quality Monitor')
         self.setFixedSize(800, 480)
+        self.setAttribute(Qt.WA_StyledBackground, True)
         self.setStyleSheet('MainWindow {background: #F2F6F3;} QFrame#card {background: white; border: 1px solid #DEE8E1; border-radius: 16px;}')
         root = QVBoxLayout(self)
         root.setContentsMargins(16, 14, 16, 12)
@@ -121,6 +122,8 @@ class MainWindow(QWidget):
         self.pages.addWidget(self.dashboard_page)
         self.connection_page = QFrame()
         self.connection_page.setObjectName('card')
+        self.connection_page.setAttribute(Qt.WA_StyledBackground, True)
+        self.connection_page.setStyleSheet('QFrame#card {background-color: #080F16;}')
         connection_layout = QVBoxLayout(self.connection_page)
         connection_layout.setContentsMargins(32, 24, 32, 24)
         connection_layout.setSpacing(16)
@@ -249,6 +252,7 @@ class MainWindow(QWidget):
         self.loading_bar.setVisible(not no_port)
         self.connection_label.setText('● ' + ('포트 없음' if no_port else '확인 중'))
         self.connection_label.setStyleSheet('font-size: 16px; color: #C07827; font-weight: 700;')
+        self.detail_reception_label.setText('포트 없음 · 마지막 값 표시' if no_port else '수신 확인 중 · 마지막 값 표시')
         # Connection status must never override the user's home/detail choice.
 
     @Slot(str, str)
@@ -282,6 +286,7 @@ class MainWindow(QWidget):
         self.display_values(values, main_value)
         self.connection_label.setText('● ' + self.mode_label)
         self.connection_label.setStyleSheet('font-size: 16px; color: #22A878; font-weight: 700;')
+        self.refresh_reception_status(time.monotonic())
         self.refresh_robot()
         self.schedule_normal_read()
 
@@ -302,6 +307,8 @@ class MainWindow(QWidget):
         delayed = self.last_frame_delayed or elapsed >= config.SENSOR_STALE_TIMEOUT_SEC
         self.connection_label.setText(('수신 지연 ' if delayed else '갱신 ') + '%d초 전' % elapsed)
         self.connection_label.setStyleSheet('font-size: 14px; color: %s;' % ('#C07827' if delayed else '#22A878'))
+        self.detail_reception_label.setText(self.connection_label.text())
+        self.detail_reception_label.setStyleSheet(self.connection_label.styleSheet())
 
     def schedule_normal_read(self):
         now = time.monotonic()

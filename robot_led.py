@@ -55,6 +55,7 @@ class LegacyRasterRobotHomeWidget(QWidget):
 
     def __init__(self, parent=None):
         super().__init__(parent)
+        self.setAttribute(Qt.WA_StyledBackground, True)
         self.setStyleSheet('background: #080F16; color: #D6EBED;')
         layout = QVBoxLayout(self)
         layout.setContentsMargins(8, 8, 8, 8)
