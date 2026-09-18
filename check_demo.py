@@ -31,9 +31,23 @@ assert (window.width(), window.height()) == (800, 480)
 assert len(window.gauges) == 8
 assert window.pages.currentWidget() is window.robot_home_page
 from robot_led import RobotDisplayState
+state_copy = {
+    RobotDisplayState.SENSOR_CHECK: ('센서 확인 중', '연결 및 데이터 수신을 확인하고 있어요'),
+    RobotDisplayState.MONITORING: ('환경 확인 중', '주변 환경 데이터를 모으고 있어요'),
+    RobotDisplayState.COMFORTABLE: ('쾌적한 상태예요', '미세먼지와 온습도가 설정 범위에 있어요'),
+    RobotDisplayState.NORMAL: ('주변 환경을 확인해 주세요', '온도·습도 또는 먼지 상태를 확인해 주세요'),
+    RobotDisplayState.BAD: ('환경 개선이 필요해요', '미세먼지 농도가 높아요'),
+    RobotDisplayState.MOVING: ('이동 중', '주변 환경 측정은 계속하고 있어요'),
+    RobotDisplayState.PURIFYING: ('공기 정화 중', '주변 환경 측정은 계속하고 있어요'),
+}
+assert set(state_copy) == set(RobotDisplayState)
 for state in RobotDisplayState:
-    window.robot_home_page.show_state(state, '주변 환경을 확인해 주세요', '측정 데이터 보충 중 · 마지막 확정 상태입니다')
+    title, detail = state_copy[state]
+    window.robot_home_page.show_state(state, title, detail)
+    window.robot_home_page.face.animation_started_at = time.monotonic() - 1.2
     app.processEvents()
+    assert window.robot_home_page.display_state is state
+    assert window.robot_home_page.face.expression == state.value
     for widget in window.findChildren(QWidget):
         if widget.isVisible():
             origin = widget.mapTo(window, QPoint(0, 0))
@@ -42,6 +56,7 @@ for state in RobotDisplayState:
             assert origin.y() + widget.height() <= 480
             if isinstance(widget, QLabel) and not widget.wordWrap():
                 assert widget.fontMetrics().horizontalAdvance(widget.text()) <= widget.width(), widget.text()
+    assert window.grab().save(f'demo_state_{state.value}.png')
 window.refresh_robot()
 app.processEvents()
 assert window.grab().save('demo_robot_home.png')
@@ -49,9 +64,13 @@ window.show_sensor_detail()
 app.processEvents()
 # Exercise card colors and the longest messages, independent of random demo data.
 from sensor_status import assess_sensor
-for pm25, pm10, humidity, temperature in [(15, 30, 30, 20), (15.1, 30.1, 55, 19),
-                                        (35.1, 80.1, 60, 27), (75.1, 150.1, 29, 26)]:
-    values = dict(source.values, **{'PM2.5': pm25, 'PM10': pm10,
+for pm1, pm25, pm10, humidity, temperature in [
+        (10, 15, 30, 30, 20),
+        (10.1, 15.1, 30.1, 55, 19),
+        (25.1, 35.1, 80.1, 60, 27),
+        (50.1, 75.1, 150.1, 29, 26),
+]:
+    values = dict(source.values, **{'PM1.0': pm1, 'PM2.5': pm25, 'PM10': pm10,
                                   'Humidity': humidity, 'Temperature': temperature})
     window.display_values(values, sensor_data.MAIN_VALUE)
     app.processEvents()
@@ -135,4 +154,4 @@ QTest.qWait(200)
 assert not window.sensor_thread.isRunning()
 window.sensor_thread.wait()
 app.processEvents()
-print('PASS: 800x480 bounds, labels, status boundaries, fixed mode, timer, data ranges')
+print('PASS: all robot states, PM1.0/PM2.5/PM10 boundaries, 800x480 bounds, labels, timer, data ranges')

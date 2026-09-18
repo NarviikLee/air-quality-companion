@@ -226,6 +226,7 @@ class SensorDetailCard(QWidget):
         from sensor_data import STATUS_COLORS
         p = QPainter(self)
         p.setRenderHint(QPainter.Antialiasing)
+        # p.fillRect(self.rect(), QColor('#080F16'))
         RobotFaceWidget.box(p, (0, 0, self.width(), self.height()), '#12232E', 15)
         p.setPen(QPen(QColor(STATUS_COLORS.get(self.status, '#57D8C8')), 2))
         p.drawLine(16, 16, 32, 16)
@@ -276,12 +277,12 @@ def install_native_shell(window, root):
     divider.setStyleSheet('background: #1C303B;')
     root.addWidget(header)
     root.addWidget(window.pages)
-    window.pages.setFixedHeight(404)
+    window.pages.setFixedHeight(418)
     window.pages.setObjectName('nativePages')
     window.pages.setAttribute(Qt.WA_StyledBackground, True)
     window.pages.setStyleSheet('QStackedWidget#nativePages {background-color: #080F16;}')
     window.pages.show()
-    root.addStretch(1)
+    # root.addStretch(1)
     old_page = window.dashboard_page
     window.pages.removeWidget(old_page)
     old_page.hide()
