@@ -31,9 +31,11 @@ V1의 센서 통신과 환경 판정은 유지하면서 QPainter 얼굴에 상�
 - `detected`: 느낌표가 점멸
 - `comfortable`: 눈이 위아래로 미세하게 이동
 - `moving`: 방향 화살표와 시선이 좌우로 전환
-- `purifying`: 좌우 공기 물결과 입 파형이 움직임
+- `purifying`: 좌우 가장자리의 가로 공기 물결이 얼굴 쪽으로 번갈아 흐르고 입 파형이 움직임
 
 `moving`과 `purifying`은 표시 상태일 뿐 실제 이동이나 공기청정 장비를 제어하지 않습니다. `PURIFYING`은 향후 외부 상태 입력을 받을 수 있도록 표시용 API만 제공하며 현재 통신 프로토콜은 구현하지 않았습니다.
+
+각 애니메이션 프레임은 얼굴 영역을 먼저 초기화한 뒤 다시 그립니다. `detected`의 눈과 glow는 모두 원형으로 렌더링해 `normal`에서 전환할 때 사각 눈 모양이 잔상처럼 보이지 않도록 했습니다.
 
 ## 데모 실행
 
@@ -44,6 +46,14 @@ python -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -r requirements.txt
 .\.venv\Scripts\python.exe main.py --demo --windowed
 ```
+
+센서 판정 대기 없이 7개 얼굴 상태와 애니메이션을 4초마다 순서대로 확인하려면 다음 명령을 사용합니다. `NORMAL` 다음에 `DETECTED`가 나오므로 상태 전환 잔상도 확인할 수 있습니다.
+
+```powershell
+.\.venv\Scripts\python.exe main.py --demo-states --windowed
+```
+
+Raspberry Pi/Linux에서는 같은 옵션을 `python3 main.py --demo-states --windowed` 형식으로 실행합니다. 전체화면 확인 시 `--windowed`를 생략합니다.
 
 공개본에는 실제 센서 프로토콜과 통신 값이 없습니다. 먼저 `--demo`로 실행하세요. 전체화면은 `--windowed`를 생략합니다. Linux에서는 해당 환경의 PySide2 또는 PySide6와 pySerial을 별도로 준비하세요. 기존 Raspberry Pi의 Python 3.7/PySide2 호환을 고려하지만 장비에서 직접 검증해야 합니다.
 

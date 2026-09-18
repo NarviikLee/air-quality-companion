@@ -40,6 +40,9 @@ class RobotFaceWidget(QPushButton):
 
     def paintEvent(self, event):
         p = QPainter(self)
+        # Clear the complete widget before drawing the next animation frame.
+        # This avoids stale pixels on the Raspberry Pi Qt 5 paint backend.
+        p.fillRect(self.rect(), QColor('#080F16'))
         p.setRenderHint(QPainter.Antialiasing)
         p.scale(self.width() / 752, self.height() / 304)
         self.paint_panel(p)
@@ -94,8 +97,15 @@ class RobotFaceWidget(QPushButton):
         for margin, alpha in ((16, 18), (10, 30), (5, 60)):
             glow = QColor(accent)
             glow.setAlpha(alpha)
-            self.box(p, (x - margin, eye_y - margin, 126 + 2 * margin,
-                         height + 2 * margin), glow, min(40, height / 2 + margin))
+            glow_rect = QRectF(x - margin, eye_y - margin,
+                               126 + 2 * margin, height + 2 * margin)
+            p.setPen(Qt.NoPen)
+            p.setBrush(glow)
+            if self.expression == 'detected':
+                p.drawEllipse(glow_rect)
+            else:
+                radius = min(40, height / 2 + margin)
+                p.drawRoundedRect(glow_rect, radius, radius)
         gradient = QLinearGradient(x, eye_y, x, eye_y + height)
         gradient.setColorAt(0, QColor(accent).lighter(135))
         gradient.setColorAt(1, QColor(accent).darker(115))
@@ -151,14 +161,17 @@ class RobotFaceWidget(QPushButton):
             p.drawLine(tip, 152, center, 134)
             p.drawLine(tip, 152, center, 170)
         elif self.expression == 'purifying' and frame.air_wave_side:
-            base = 62 if frame.air_wave_side < 0 else 690
+            base = 42 if frame.air_wave_side < 0 else 710
             direction = 1 if frame.air_wave_side < 0 else -1
-            for offset in (0, 15):
+            for y in (140, 164):
                 path = QPainterPath()
-                path.moveTo(base + direction * offset, 124)
-                path.cubicTo(base + direction * (18 + offset), 136,
-                             base - direction * (6 - offset), 150,
-                             base + direction * (14 + offset), 164)
+                path.moveTo(base, y)
+                path.cubicTo(base + direction * 10, y - 9,
+                             base + direction * 20, y + 9,
+                             base + direction * 30, y)
+                path.cubicTo(base + direction * 40, y - 9,
+                             base + direction * 50, y + 9,
+                             base + direction * 60, y)
                 p.drawPath(path)
 
 

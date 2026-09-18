@@ -17,6 +17,28 @@ APP.setQuitOnLastWindowClosed(False)
 
 
 class RobotTests(unittest.TestCase):
+    def test_demo_states_cycle_through_every_expression(self):
+        class Source:
+            def read(self):
+                return {s.name: s.initial for s in config.SENSORS}, None
+        w = MainWindow(Source, demo_states=True)
+        try:
+            wait_until(lambda: not w._busy)
+            w.data_timer.stop()
+            w.demo_state_timer.stop()
+            seen = []
+            for _ in range(len(R)):
+                seen.append(w.robot_home_page.display_state)
+                w.show_next_demo_state()
+            self.assertEqual(seen, [R.SENSOR_CHECK, R.MONITORING, R.NORMAL, R.BAD,
+                                    R.COMFORTABLE, R.MOVING, R.PURIFYING])
+            self.assertEqual(w.robot_home_page.display_state, R.SENSOR_CHECK)
+        finally:
+            w.close()
+            wait_until(lambda: not w.sensor_thread.isRunning())
+            w.sensor_thread.wait()
+            APP.processEvents()
+
     def test_purifying_is_display_only_and_sensor_check_has_priority(self):
         analyzer, controller = AirQualityAnalyzer(), RobotLedController()
         controller.set_purifying(True)

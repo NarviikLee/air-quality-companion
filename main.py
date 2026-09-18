@@ -52,13 +52,14 @@ if __name__ == '__main__':
     if not acquired:
         logging.warning('Air Quality Display is already running; duplicate launch ignored.')
         sys.exit(0)  # A service start while a manual instance owns the lock must not loop.
-    if '--demo' in sys.argv:
+    demo_states = '--demo-states' in sys.argv
+    if '--demo' in sys.argv or demo_states:
         import sensor_data
         sensor_data.SOURCE_MODE = 'demo'
     from dashboard import MainWindow
     logging.info('Python %s / %s / Qt %s', sys.version.split()[0], BINDING, QtCore.qVersion())
     app = QApplication(sys.argv)
-    window = MainWindow()
+    window = MainWindow(demo_states=demo_states)
     shutdown_signals = ShutdownSignals(window)
     service_watchdog = ServiceWatchdog(window)
     if '--windowed' not in sys.argv and (FULLSCREEN or '--fullscreen' in sys.argv):

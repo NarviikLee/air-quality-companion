@@ -3,7 +3,7 @@ import time
 import logging
 import sensor_data as config
 from air_quality_analyzer import AirQualityAnalyzer
-from robot_led import RobotLedController
+from robot_led import RobotDisplayState, RobotLedController
 from robot_ui import RobotHomeWidget, install_native_shell
 from qt_compat import QDateTime, Qt, QTimer, QThread, Signal, Slot
 from qt_compat import QKeySequence, QShortcut
@@ -16,6 +16,17 @@ from sensor_worker import SensorWorker
 from sensor_status import assess_sensor
 
 
+DEMO_ROBOT_STATES = (
+    (RobotDisplayState.SENSOR_CHECK, '센서 확인 중', 'WAITING 애니메이션 확인'),
+    (RobotDisplayState.MONITORING, '환경 확인 중', 'MONITORING 애니메이션 확인'),
+    (RobotDisplayState.NORMAL, '주변 환경을 확인해 주세요', 'NORMAL 애니메이션 확인'),
+    (RobotDisplayState.BAD, '환경 개선이 필요해요', 'DETECTED 애니메이션 확인'),
+    (RobotDisplayState.COMFORTABLE, '쾌적한 상태예요', 'COMFORTABLE 애니메이션 확인'),
+    (RobotDisplayState.MOVING, '이동 중', 'MOVING 애니메이션 확인'),
+    (RobotDisplayState.PURIFYING, '공기 정화 중', 'PURIFYING 애니메이션 확인'),
+)
+
+
 def label(text, size, color='#203C34', bold=False):
     widget = QLabel(text)
     widget.setStyleSheet(f'font-size: {size}px; color: {color}; font-weight: {700 if bold else 400};')
@@ -26,11 +37,13 @@ class MainWindow(QWidget):
     read_requested = Signal()
     stop_requested = Signal()
 
-    def __init__(self, source_factory=create_sensor_source):
+    def __init__(self, source_factory=create_sensor_source, demo_states=False):
         super().__init__()
         if len(SENSORS) > 8 or len({s.name for s in SENSORS}) != len(SENSORS):
             raise ValueError('Use up to eight sensors with unique names.')
         self.mode_label = 'DEMO' if SOURCE_MODE == 'demo' else 'SENSOR'
+        self.demo_states = bool(demo_states)
+        self.demo_state_index = 0
         self.setWindowTitle('Air Quality Monitor')
         self.setFixedSize(800, 480)
         self.setAttribute(Qt.WA_StyledBackground, True)
@@ -178,9 +191,14 @@ class MainWindow(QWidget):
         self.data_timer = QTimer(self)
         self.data_timer.timeout.connect(self.update_sensors)
         self.data_timer.setSingleShot(True)
+        self.demo_state_timer = QTimer(self)
+        self.demo_state_timer.setInterval(4000)
+        self.demo_state_timer.timeout.connect(self.show_next_demo_state)
         self.show_connection_state(False)
         self.refresh_robot()
         self.update_sensors()
+        if self.demo_states:
+            self.demo_state_timer.start()
         self.escape = QShortcut(QKeySequence('Esc'), self)
         self.escape.activated.connect(self.showNormal)
 
@@ -250,8 +268,8 @@ class MainWindow(QWidget):
         self.connection_detail.setText('시리얼 포트가 없습니다. 케이블과 연결 상태를 확인해주세요.'
                                        if no_port else '연결 및 데이터 수신을 확인하고 있습니다.')
         self.loading_bar.setVisible(not no_port)
-        self.connection_label.setText('● ' + ('포트 없음' if no_port else '확인 중'))
-        self.connection_label.setStyleSheet('font-size: 16px; color: #C07827; font-weight: 700;')
+        # self.connection_label.setText('● ' + ('포트 없음' if no_port else '확인 중'))
+        # self.connection_label.setStyleSheet('font-size: 16px; color: #C07827; font-weight: 700;')
         self.detail_reception_label.setText('포트 없음 · 마지막 값 표시' if no_port else '수신 확인 중 · 마지막 값 표시')
         # Connection status must never override the user's home/detail choice.
 
@@ -284,8 +302,8 @@ class MainWindow(QWidget):
         self.last_received_at = getattr(values, 'timestamp', time.monotonic())
         self.analyzer.accept_sample(values, self.last_received_at)
         self.display_values(values, main_value)
-        self.connection_label.setText('● ' + self.mode_label)
-        self.connection_label.setStyleSheet('font-size: 16px; color: #22A878; font-weight: 700;')
+        # self.connection_label.setText('● ' + self.mode_label)
+        # self.connection_label.setStyleSheet('font-size: 16px; color: #22A878; font-weight: 700;')
         self.refresh_reception_status(time.monotonic())
         self.refresh_robot()
         self.schedule_normal_read()
@@ -298,7 +316,18 @@ class MainWindow(QWidget):
             self.pages.setCurrentWidget(self.dashboard_page)
 
     def refresh_robot(self):
+        if self.demo_states:
+            state, title, detail = DEMO_ROBOT_STATES[self.demo_state_index]
+            position = f'{self.demo_state_index + 1}/{len(DEMO_ROBOT_STATES)}'
+            self.robot_home_page.show_state(state, title, f'{detail} · {position} · 4초마다 전환')
+            return
         self.robot_home_page.show_state(*self.robot_controller.resolve(self.analyzer))
+
+    def show_next_demo_state(self):
+        if self._closing or not self.demo_states:
+            return
+        self.demo_state_index = (self.demo_state_index + 1) % len(DEMO_ROBOT_STATES)
+        self.refresh_robot()
 
     def refresh_reception_status(self, now):
         if self.last_received_at is None:
