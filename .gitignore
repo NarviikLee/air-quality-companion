@@ -45,6 +45,7 @@ sensor_protocol.py
 !/qt_compat.py
 !/repeated_error_log.py
 !/robot_led.py
+!/robot_animation.py
 !/robot_ui.py
 !/sensor_data.py
 !/sensor_status.py
@@ -57,6 +58,7 @@ sensor_protocol.py
 !/test_port_discovery.py
 !/test_repeated_error_log.py
 !/test_robot_led.py
+!/test_robot_animation.py
 !/test_sensor_status.py
 !/test_sensor_worker.py
 !/test_serial_source.py

@@ -17,6 +17,15 @@ APP.setQuitOnLastWindowClosed(False)
 
 
 class RobotTests(unittest.TestCase):
+    def test_purifying_is_display_only_and_sensor_check_has_priority(self):
+        analyzer, controller = AirQualityAnalyzer(), RobotLedController()
+        controller.set_purifying(True)
+        self.assertEqual(controller.resolve(analyzer)[0], R.SENSOR_CHECK)
+        analyzer.accept_sample(GOOD, 0)
+        self.assertEqual(controller.resolve(analyzer)[0], R.PURIFYING)
+        controller.set_purifying(False)
+        self.assertEqual(controller.resolve(analyzer)[0], R.MONITORING)
+
     def test_moving_priority_and_candidate_face(self):
         a, c = AirQualityAnalyzer(), RobotLedController()
         c.set_moving(True)

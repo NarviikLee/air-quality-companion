@@ -9,10 +9,11 @@ from robot_ui import RobotHomeWidget
 class RobotDisplayState(Enum):
     SENSOR_CHECK = 'waiting'
     MONITORING = 'monitoring'
-    COMFORTABLE = 'complete'
+    COMFORTABLE = 'comfortable'
     NORMAL = 'normal'
     BAD = 'detected'
     MOVING = 'moving'
+    PURIFYING = 'purifying'
 
 
 REASONS = {'humidity_low': '습도가 낮아요', 'humidity_high': '습도가 높아요',
@@ -25,15 +26,21 @@ REASONS = {'humidity_low': '습도가 낮아요', 'humidity_high': '습도가 �
 class RobotLedController:
     def __init__(self):
         self.moving = False
+        self.purifying = False
 
     def set_moving(self, moving):
         self.moving = bool(moving)  # Placeholder for a future external status input only.
+
+    def set_purifying(self, purifying):
+        self.purifying = bool(purifying)  # Display input only; does not control hardware.
 
     def resolve(self, analyzer):
         if analyzer.sensor_check:
             return RobotDisplayState.SENSOR_CHECK, '센서 확인 중', '연결 및 데이터 수신을 확인하고 있어요'
         if config.ENABLE_MOVING_DISPLAY and self.moving:
             return RobotDisplayState.MOVING, '이동 중', '주변 환경 측정은 계속하고 있어요'
+        if self.purifying:
+            return RobotDisplayState.PURIFYING, '공기 정화 중', '주변 환경 측정은 계속하고 있어요'
         if analyzer.confirmed_state is None:
             return RobotDisplayState.MONITORING, '환경 확인 중', '주변 환경 데이터를 모으고 있어요'
         state = (RobotDisplayState.COMFORTABLE, RobotDisplayState.NORMAL,

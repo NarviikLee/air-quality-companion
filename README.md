@@ -1,4 +1,4 @@
-# Air Quality Robot Display — V1 / WIP
+# Air Quality Robot Display — V2 UI Animation / WIP
 
 800×480 Qt 화면에서 주변 환경을 로봇 표정과 8개 센서 카드로 표시하는 Python 프로젝트입니다. 실제 로봇 이동이나 공기청정 장비를 제어하지 않습니다.
 
@@ -20,6 +20,20 @@ Python, PySide6(Windows 개발), PySide2/Qt 5(기존 Raspberry Pi 환경), QPain
 ### V1 화면 호환성 보완
 
 Pi의 Qt 5와 Windows Qt 6에서 헤더·상세·홈·종료 화면 및 바깥 여백을 어두운 배경으로 명시합니다. 각 컨테이너에 `WA_StyledBackground`를 적용했습니다. 헤더의 DEMO/연결 알림은 숨기고, 상세 화면 하단에는 갱신 경과시간·수신 지연 안내를 유지합니다. 분석 및 통신 기준은 변경하지 않았습니다. 배포 시 `dashboard.py`, `robot_ui.py`, `robot_led.py`를 함께 복사하세요. 실제 Pi 렌더링은 재확인이 필요합니다.
+
+### V2 얼굴 애니메이션
+
+V1의 센서 통신과 환경 판정은 유지하면서 QPainter 얼굴에 상태별 움직임을 추가했습니다. `robot_animation.py`는 경과시간에 따른 눈 위치, 눈 개방 정도, 입 파형과 상태 기호만 계산하고, `robot_ui.py`가 하나의 50ms Qt 타이머로 화면을 다시 그립니다. 얼굴 화면이 숨겨지면 해당 타이머도 정지합니다.
+
+- `waiting`: 입 파형이 오른쪽으로 흐름
+- `monitoring`: 눈이 좌우로 주변을 탐색
+- `normal`: 일정 간격으로 눈을 깜빡임
+- `detected`: 느낌표가 점멸
+- `comfortable`: 눈이 위아래로 미세하게 이동
+- `moving`: 방향 화살표와 시선이 좌우로 전환
+- `purifying`: 좌우 공기 물결과 입 파형이 움직임
+
+`moving`과 `purifying`은 표시 상태일 뿐 실제 이동이나 공기청정 장비를 제어하지 않습니다. `PURIFYING`은 향후 외부 상태 입력을 받을 수 있도록 표시용 API만 제공하며 현재 통신 프로토콜은 구현하지 않았습니다.
 
 ## 데모 실행
 
@@ -63,7 +77,7 @@ if (!(Test-Path sensor_connection_local.py)) { Copy-Item sensor_connection_examp
 
 `.gitignore`는 검토한 파일만 공개하는 allowlist입니다. 새 파일을 추가할 때 공개 여부를 검토해야 합니다. 실제 protocol/config, .env, IDE/캐시, 백업 ZIP, 장비 로그, 대화/인계 문서와 이전 제어 프로그램은 제외됩니다. `git add -f`로 제외 파일을 추가하지 마세요.
 
-**V1 / WIP.** 실제 센서의 단위·음수 온도 인코딩·무효값, Pi의 응답 주기/timeout/터치/폰트와 복구 동작은 장비에서 추가 확인해야 합니다. 외부 이동 통신 규격, 장비 제어, V2 얼굴 애니메이션은 구현하지 않았습니다.
+**V2 UI Animation / WIP.** 센서 분석과 통신은 V1 기준을 유지합니다. 실제 센서의 단위·음수 온도 인코딩·무효값, Pi의 응답 주기/timeout/터치/폰트·애니메이션 성능과 복구 동작은 장비에서 추가 확인해야 합니다. 외부 이동/정화 통신 규격과 장비 제어는 구현하지 않았습니다.
 
 ![Robot home](demo_robot_home.png)
 ![Sensor detail](demo_preview.png)

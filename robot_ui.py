@@ -1,17 +1,36 @@
-"""Native Qt rendering based on designs/robot_led; no raster or timer dependency."""
-from qt_compat import QWidget, QLabel, QPushButton, Signal, Qt, QColor, QPainter, QPen, QRectF, QPainterPath, QLinearGradient
+"""Native Qt rendering based on designs/robot_led; no raster dependency."""
+import math
+import time
+
+from qt_compat import QWidget, QLabel, QPushButton, Signal, Qt, QColor, QPainter, QPen, QRectF, QPainterPath, QLinearGradient, QTimer
+from robot_animation import RobotAnimationController
 
 
 class RobotFaceWidget(QPushButton):
     def __init__(self, parent=None):
         super().__init__(parent)
         self.expression = 'waiting'
+        self.animation = RobotAnimationController(self.expression)
+        self.animation_started_at = time.monotonic()
+        self.animation_timer = QTimer(self)
+        self.animation_timer.setInterval(50)
+        self.animation_timer.timeout.connect(self.update)
         self.setFlat(True)
 
     def set_expression(self, expression):
-        if expression != self.expression:
-            self.expression = expression
+        if self.animation.set_expression(expression):
+            self.expression = self.animation.expression
+            self.animation_started_at = time.monotonic()
             self.update()
+
+    def showEvent(self, event):
+        super().showEvent(event)
+        if not self.animation_timer.isActive():
+            self.animation_timer.start()
+
+    def hideEvent(self, event):
+        self.animation_timer.stop()
+        super().hideEvent(event)
 
     @staticmethod
     def box(p, rect, color, radius):
@@ -24,11 +43,14 @@ class RobotFaceWidget(QPushButton):
         p.setRenderHint(QPainter.Antialiasing)
         p.scale(self.width() / 752, self.height() / 304)
         self.paint_panel(p)
+        frame = self.animation.frame_at(time.monotonic() - self.animation_started_at)
         accent = {'waiting': '#B7C2D8', 'normal': '#EBC85A', 'detected': '#FFBA70',
-                  'complete': '#97E9AA', 'moving': '#80CFFF'}.get(self.expression, '#62DDCC')
+                  'comfortable': '#97E9AA', 'moving': '#80CFFF',
+                  'purifying': '#62DDCC'}.get(self.expression, '#62DDCC')
         for x in (175, 451):
-            self.paint_eye(p, x, accent)
-        self.paint_mouth(p, accent)
+            self.paint_eye(p, x, accent, frame)
+        self.paint_mouth(p, accent, frame)
+        self.paint_state_symbol(p, accent, frame)
         if self.hasFocus() and self.isEnabled():
             p.setPen(QPen(QColor('#66F4E1'), 1))
             p.setBrush(Qt.NoBrush)
@@ -50,40 +72,49 @@ class RobotFaceWidget(QPushButton):
             p.drawLine(x, 264, x, 282)
             p.drawLine(x, 282, x + direction * 22, 282)
 
-    def paint_eye(self, p, x, accent):
+    def paint_eye(self, p, x, accent, frame):
         if self.expression == 'waiting':
             self.box(p, (x, 128, 126, 15), accent, 7)
             return
-        if self.expression == 'complete':
+        x += frame.eye_offset_x
+        y_offset = frame.eye_offset_y
+        if self.expression == 'comfortable':
             path = QPainterPath()
-            path.moveTo(x, 162)
-            path.cubicTo(x + 18, 63, x + 108, 63, x + 126, 162)
+            path.moveTo(x, 162 + y_offset)
+            path.cubicTo(x + 18, 63 + y_offset, x + 108, 63 + y_offset,
+                         x + 126, 162 + y_offset)
             pen = QPen(QColor(accent), 13)
             pen.setCapStyle(Qt.RoundCap)
             p.setPen(pen)
             p.setBrush(Qt.NoBrush)
             p.drawPath(path)
             return
-        x += 18 if self.expression == 'moving' else 0
+        height = max(10.0, 120.0 * frame.eye_openness)
+        eye_y = 134.0 - height / 2.0 + y_offset
         for margin, alpha in ((16, 18), (10, 30), (5, 60)):
             glow = QColor(accent)
             glow.setAlpha(alpha)
-            self.box(p, (x - margin, 74 - margin, 126 + 2 * margin, 120 + 2 * margin), glow, 40)
-        gradient = QLinearGradient(x, 74, x, 194)
+            self.box(p, (x - margin, eye_y - margin, 126 + 2 * margin,
+                         height + 2 * margin), glow, min(40, height / 2 + margin))
+        gradient = QLinearGradient(x, eye_y, x, eye_y + height)
         gradient.setColorAt(0, QColor(accent).lighter(135))
         gradient.setColorAt(1, QColor(accent).darker(115))
         p.setPen(Qt.NoPen)
         p.setBrush(gradient)
         if self.expression == 'detected':
-            p.drawEllipse(QRectF(x, 70, 126, 128))
+            p.drawEllipse(QRectF(x, eye_y, 126, height))
         else:
-            p.drawRoundedRect(QRectF(x, 74, 126, 120), 34, 34)
-            p.setPen(QPen(QColor('#3046A89F'), 1))
-            for y in range(80, 191, 6):
-                p.drawLine(x + 12, y, x + 114, y)
+            radius = min(34.0, height / 2.0)
+            p.drawRoundedRect(QRectF(x, eye_y, 126, height), radius, radius)
+            if height > 30:
+                p.setPen(QPen(QColor('#3046A89F'), 1))
+                y = eye_y + 6
+                while y < eye_y + height - 3:
+                    p.drawLine(x + 12, int(y), x + 114, int(y))
+                    y += 6
 
-    def paint_mouth(self, p, accent):
-        if self.expression == 'complete':
+    def paint_mouth(self, p, accent, frame):
+        if self.expression == 'comfortable':
             path = QPainterPath()
             path.moveTo(353, 234)
             path.cubicTo(362, 253, 390, 253, 399, 234)
@@ -95,8 +126,40 @@ class RobotFaceWidget(QPushButton):
             p.setBrush(QColor(accent))
             p.drawEllipse(QRectF(366, 227, 20, 25))
         else:
-            for i, height in enumerate((6, 10, 12, 12, 10, 6)):
+            heights = (6, 10, 12, 12, 10, 6)
+            if self.expression in ('waiting', 'purifying'):
+                heights = tuple(7 + 6 * (0.5 + 0.5 * math.sin(frame.mouth_phase - i * 0.9))
+                                for i in range(6))
+            for i, height in enumerate(heights):
                 self.box(p, (330 + i * 16, 235 + (12 - height) / 2, 11, height), accent, 3)
+
+    def paint_state_symbol(self, p, accent, frame):
+        pen = QPen(QColor(accent), 6)
+        pen.setCapStyle(Qt.RoundCap)
+        pen.setJoinStyle(Qt.RoundJoin)
+        p.setPen(pen)
+        p.setBrush(Qt.NoBrush)
+        if self.expression == 'detected' and frame.show_exclamation:
+            p.drawLine(650, 94, 650, 135)
+            p.setBrush(QColor(accent))
+            p.setPen(Qt.NoPen)
+            p.drawEllipse(QRectF(644, 146, 12, 12))
+        elif self.expression == 'moving' and frame.direction:
+            center = 70 if frame.direction < 0 else 682
+            tip = center - 24 if frame.direction < 0 else center + 24
+            p.drawLine(center - 18, 152, center + 18, 152)
+            p.drawLine(tip, 152, center, 134)
+            p.drawLine(tip, 152, center, 170)
+        elif self.expression == 'purifying' and frame.air_wave_side:
+            base = 62 if frame.air_wave_side < 0 else 690
+            direction = 1 if frame.air_wave_side < 0 else -1
+            for offset in (0, 15):
+                path = QPainterPath()
+                path.moveTo(base + direction * offset, 124)
+                path.cubicTo(base + direction * (18 + offset), 136,
+                             base - direction * (6 - offset), 150,
+                             base + direction * (14 + offset), 164)
+                p.drawPath(path)
 
 
 class RobotHomeWidget(QWidget):
