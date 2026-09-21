@@ -273,7 +273,6 @@ class MainWindow(QWidget):
         self.loading_bar.setVisible(not no_port)
         # self.connection_label.setText('● ' + ('포트 없음' if no_port else '확인 중'))
         # self.connection_label.setStyleSheet('font-size: 16px; color: #C07827; font-weight: 700;')
-        self.detail_reception_label.setText('포트 없음 · 마지막 값 표시' if no_port else '수신 확인 중 · 마지막 값 표시')
         # Connection status must never override the user's home/detail choice.
 
     @Slot(str, str)
@@ -316,7 +315,8 @@ class MainWindow(QWidget):
         self.pages.setCurrentWidget(self.robot_home_page)
 
     def show_sensor_detail(self):
-        if not self.analyzer.sensor_check and not self._closing:
+        if (self.pages.currentWidget() is self.robot_home_page
+                and not self.analyzer.sensor_check and not self._closing):
             self.pages.setCurrentWidget(self.dashboard_page)
             self.detail_return_timer.start(round(config.SENSOR_DETAIL_TIMEOUT_SEC * 1000))
 
@@ -341,8 +341,6 @@ class MainWindow(QWidget):
         delayed = self.last_frame_delayed or elapsed >= config.SENSOR_STALE_TIMEOUT_SEC
         self.connection_label.setText(('수신 지연 ' if delayed else '갱신 ') + '%d초 전' % elapsed)
         self.connection_label.setStyleSheet('font-size: 14px; color: %s;' % ('#C07827' if delayed else '#22A878'))
-        self.detail_reception_label.setText(self.connection_label.text())
-        self.detail_reception_label.setStyleSheet(self.connection_label.styleSheet())
 
     def schedule_normal_read(self):
         now = time.monotonic()

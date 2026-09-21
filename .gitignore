@@ -33,6 +33,7 @@ sensor_protocol.py
 /*
 !/.gitignore
 !/README.md
+!/app_config.ini
 !/requirements.txt
 !/SENSOR_CRITERIA.md
 !/sensor_connection_example.py

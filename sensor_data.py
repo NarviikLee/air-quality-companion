@@ -1,5 +1,7 @@
 """통신 및 데모 설정: 상수를 수정하고 프로그램을 다시 실행하세요."""
 from dataclasses import dataclass
+from configparser import ConfigParser
+from pathlib import Path
 import random
 from sensor_status import CARD_COLORS, assess_sensor
 
@@ -31,7 +33,22 @@ MIN_SAMPLES_IN_WINDOW = 24
 STATE_CONFIRM_DURATION_SEC = 10
 MAX_CONSECUTIVE_FAILURES = 3
 SENSOR_STALE_TIMEOUT_SEC = 5
-SENSOR_DETAIL_TIMEOUT_SEC = 5
+
+
+def _sensor_detail_timeout_sec():
+    """Load the UI timeout without making a missing config fatal at startup."""
+    parser = ConfigParser()
+    parser.read(str(Path(__file__).resolve().with_name('app_config.ini')), encoding='utf-8')
+    if not parser.has_option('ui', 'sensor_detail_timeout_sec'):
+        return 5.0
+    try:
+        value = parser.getfloat('ui', 'sensor_detail_timeout_sec')
+    except ValueError:
+        return 5.0
+    return value if value > 0 else 5.0
+
+
+SENSOR_DETAIL_TIMEOUT_SEC = _sensor_detail_timeout_sec()
 ENABLE_MOVING_DISPLAY = False
 UPDATE_INTERVAL_MS = round(SAMPLE_INTERVAL_SEC * 1000)
 MAIN_VALUE = 24.0  # 센서와 독립적인 임시 점수. 실제 AQI가 아닙니다.

@@ -74,12 +74,9 @@ class LegacyRasterRobotHomeWidget(QWidget):
         self.face.clicked.connect(self.detail_requested.emit)
         layout.addWidget(self.face)
         self.title = QLabel()
-        self.detail = QLabel()
-        self.hint = QLabel('얼굴을 터치하면 8개 센서 측정값을 확인할 수 있어요')
-        for widget, size in ((self.title, 24), (self.detail, 17), (self.hint, 14)):
-            widget.setAlignment(Qt.AlignCenter)
-            widget.setStyleSheet('font-size: %dpx; color: #D6EBED;' % size)
-            layout.addWidget(widget)
+        self.title.setAlignment(Qt.AlignCenter)
+        self.title.setStyleSheet('font-size: 24px; color: #D6EBED;')
+        layout.addWidget(self.title)
         self.images = {}
         folder = Path(__file__).resolve().parent / 'designs' / 'robot_led' / 'states'
         for state in RobotDisplayState:
@@ -107,5 +104,4 @@ class LegacyRasterRobotHomeWidget(QWidget):
             self.face.setIconSize(QSize(560, 201))
             self.display_state = state
         self.title.setText(title)
-        self.detail.setText(detail)
         self.face.setAccessibleName(title + ' · 센서 상세 화면 열기')

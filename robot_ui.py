@@ -186,14 +186,10 @@ class RobotHomeWidget(QWidget):
         self.setStyleSheet('QWidget#robotHome {background-color: #080F16;}')
         self.face.setGeometry(24, 15, 752, 304)
         self.face.clicked.connect(self.request_detail)
-        self.title, self.detail, self.hint = QLabel(self), QLabel(self), QLabel(self)
-        for widget, y, height, size, color in (
-                (self.title, 315, 34, 23, '#D6EBED'),
-                (self.detail, 350, 24, 16, '#91AFBA'),
-                (self.hint, 377, 24, 15, '#819BA6')):
-            widget.setGeometry(24, y, 752, height)
-            widget.setAlignment(Qt.AlignCenter)
-            widget.setStyleSheet('font-size: %dpx; color: %s;' % (size, color))
+        self.title = QLabel(self)
+        self.title.setGeometry(24, 335, 752, 42)
+        self.title.setAlignment(Qt.AlignCenter)
+        self.title.setStyleSheet('font-size: 23px; color: #D6EBED;')
         self.display_state = None
         self.face.setEnabled(False)
 
@@ -201,14 +197,19 @@ class RobotHomeWidget(QWidget):
         if self.face.isEnabled():
             self.detail_requested.emit()
 
+    def mouseReleaseEvent(self, event):
+        if event.button() == Qt.LeftButton:
+            self.request_detail()
+            event.accept()
+            return
+        super().mouseReleaseEvent(event)
+
     def show_state(self, state, title, detail):
         self.display_state = state
         self.face.set_expression(state.value)
         enabled = state.value != 'waiting'
         self.face.setEnabled(enabled)
         self.title.setText(title)
-        self.detail.setText(detail)
-        self.hint.setText('화면을 터치하면 측정값을 확인할 수 있습니다' if enabled else '센서 연결 후 측정값을 확인할 수 있습니다')
         self.face.setAccessibleName(title + (' · 센서 상세 화면 열기' if enabled else ' · 연결 대기'))
 
 
@@ -322,9 +323,6 @@ def install_native_shell(window, root):
     detail.setObjectName('sensorDetail')
     detail.setAttribute(Qt.WA_StyledBackground, True)
     detail.setStyleSheet('QWidget#sensorDetail {background-color: #080F16;}')
-    title = QLabel('주변 공기 측정값', detail)
-    title.setGeometry(24, 15, 752, 38)
-    title.setStyleSheet('font-size: 26px; font-weight: 700; color: #D6EBED;')
     window.home_button.hide()
     import sensor_data as config
     specs = {spec.name: spec for spec in config.SENSORS}
@@ -333,16 +331,8 @@ def install_native_shell(window, root):
         if name not in specs:
             continue
         card = SensorDetailCard(specs[name], detail)
-        card.setGeometry(24 + (i % 4) * 190, 72 + (i // 4) * 140, 182, 128)
+        card.setGeometry(24 + (i % 4) * 190, 45 + (i // 4) * 160, 182, 128)
         window.gauges[name] = (card, card.assessment_label)
-    note = QLabel('카드: 최신 수신값 · 표정: 평균 상태 · 참고용', detail)
-    note.setGeometry(24, 387, 752, 17)
-    note.setAlignment(Qt.AlignCenter)
-    note.setStyleSheet('font-size: 13px; color: #819BA6;')
-    window.detail_reception_label = QLabel('센서 확인 중', detail)
-    window.detail_reception_label.setGeometry(24, 362, 752, 24)
-    window.detail_reception_label.setAlignment(Qt.AlignCenter)
-    window.detail_reception_label.setStyleSheet('font-size: 14px; color: #819BA6;')
     # The detail page is read-only; handle touches on cards and labels as return.
     for child in detail.findChildren(QWidget):
         child.installEventFilter(detail)
