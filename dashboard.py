@@ -191,6 +191,9 @@ class MainWindow(QWidget):
         self.data_timer = QTimer(self)
         self.data_timer.timeout.connect(self.update_sensors)
         self.data_timer.setSingleShot(True)
+        self.detail_return_timer = QTimer(self)
+        self.detail_return_timer.setSingleShot(True)
+        self.detail_return_timer.timeout.connect(self.show_robot_home)
         self.demo_state_timer = QTimer(self)
         self.demo_state_timer.setInterval(4000)
         self.demo_state_timer.timeout.connect(self.show_next_demo_state)
@@ -309,11 +312,13 @@ class MainWindow(QWidget):
         self.schedule_normal_read()
 
     def show_robot_home(self):
+        self.detail_return_timer.stop()
         self.pages.setCurrentWidget(self.robot_home_page)
 
     def show_sensor_detail(self):
         if not self.analyzer.sensor_check and not self._closing:
             self.pages.setCurrentWidget(self.dashboard_page)
+            self.detail_return_timer.start(round(config.SENSOR_DETAIL_TIMEOUT_SEC * 1000))
 
     def refresh_robot(self):
         if self.demo_states:
@@ -354,6 +359,7 @@ class MainWindow(QWidget):
                 self.exit_button.setEnabled(False)
                 self.shutdown_deadline = time.monotonic() + 3
                 self.data_timer.stop()
+                self.detail_return_timer.stop()
                 self.retry_deadline = None
                 self.show_connection_state(False)
                 self.pages.setCurrentWidget(self.connection_page)

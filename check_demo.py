@@ -62,6 +62,9 @@ app.processEvents()
 assert window.grab().save('demo_robot_home.png')
 window.show_sensor_detail()
 app.processEvents()
+assert window.detail_return_timer.isActive()
+# Keep the detail page visible while this offscreen test performs long checks.
+window.detail_return_timer.stop()
 # Exercise card colors and the longest messages, independent of random demo data.
 from sensor_status import assess_sensor
 for pm1, pm25, pm10, humidity, temperature in [
@@ -149,6 +152,10 @@ for _ in range(2):
     else:
         raise AssertionError('Expected unavailable data')
 assert len(source.read()[0]) == 8
+window.pages.setCurrentWidget(window.dashboard_page)
+window.detail_return_timer.start(20)
+QTest.qWait(50)
+assert window.pages.currentWidget() is window.robot_home_page
 window.close()
 QTest.qWait(200)
 assert not window.sensor_thread.isRunning()

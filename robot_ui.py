@@ -2,7 +2,7 @@
 import math
 import time
 
-from qt_compat import QWidget, QLabel, QPushButton, Signal, Qt, QColor, QPainter, QPen, QRectF, QPainterPath, QLinearGradient, QTimer
+from qt_compat import QWidget, QLabel, QPushButton, Signal, Qt, QEvent, QColor, QPainter, QPen, QRectF, QPainterPath, QLinearGradient, QTimer
 from robot_animation import RobotAnimationController
 
 
@@ -246,6 +246,23 @@ class SensorDetailCard(QWidget):
         p.end()
 
 
+class SensorDetailPage(QWidget):
+    return_requested = Signal()
+
+    def eventFilter(self, watched, event):
+        if event.type() == QEvent.MouseButtonPress and event.button() == Qt.LeftButton:
+            self.return_requested.emit()
+            return True
+        return super().eventFilter(watched, event)
+
+    def mousePressEvent(self, event):
+        if event.button() == Qt.LeftButton:
+            self.return_requested.emit()
+            event.accept()
+            return
+        super().mousePressEvent(event)
+
+
 def install_native_shell(window, root):
     """Replace visible presentation only; preserve acquisition/close objects."""
     from qt_compat import QFrame
@@ -300,19 +317,15 @@ def install_native_shell(window, root):
     window.pages.removeWidget(old_page)
     old_page.hide()
     window.legacy_detail_page = old_page
-    detail = QWidget()
+    detail = SensorDetailPage()
+    detail.return_requested.connect(window.show_robot_home)
     detail.setObjectName('sensorDetail')
     detail.setAttribute(Qt.WA_StyledBackground, True)
     detail.setStyleSheet('QWidget#sensorDetail {background-color: #080F16;}')
     title = QLabel('주변 공기 측정값', detail)
-    title.setGeometry(24, 15, 430, 38)
+    title.setGeometry(24, 15, 752, 38)
     title.setStyleSheet('font-size: 26px; font-weight: 700; color: #D6EBED;')
-    window.home_button.setParent(detail)
-    window.home_button.setMinimumSize(0, 0)
-    window.home_button.setMaximumSize(16777215, 16777215)
-    window.home_button.setText('← 얼굴로')
-    window.home_button.setGeometry(648, 16, 128, 40)
-    window.home_button.show()
+    window.home_button.hide()
     import sensor_data as config
     specs = {spec.name: spec for spec in config.SENSORS}
     window.gauges = {}
@@ -330,6 +343,9 @@ def install_native_shell(window, root):
     window.detail_reception_label.setGeometry(24, 362, 752, 24)
     window.detail_reception_label.setAlignment(Qt.AlignCenter)
     window.detail_reception_label.setStyleSheet('font-size: 14px; color: #819BA6;')
+    # The detail page is read-only; handle touches on cards and labels as return.
+    for child in detail.findChildren(QWidget):
+        child.installEventFilter(detail)
     window.dashboard_page = detail
     window.pages.addWidget(detail)
     window.pages.setCurrentWidget(window.robot_home_page)

@@ -93,6 +93,9 @@ class RobotTests(unittest.TestCase):
             self.assertTrue(w.robot_home_page.face.isEnabled())
             QTest.mouseClick(w.robot_home_page.face, Qt.LeftButton)
             self.assertIs(w.pages.currentWidget(), w.dashboard_page)
+            self.assertTrue(w.detail_return_timer.isActive())
+            self.assertEqual(w.detail_return_timer.interval(), config.SENSOR_DETAIL_TIMEOUT_SEC * 1000)
+            self.assertTrue(w.home_button.isHidden())
             values = {s.name: s.initial for s in config.SENSORS}
             w.analyzer.reset()
             start = time.monotonic() - 40
@@ -112,11 +115,32 @@ class RobotTests(unittest.TestCase):
             w.on_failed('waiting', 'timeout')
             self.assertEqual(w.robot_home_page.display_state, R.SENSOR_CHECK)
             self.assertIs(w.pages.currentWidget(), w.dashboard_page)
-            QTest.mouseClick(w.home_button, Qt.LeftButton)
+            QTest.mouseClick(w.gauges['PM1.0'][0], Qt.LeftButton)
             self.assertIs(w.pages.currentWidget(), w.robot_home_page)
+            self.assertFalse(w.detail_return_timer.isActive())
             self.assertFalse(w.robot_home_page.face.isEnabled())
             QTest.mouseClick(w.robot_home_page.face, Qt.LeftButton)
             self.assertIs(w.pages.currentWidget(), w.robot_home_page)
+        finally:
+            w.close()
+            wait_until(lambda: not w.sensor_thread.isRunning())
+            w.sensor_thread.wait()
+            APP.processEvents()
+
+    def test_sensor_detail_returns_after_timeout(self):
+        class Source:
+            def read(self):
+                return {s.name: s.initial for s in config.SENSORS}, None
+        w = MainWindow(Source)
+        try:
+            wait_until(lambda: not w._busy)
+            w.data_timer.stop()
+            w.show_sensor_detail()
+            self.assertIs(w.pages.currentWidget(), w.dashboard_page)
+            w.detail_return_timer.start(20)
+            QTest.qWait(50)
+            self.assertIs(w.pages.currentWidget(), w.robot_home_page)
+            self.assertFalse(w.detail_return_timer.isActive())
         finally:
             w.close()
             wait_until(lambda: not w.sensor_thread.isRunning())
