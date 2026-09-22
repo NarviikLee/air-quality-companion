@@ -11,7 +11,7 @@
 - VOC/NOx/Bio는 표시 전용이며 종합 표정에서 제외
 - 데모 모드, 종료 처리, 중복 실행 방지, systemd watchdog 지원
 
-상세 카드는 최신 수신값, 얼굴은 평균과 확정 결과를 표시합니다. 센서 대기 중 상세 진입은 차단됩니다. 상세 화면은 읽기 전용이며 화면을 다시 터치하거나 5초가 지나면 얼굴 화면으로 복귀합니다. 복귀 시간은 `SENSOR_DETAIL_TIMEOUT_SEC`에서 조정합니다. 공식 AQI나 건강 안전 판정이 아닙니다. 판정 근거는 [SENSOR_CRITERIA.md](SENSOR_CRITERIA.md)를 참고하세요.
+상세 카드는 최신 수신값, 얼굴은 평균과 확정 결과를 표시합니다. 센서 대기 중 상세 진입은 차단됩니다. `MONITORING` 이후에는 로봇 홈 영역을 터치해 상세 화면으로 이동할 수 있습니다. 상세 화면은 읽기 전용이며 화면을 다시 터치하거나 설정 시간이 지나면 얼굴 화면으로 복귀합니다. 공식 AQI나 건강 안전 판정이 아닙니다. 판정 근거는 [SENSOR_CRITERIA.md](SENSOR_CRITERIA.md)를 참고하세요.
 
 ## 기술 스택
 
@@ -19,7 +19,16 @@ Python, PySide6(Windows 개발), PySide2/Qt 5(기존 Raspberry Pi 환경), QPain
 
 ### V1 화면 호환성 보완
 
-Pi의 Qt 5와 Windows Qt 6에서 헤더·상세·홈·종료 화면 및 바깥 여백을 어두운 배경으로 명시합니다. 각 컨테이너에 `WA_StyledBackground`를 적용했습니다. 헤더의 DEMO/연결 알림은 숨기고, 상세 화면 하단에는 갱신 경과시간·수신 지연 안내를 유지합니다. 분석 및 통신 기준은 변경하지 않았습니다. 배포 시 `dashboard.py`, `robot_ui.py`, `robot_led.py`를 함께 복사하세요. 실제 Pi 렌더링은 재확인이 필요합니다.
+Pi의 Qt 5와 Windows Qt 6에서 헤더·상세·홈·종료 화면 및 바깥 여백을 어두운 배경으로 명시합니다. 각 컨테이너에 `WA_StyledBackground`를 적용했습니다. 헤더의 DEMO/연결 알림은 숨겼습니다. 로봇 홈은 얼굴 아래 상태 제목만 표시하고, 상세 화면은 별도 제목·갱신 경과시간·수신 지연·안내 문구 없이 8개 센서 카드만 표시합니다. 터치 후 얼굴에 남던 버튼 포커스 테두리도 제거했습니다. 분석 및 통신 기준은 변경하지 않았습니다. 배포 시 `dashboard.py`, `robot_ui.py`, `robot_led.py`, `sensor_data.py`, `app_config.ini`를 함께 복사하세요. 실제 Pi 렌더링은 재확인이 필요합니다.
+
+### UI 설정
+
+센서 상세 화면의 자동 복귀 시간은 `app_config.ini`에서 초 단위로 변경합니다. 설정은 프로그램을 다시 시작할 때 적용됩니다. 파일이 없거나 값이 잘못됐거나 0 이하이면 5초를 사용합니다.
+
+```ini
+[ui]
+sensor_detail_timeout_sec = 5
+```
 
 ### V2 얼굴 애니메이션
 
@@ -82,6 +91,15 @@ if (!(Test-Path sensor_connection_local.py)) { Copy-Item sensor_connection_examp
 ```
 
 테스트는 가짜 포트/데이터와 offscreen Qt를 사용합니다. 실제 장비 전용 패킷 테스트는 공개하지 않습니다. `check_demo.py`는 미리보기 PNG를 생성합니다.
+
+README에 사용하는 현재 런타임 UI 이미지는 다음 명령으로 다시 생성합니다. `preview_robot.py`는 별도의 목업을 그리지 않고 실제 `MainWindow`, 로봇 홈 위젯, 센서 카드 위젯을 캡처합니다. 홈 이미지는 `MONITORING / 환경 확인 중` 상태로 고정됩니다.
+
+```powershell
+.\.venv\Scripts\python.exe preview_robot.py
+```
+
+- `demo_robot_home.png`: MONITORING 로봇 홈 화면
+- `demo_preview.png`: 고정 예시값을 표시한 8개 센서 카드 화면
 
 ## 공개 범위와 현재 상태
 

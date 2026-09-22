@@ -43,6 +43,7 @@ sensor_protocol.py
 !/dashboard.py
 !/main.py
 !/port_discovery.py
+!/preview_robot.py
 !/qt_compat.py
 !/repeated_error_log.py
 !/robot_led.py

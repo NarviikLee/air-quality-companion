@@ -16,6 +16,7 @@ class RobotFaceWidget(QPushButton):
         self.animation_timer.setInterval(50)
         self.animation_timer.timeout.connect(self.update)
         self.setFlat(True)
+        self.setFocusPolicy(Qt.NoFocus)
 
     def set_expression(self, expression):
         if self.animation.set_expression(expression):
@@ -54,10 +55,6 @@ class RobotFaceWidget(QPushButton):
             self.paint_eye(p, x, accent, frame)
         self.paint_mouth(p, accent, frame)
         self.paint_state_symbol(p, accent, frame)
-        if self.hasFocus() and self.isEnabled():
-            p.setPen(QPen(QColor('#66F4E1'), 1))
-            p.setBrush(Qt.NoBrush)
-            p.drawRoundedRect(QRectF(2, 2, 748, 300), 34, 34)
         p.end()
 
 
