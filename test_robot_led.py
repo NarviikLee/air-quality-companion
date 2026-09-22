@@ -1,5 +1,7 @@
 import os
 os.environ['QT_QPA_PLATFORM'] = 'offscreen'
+from pathlib import Path
+from tempfile import TemporaryDirectory
 import time
 import unittest
 from unittest.mock import patch
@@ -17,6 +19,19 @@ APP.setQuitOnLastWindowClosed(False)
 
 
 class RobotTests(unittest.TestCase):
+    def test_detail_timeout_config_falls_back_safely(self):
+        with TemporaryDirectory() as folder:
+            path = Path(folder) / 'app_config.ini'
+            self.assertEqual(config._sensor_detail_timeout_sec(path), 5.0)
+            path.write_text('[ui]\nsensor_detail_timeout_sec = 8\n', encoding='utf-8')
+            self.assertEqual(config._sensor_detail_timeout_sec(path), 8.0)
+            path.write_text('[ui\nsensor_detail_timeout_sec = 8\n', encoding='utf-8')
+            self.assertEqual(config._sensor_detail_timeout_sec(path), 5.0)
+            path.write_text('[ui]\nsensor_detail_timeout_sec = invalid\n', encoding='utf-8')
+            self.assertEqual(config._sensor_detail_timeout_sec(path), 5.0)
+            path.write_text('[ui]\nsensor_detail_timeout_sec = 0\n', encoding='utf-8')
+            self.assertEqual(config._sensor_detail_timeout_sec(path), 5.0)
+
     def test_demo_states_cycle_through_every_expression(self):
         class Source:
             def read(self):
@@ -110,6 +125,8 @@ class RobotTests(unittest.TestCase):
             w.on_failed('waiting', 'timeout')
             self.assertEqual(w.analyzer.confirmed_state, 0)
             self.assertIs(w.pages.currentWidget(), w.dashboard_page)
+            self.assertTrue(all(state.text() == '수신 지연'
+                                for _, state in w.gauges.values()))
             w.refresh_reception_status(time.monotonic())
             self.assertIn('수신 지연', w.connection_label.text())
             w.on_failed('waiting', 'timeout')
@@ -175,6 +192,8 @@ class RobotTests(unittest.TestCase):
             w.analyzer.last_at = time.monotonic() - 5
             QTest.qWait(300)
             self.assertTrue(w.analyzer.sensor_check)
+            self.assertTrue(all(state.text() == '수신 지연'
+                                for _, state in w.gauges.values()))
             self.assertIsNone(w.operation_deadline)
             self.assertFalse(w._recovering)
             self.assertIs(w.pages.currentWidget(), w.dashboard_page)

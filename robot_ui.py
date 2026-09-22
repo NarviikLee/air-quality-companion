@@ -13,7 +13,7 @@ class RobotFaceWidget(QPushButton):
         self.animation = RobotAnimationController(self.expression)
         self.animation_started_at = time.monotonic()
         self.animation_timer = QTimer(self)
-        self.animation_timer.setInterval(50)
+        self.animation_timer.setInterval(75)
         self.animation_timer.timeout.connect(self.update)
         self.setFlat(True)
         self.setFocusPolicy(Qt.NoFocus)

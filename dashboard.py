@@ -248,7 +248,8 @@ class MainWindow(QWidget):
 
     def check_worker_health(self):
         now = time.monotonic()
-        self.analyzer.check_stale(now)
+        if self.analyzer.check_stale(now):
+            self.mark_detail_delayed()
         if not self._closing:
             self.refresh_robot()
             self.refresh_reception_status(now)
@@ -284,6 +285,7 @@ class MainWindow(QWidget):
         self.last_error = detail
         self.last_frame_delayed = True
         self.analyzer.record_failure(no_port=state == 'no_port')
+        self.mark_detail_delayed()
         self.show_connection_state(state == 'no_port')
         self.refresh_robot()
         delay = max(1, RETRY_INTERVAL_SECONDS)
@@ -420,3 +422,14 @@ class MainWindow(QWidget):
             state.setAccessibleName(assessment.message)
             state.setToolTip(assessment.detail)
             state.setStyleSheet(f'font-size: 13px; font-weight: 400; color: {STATUS_COLORS[status]};')
+
+    def mark_detail_delayed(self):
+        """Keep the last value visible but make its delayed status explicit per card."""
+        color = STATUS_COLORS['CARD_UNKNOWN']
+        for gauge, state in self.gauges.values():
+            gauge.set_value(gauge.value, 'CARD_UNKNOWN')
+            state.setText('수신 지연')
+            state.setAccessibleName('수신 지연 · 마지막 정상값')
+            state.setToolTip('새 센서 데이터가 도착하면 자동으로 갱신됩니다.')
+            state.setStyleSheet(
+                f'font-size: 13px; font-weight: 400; color: {color};')

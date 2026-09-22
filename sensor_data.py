@@ -1,6 +1,6 @@
 """통신 및 데모 설정: 상수를 수정하고 프로그램을 다시 실행하세요."""
 from dataclasses import dataclass
-from configparser import ConfigParser
+from configparser import ConfigParser, Error as ConfigError
 from pathlib import Path
 import random
 from sensor_status import CARD_COLORS, assess_sensor
@@ -35,15 +35,19 @@ MAX_CONSECUTIVE_FAILURES = 3
 SENSOR_STALE_TIMEOUT_SEC = 5
 
 
-def _sensor_detail_timeout_sec():
+def _sensor_detail_timeout_sec(path=None):
     """Load the UI timeout without making a missing config fatal at startup."""
     parser = ConfigParser()
-    parser.read(str(Path(__file__).resolve().with_name('app_config.ini')), encoding='utf-8')
+    path = Path(path) if path is not None else Path(__file__).resolve().with_name('app_config.ini')
+    try:
+        parser.read(str(path), encoding='utf-8')
+    except (ConfigError, OSError, UnicodeError):
+        return 5.0
     if not parser.has_option('ui', 'sensor_detail_timeout_sec'):
         return 5.0
     try:
         value = parser.getfloat('ui', 'sensor_detail_timeout_sec')
-    except ValueError:
+    except (ConfigError, ValueError):
         return 5.0
     return value if value > 0 else 5.0
 

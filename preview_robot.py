@@ -1,6 +1,7 @@
 """Render the current runtime Qt UI to the two README preview images."""
 import os
 from pathlib import Path
+from unittest.mock import patch
 os.environ['QT_QPA_PLATFORM'] = 'offscreen'
 from qt_compat import (QApplication, QImage, QPainter, QPainterPath, QColor,
                        QFont, QFontDatabase, QPen, QRectF, Qt)
@@ -147,12 +148,13 @@ def render():
     window.clock.setText('10:32:00')
 
     # Fix the state and animation phase so repeated renders are deterministic.
-    window.robot_home_page.show_state(
-        RobotDisplayState.MONITORING, '환경 확인 중', '')
-    window.robot_home_page.face.animation_started_at = time.monotonic()
-    window.pages.setCurrentWidget(window.robot_home_page)
-    app.processEvents()
-    _save_window(window, 'demo_robot_home.png')
+    with patch('robot_ui.time.monotonic', return_value=100.0):
+        window.robot_home_page.show_state(
+            RobotDisplayState.MONITORING, '환경 확인 중', '')
+        window.robot_home_page.face.animation_started_at = 100.0
+        window.pages.setCurrentWidget(window.robot_home_page)
+        app.processEvents()
+        _save_window(window, 'demo_robot_home.png')
 
     window.display_values(PREVIEW_VALUES, sensor_data.MAIN_VALUE)
     window.pages.setCurrentWidget(window.dashboard_page)
