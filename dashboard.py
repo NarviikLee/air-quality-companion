@@ -417,10 +417,8 @@ class MainWindow(QWidget):
             status = assessment.level
             gauge.set_value(values[name], status)
             gauge.setAccessibleName(f'{name}: {values[name]} {gauge.unit}, {assessment.message}')
-            gauge.setToolTip(assessment.detail)
             state.setText('—' if assessment.message == '기준 미정' else assessment.message)
             state.setAccessibleName(assessment.message)
-            state.setToolTip(assessment.detail)
             state.setStyleSheet(f'font-size: 13px; font-weight: 400; color: {STATUS_COLORS[status]};')
 
     def mark_detail_delayed(self):
@@ -430,6 +428,5 @@ class MainWindow(QWidget):
             gauge.set_value(gauge.value, 'CARD_UNKNOWN')
             state.setText('수신 지연')
             state.setAccessibleName('수신 지연 · 마지막 정상값')
-            state.setToolTip('새 센서 데이터가 도착하면 자동으로 갱신됩니다.')
             state.setStyleSheet(
                 f'font-size: 13px; font-weight: 400; color: {color};')

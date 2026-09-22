@@ -120,6 +120,8 @@ class RobotTests(unittest.TestCase):
             snapshot = SensorSnapshot(dict(values, VOC=None), time.monotonic())
             w.on_received(snapshot, None)
             self.assertIsNone(w.gauges['VOC'][0].value)
+            self.assertTrue(all(not gauge.toolTip() and not state.toolTip()
+                                for gauge, state in w.gauges.values()))
             self.assertIs(w.pages.currentWidget(), w.dashboard_page)
             self.assertEqual(w.analyzer.confirmed_state, 0)
             w.on_failed('waiting', 'timeout')
