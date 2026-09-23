@@ -8,8 +8,8 @@ from unittest.mock import patch
 from qt_compat import QApplication, QTest, Qt
 from air_quality_analyzer import AirQualityAnalyzer
 from robot_led import RobotLedController, RobotDisplayState as R
-from test_air_quality_analyzer import GOOD
-from test_sensor_worker import wait_until
+from tests.test_air_quality_analyzer import GOOD
+from tests.test_sensor_worker import wait_until
 from sensor_worker import SensorSnapshot
 import sensor_data as config
 from dashboard import MainWindow

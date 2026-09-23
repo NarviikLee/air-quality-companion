@@ -9,7 +9,7 @@ import time
 import unittest
 from single_instance import SingleInstance
 
-ROOT = Path(__file__).resolve().parent
+ROOT = Path(__file__).resolve().parents[1]
 CONTENDER = '''
 import sys
 from single_instance import SingleInstance

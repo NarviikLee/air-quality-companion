@@ -104,7 +104,7 @@ class WorkerTests(unittest.TestCase):
     def test_serial_snapshot_displays_without_fake_main_score(self):
         from types import SimpleNamespace
         from serial_source import SerialSensorSource
-        from test_serial_source import RAW, Port
+        from tests.test_serial_source import RAW, Port
         device = 'COM1' if os.name == 'nt' else '/dev/ttyUSB0'
         window = self.create(lambda: SerialSensorSource(
             ports=lambda: [SimpleNamespace(device=device)],

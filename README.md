@@ -86,11 +86,11 @@ if (!(Test-Path sensor_connection_local.py)) { Copy-Item sensor_connection_examp
 위 예제 복사 후 센서 없이 실행할 수 있습니다.
 
 ```powershell
-.\.venv\Scripts\python.exe -m unittest discover -p "test_*.py"
-.\.venv\Scripts\python.exe check_demo.py
+.\.venv\Scripts\python.exe -m unittest discover -s tests -p "test_*.py"
+.\.venv\Scripts\python.exe tests\check_demo.py
 ```
 
-테스트는 가짜 포트/데이터와 offscreen Qt를 사용합니다. 실제 장비 전용 패킷 테스트는 공개하지 않습니다. `check_demo.py`는 미리보기 PNG를 생성합니다.
+테스트는 가짜 포트/데이터와 offscreen Qt를 사용합니다. 실제 장비 전용 패킷 테스트는 공개하지 않습니다. `tests/check_demo.py`는 `demo_images/`에 미리보기 PNG를 생성합니다.
 
 README에 사용하는 현재 런타임 UI 이미지는 다음 명령으로 다시 생성합니다. `preview_robot.py`는 별도의 목업을 그리지 않고 실제 `MainWindow`, 로봇 홈 위젯, 센서 카드 위젯을 캡처합니다. 홈 이미지는 `MONITORING / 환경 확인 중` 상태로 고정됩니다.
 
@@ -98,8 +98,8 @@ README에 사용하는 현재 런타임 UI 이미지는 다음 명령으로 다�
 .\.venv\Scripts\python.exe preview_robot.py
 ```
 
-- `demo_robot_home.png`: MONITORING 로봇 홈 화면
-- `demo_preview.png`: 고정 예시값을 표시한 8개 센서 카드 화면
+- `demo_images/demo_robot_home.png`: MONITORING 로봇 홈 화면
+- `demo_images/demo_preview.png`: 고정 예시값을 표시한 8개 센서 카드 화면
 
 ## 유지보수 이력
 
@@ -144,5 +144,5 @@ README에 사용하는 현재 런타임 UI 이미지는 다음 명령으로 다�
 
 **V2 UI Animation / WIP.** 센서 분석과 통신은 V1 기준을 유지합니다. 실제 센서의 단위·음수 온도 인코딩·무효값, Pi의 응답 주기/timeout/터치/폰트·애니메이션 성능과 복구 동작은 장비에서 추가 확인해야 합니다. 외부 이동/정화 통신 규격과 장비 제어는 구현하지 않았습니다.
 
-![Robot home](demo_robot_home.png)
-![Sensor detail](demo_preview.png)
+![Robot home](demo_images/demo_robot_home.png)
+![Sensor detail](demo_images/demo_preview.png)

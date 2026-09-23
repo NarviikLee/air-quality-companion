@@ -40,4 +40,4 @@ sensor_status.py에서 기준·문구를 관리한다. 카드 링과 메시지�
 음수 농도, 0~100% 밖 습도, 비유한 값은 판정 함수에서 회색 ‘값 확인’으로 처리한다. 실제 통신 경로의 기존 비유한 값 거부는 유지한다.
 
 Pi 배포: dashboard.py, sensor_data.py, 새 sensor_status.py를 함께 복사한다.
-검증: `python -m unittest test_sensor_status` 및 `python check_demo.py`.
+검증: `python -m unittest tests.test_sensor_status` 및 `python tests/check_demo.py`.

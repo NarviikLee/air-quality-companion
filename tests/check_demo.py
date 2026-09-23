@@ -1,6 +1,11 @@
-"""Offscreen smoke check: python check_demo.py. Writes demo_preview.png."""
+"""Offscreen smoke check; writes screenshots under demo_images/."""
 import os
+from pathlib import Path
+import sys
 import time
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+OUTPUT_DIR = PROJECT_ROOT / 'demo_images'
+sys.path.insert(0, str(PROJECT_ROOT))
 os.environ['QT_QPA_PLATFORM'] = 'offscreen'
 
 from qt_compat import QPoint
@@ -56,10 +61,10 @@ for state in RobotDisplayState:
             assert origin.y() + widget.height() <= 480
             if isinstance(widget, QLabel) and not widget.wordWrap():
                 assert widget.fontMetrics().horizontalAdvance(widget.text()) <= widget.width(), widget.text()
-    assert window.grab().save(f'demo_state_{state.value}.png')
+    assert window.grab().save(str(OUTPUT_DIR / f'demo_state_{state.value}.png'))
 window.refresh_robot()
 app.processEvents()
-assert window.grab().save('demo_robot_home.png')
+assert window.grab().save(str(OUTPUT_DIR / 'demo_robot_home.png'))
 window.show_sensor_detail()
 app.processEvents()
 assert window.detail_return_timer.isActive()
@@ -114,7 +119,7 @@ for _ in range(1000):
         assert spec.minimum <= values[spec.name] <= spec.maximum
 window.display_values({s.name: s.initial for s in sensor_data.SENSORS}, sensor_data.MAIN_VALUE)
 app.processEvents()
-assert window.grab().save('demo_preview.png')
+assert window.grab().save(str(OUTPUT_DIR / 'demo_preview.png'))
 for mode in ('waiting', 'no_port'):
     settle()
     sensor_data.DEMO_CONNECTION = mode
@@ -131,7 +136,7 @@ for mode in ('waiting', 'no_port'):
         assert origin.y() + widget.height() <= 480
         if isinstance(widget, QLabel) and not widget.wordWrap():
             assert widget.fontMetrics().horizontalAdvance(widget.text()) <= widget.width(), widget.text()
-    assert window.grab().save(f'demo_{mode}.png')
+    assert window.grab().save(str(OUTPUT_DIR / f'demo_{mode}.png'))
     count = window.retry_count
     QTest.qWait(3300)
     settle()

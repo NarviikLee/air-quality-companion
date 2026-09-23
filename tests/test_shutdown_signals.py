@@ -62,7 +62,7 @@ print('PASS: signal -> closeEvent -> worker cleanup -> exit 0')
 '''.replace('SIGNAL_NAME', name)
                 environment = dict(os.environ, QT_QPA_PLATFORM='offscreen')
                 result = subprocess.run([sys.executable, '-c', code],
-                    cwd=str(Path(__file__).resolve().parent), env=environment,
+                    cwd=str(Path(__file__).resolve().parents[1]), env=environment,
                     stdout=subprocess.PIPE, stderr=subprocess.PIPE, timeout=12)
                 self.assertEqual(result.returncode, 0, repr(result.stdout + result.stderr))
                 self.assertIn(b'PASS:', result.stdout)

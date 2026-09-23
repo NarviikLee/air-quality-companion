@@ -89,7 +89,9 @@ def render_legacy_concept():
             text(28, 426, 744, 30, '공기 수치를 살펴본 뒤에는 에어봇이 다시 인사할게요.', 19, '#6B8275')
         p.end()
         name = 'robot_detail_preview.png' if detail else 'robot_home_preview.png'
-        assert img.save(str(Path(__file__).with_name(name)))
+        target = Path(__file__).resolve().parent / 'demo_images' / name
+        target.parent.mkdir(exist_ok=True)
+        assert img.save(str(target))
         print(name)
 
 
@@ -118,7 +120,8 @@ def _process_until(app, condition, timeout_sec=3.0):
 
 
 def _save_window(window, filename):
-    target = Path(__file__).resolve().with_name(filename)
+    target = Path(__file__).resolve().parent / 'demo_images' / filename
+    target.parent.mkdir(exist_ok=True)
     image = window.grab()
     if image.isNull() or not image.save(str(target)):
         raise RuntimeError('Could not save preview: %s' % target)
