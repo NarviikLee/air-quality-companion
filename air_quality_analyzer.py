@@ -21,8 +21,8 @@ class Measurement:
     values: tuple
 
 
-def map_robot_state(name, value):
-    level = assess_sensor(name, value).level
+def map_robot_state(name, value, temperature=None):
+    level = assess_sensor(name, value, temperature=temperature).level
     if level == 'CARD_UNKNOWN':
         raise ValueError('Invalid analysis value')
     if level == 'CARD_GOOD':
@@ -102,7 +102,9 @@ class AirQualityAnalyzer:
             return True
         self.averages = {name: sum(s.values[i] for s in self.samples) / len(self.samples)
                          for i, name in enumerate(NAMES)}
-        states = {name: map_robot_state(name, value) for name, value in self.averages.items()}
+        temperature = self.averages['Temperature']
+        states = {name: map_robot_state(name, value, temperature=temperature)
+                  for name, value in self.averages.items()}
         state = max(states.values())
         reasons = []
         for name in NAMES:
@@ -112,7 +114,12 @@ class AirQualityAnalyzer:
             if name == 'Temperature':
                 reason = 'temperature_low' if value < TEMPERATURE_COMFORT[0] else 'temperature_high'
             elif name == 'Humidity':
-                reason = 'humidity_low' if value < 30 else 'humidity_high'
+                if value < 30:
+                    reason = 'humidity_low'
+                elif value >= 60 or value > 50 or (temperature > 24 and value > 45):
+                    reason = 'humidity_high'
+                else:
+                    continue  # The temperature card already explains this thermal state.
             else:
                 reason = {'PM1.0': 'pm1', 'PM2.5': 'pm25', 'PM10': 'pm10'}[name] + ('_bad' if state == 2 else '_normal')
             reasons.append(reason)

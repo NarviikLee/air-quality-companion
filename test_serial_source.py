@@ -1,8 +1,9 @@
 import unittest
 from types import SimpleNamespace
-from unittest.mock import patch
+from unittest.mock import Mock, patch
 import serial
 import sensor_data as config
+import sensor_protocol_template as protocol_template
 from serial_source import SerialSensorSource
 
 RAW = dict(pm1=8, pm25=12, pm10=18, bioaerosol=16,
@@ -34,7 +35,7 @@ class SerialSourceTests(unittest.TestCase):
             port = Port(kwargs['port'])
             self.opened.append(port)
             return port
-        def read(port):
+        def read(port, cancel_event=None):
             if port.port not in self.names:
                 raise serial.SerialException('Device disconnected')
             if port.port in self.bad:
@@ -55,6 +56,25 @@ class SerialSourceTests(unittest.TestCase):
         self.assertGreater(self.settings[0]['write_timeout'], 0)
         self.source.read()
         self.assertEqual(len(self.opened), 1)
+
+    def test_unchanged_protocol_template_fails_before_opening_port(self):
+        opener = Mock()
+        with patch('serial_source.import_module', return_value=protocol_template):
+            with self.assertRaisesRegex(protocol_template.ProtocolError,
+                                        'Private sensor protocol is not configured'):
+                SerialSensorSource(opener=opener)
+        opener.assert_not_called()
+
+    def test_missing_private_protocol_uses_public_template(self):
+        def load(name):
+            if name == 'sensor_protocol':
+                raise ModuleNotFoundError("No module named 'sensor_protocol'",
+                                          name='sensor_protocol')
+            return protocol_template
+
+        with patch('serial_source.import_module', side_effect=load):
+            with self.assertRaises(protocol_template.ProtocolError):
+                SerialSensorSource()
 
     def test_port_list_logged_only_when_changed(self):
         with patch('serial_source.LOG') as log:
@@ -149,7 +169,7 @@ class SerialSourceTests(unittest.TestCase):
 
     def test_invalid_field_in_valid_response_keeps_port(self):
         self.names = ['COM1']
-        self.source.reader = lambda port: dict(RAW, voc=None)
+        self.source.reader = lambda port, cancel_event=None: dict(RAW, voc=None)
         values, _ = self.source.read()
         self.assertIsNone(values['VOC'])
         self.assertEqual(values['PM2.5'], 12)
@@ -159,7 +179,8 @@ class SerialSourceTests(unittest.TestCase):
         from sensor_protocol import CRCError, FrameError
         self.names = ['COM1']
         for error in (CRCError, FrameError):
-            self.source.reader = lambda port: (_ for _ in ()).throw(error('invalid frame'))
+            self.source.reader = lambda port, cancel_event=None: (_ for _ in ()).throw(
+                error('invalid frame'))
             with self.assertRaises(config.DataUnavailableError):
                 self.source.read()
             self.assertIsNone(self.source.connection)

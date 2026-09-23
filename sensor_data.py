@@ -61,6 +61,18 @@ MAIN_MAX = 100.0
 DEMO_CONNECTION = 'ok'  # 'ok', 'waiting' (수신 실패), 'no_port' (포트 없음)
 RETRY_INTERVAL_SECONDS = 3
 DEMO_RECOVER_AFTER = 0  # 0: 계속 실패, 2: 두 번 재시도 후 정상 복구
+DEMO_THERMAL_PROFILES = (
+    (18.0, 45.0),  # 적정 습도지만 서늘함
+    (22.0, 45.0),  # 쾌적
+    (25.0, 50.0),  # 다소 후텁지근
+    (28.0, 40.0),  # 습도는 적정하지만 온도가 높음
+    (28.0, 55.0),  # 후텁지근
+    (24.0, 25.0),  # 건조
+    (24.0, 65.0),  # 습함
+)
+# Keep a random profile long enough to pass moving-average and confirmation timers.
+DEMO_THERMAL_HOLD_SAMPLES = max(1, round(
+    (MOVING_AVERAGE_WINDOW_SEC + STATE_CONFIRM_DURATION_SEC + 5) / SAMPLE_INTERVAL_SEC))
 
 
 class PortUnavailableError(Exception):
@@ -123,6 +135,19 @@ class DummySensorSource:
         self.values = {spec.name: spec.initial for spec in SENSORS}
         self.main_value = MAIN_VALUE
         self.failed_reads = 0
+        self.thermal_profile = None
+        self.thermal_reads_remaining = 0
+
+    def _update_thermal_demo(self):
+        if self.thermal_reads_remaining <= 0:
+            choices = [profile for profile in DEMO_THERMAL_PROFILES
+                       if profile != self.thermal_profile]
+            self.thermal_profile = random.choice(choices)
+            self.thermal_reads_remaining = DEMO_THERMAL_HOLD_SAMPLES
+        temperature, humidity = self.thermal_profile
+        self.values['Temperature'] = temperature + random.uniform(-0.3, 0.3)
+        self.values['Humidity'] = max(0, min(100, humidity + random.uniform(-1, 1)))
+        self.thermal_reads_remaining -= 1
 
     def read(self):
         if DEMO_CONNECTION not in ('ok', 'waiting', 'no_port'):
@@ -135,8 +160,11 @@ class DummySensorSource:
             raise DataUnavailableError()
         if AUTO_UPDATE:
             for spec in SENSORS:
+                if spec.name in ('Temperature', 'Humidity'):
+                    continue
                 self.values[spec.name] = max(spec.minimum, min(spec.maximum,
                     self.values[spec.name] + random.uniform(-spec.step, spec.step)))
+            self._update_thermal_demo()
             self.main_value = max(0, min(MAIN_MAX,
                 self.main_value + random.uniform(-MAIN_STEP, MAIN_STEP)))
         return dict(self.values), self.main_value

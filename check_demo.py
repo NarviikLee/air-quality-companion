@@ -78,7 +78,7 @@ for pm1, pm25, pm10, humidity, temperature in [
     window.display_values(values, sensor_data.MAIN_VALUE)
     app.processEvents()
     for name, (gauge, state) in window.gauges.items():
-        assessment = assess_sensor(name, values[name])
+        assessment = assess_sensor(name, values[name], temperature=values['Temperature'])
         assert gauge.status == assessment.level
         assert state.text() == ('—' if assessment.message == '기준 미정' else assessment.message)
         assert state.accessibleName() == assessment.message

@@ -3,11 +3,11 @@
 One candidate per read call; the UI schedules the next attempt.
 """
 import logging
+from importlib import import_module
 from sensor_status import validate_sensor_value
 import serial
 from serial.tools.list_ports import comports
 import sensor_data as config
-from sensor_protocol import read_sensor_data
 from port_discovery import discover_ports, resolve_os_mode
 
 LOG = logging.getLogger(__name__)
@@ -16,12 +16,27 @@ KEYS = {'PM1.0': 'pm1', 'PM2.5': 'pm25', 'PM10': 'pm10',
         'Humidity': 'humidity', 'VOC': 'voc', 'NOx': 'nox'}
 
 
+def _load_protocol_reader():
+    """Load the private protocol, or its non-operational public interface."""
+    try:
+        protocol = import_module('sensor_protocol')
+    except ModuleNotFoundError as error:
+        if error.name != 'sensor_protocol':
+            raise
+        protocol = import_module('sensor_protocol_template')
+    validator = getattr(protocol, 'validate_protocol_config', None)
+    if validator is not None:
+        validator()
+    return protocol.read_sensor_data
+
+
 class SerialSensorSource:
-    def __init__(self, ports=comports, opener=serial.Serial, reader=read_sensor_data):
+    def __init__(self, ports=comports, opener=serial.Serial, reader=None):
         if (config.SERIAL_TIMEOUT_SECONDS <= 0 or config.SERIAL_WRITE_TIMEOUT_SECONDS <= 0
                 or config.PORT_FAILURE_LIMIT < 1):
             raise ValueError('Timeouts must be positive and failure limit at least one')
-        self.ports, self.opener, self.reader = ports, opener, reader
+        self.ports, self.opener = ports, opener
+        self.reader = _load_protocol_reader() if reader is None else reader
         self.os_mode = resolve_os_mode(config.OS_MODE)
         LOG.info('Serial port discovery mode: %s', self.os_mode)
         self.connection = None
@@ -82,10 +97,7 @@ class SerialSensorSource:
                 raise config.DataUnavailableError(f'{name}: open failed: {error}') from error
         name = self.connection.port
         try:
-            if self.reader is read_sensor_data:
-                raw = self.reader(self.connection, cancel_event=self.cancel_event)
-            else:
-                raw = self.reader(self.connection)
+            raw = self.reader(self.connection, cancel_event=self.cancel_event)
             # reader must return only after whole-frame validation succeeds.
             values = {s.name: validate_sensor_value(s.name, raw[KEYS[s.name]])
                       for s in config.SENSORS}

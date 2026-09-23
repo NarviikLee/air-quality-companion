@@ -1,6 +1,7 @@
 import unittest
+from unittest.mock import patch
 from sensor_status import assess_sensor
-from sensor_data import get_status
+from sensor_data import DummySensorSource, DEMO_THERMAL_HOLD_SAMPLES, get_status
 
 
 class SensorStatusTests(unittest.TestCase):
@@ -20,6 +21,22 @@ class SensorStatusTests(unittest.TestCase):
                                (60, '습함'), (100, '습함')]:
             self.assertEqual(assess_sensor('Humidity', value).message, message)
 
+    def test_humidity_label_uses_temperature_context(self):
+        cases = [
+            (18, 45, '적정·서늘함', 'CARD_GOOD'),
+            (22, 45, '쾌적', 'CARD_GOOD'),
+            (25, 45, '쾌적', 'CARD_GOOD'),
+            (25, 50, '다소 후텁지근', 'CARD_WARNING'),
+            (28, 40, '온도 높음', 'CARD_WARNING'),
+            (28, 50, '후텁지근', 'CARD_WARNING'),
+            (22, 60, '습함', 'CARD_BAD'),
+        ]
+        for temperature, humidity, message, level in cases:
+            with self.subTest(temperature=temperature, humidity=humidity):
+                result = assess_sensor('Humidity', humidity, temperature=temperature)
+                self.assertEqual(result.message, message)
+                self.assertEqual(result.level, level)
+
     def test_temperature_is_comfort_not_pollution(self):
         for value, message in [(-5, '낮음'), (19.9, '낮음'), (20, '적정'),
                                (26, '적정'), (26.1, '높음')]:
@@ -38,6 +55,18 @@ class SensorStatusTests(unittest.TestCase):
     def test_central_demo_policy_unchanged(self):
         for value, expected in [(30, 'GOOD'), (55, 'NORMAL'), (80, 'BAD'), (81, 'VERY BAD')]:
             self.assertEqual(get_status('MAIN', value), expected)
+
+    def test_demo_holds_a_random_thermal_profile(self):
+        source = DummySensorSource()
+        with patch('sensor_data.random.choice', return_value=(25.0, 50.0)), \
+                patch('sensor_data.random.uniform', return_value=0):
+            values, _ = source.read()
+        self.assertEqual(values['Temperature'], 25.0)
+        self.assertEqual(values['Humidity'], 50.0)
+        self.assertEqual(source.thermal_reads_remaining, DEMO_THERMAL_HOLD_SAMPLES - 1)
+        self.assertEqual(
+            assess_sensor('Humidity', values['Humidity'], values['Temperature']).message,
+            '다소 후텁지근')
 
 
 if __name__ == '__main__':

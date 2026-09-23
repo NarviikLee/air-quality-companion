@@ -109,7 +109,7 @@ class WorkerTests(unittest.TestCase):
         window = self.create(lambda: SerialSensorSource(
             ports=lambda: [SimpleNamespace(device=device)],
             opener=lambda **kwargs: Port(kwargs['port']),
-            reader=lambda port: RAW.copy()))
+            reader=lambda port, cancel_event=None: RAW.copy()))
         wait_until(lambda: not window.analyzer.sensor_check)
         self.assertEqual(window.main_gauge.status, 'MAIN')
         self.assertEqual(window.gauges['Temperature'][0].value, 24.5)

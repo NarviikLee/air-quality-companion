@@ -19,6 +19,7 @@ Thumbs.db
 # Local / sensitive configuration
 .env
 sensor_protocol.py
+PROGRAM_LOGIC_LOCAL.md
 *_local.py
 *_secret.py
 

@@ -36,7 +36,7 @@ def validate_sensor_value(name, value):
     return value
 
 
-def assess_sensor(name, value):
+def assess_sensor(name, value, temperature=None):
     value = validate_sensor_value(name, value)
     if value is None:
         return Assessment('CARD_UNKNOWN', '값 확인', '유효한 측정 범위를 확인하세요.')
@@ -50,9 +50,29 @@ def assess_sensor(name, value):
                 return Assessment(level, message, detail)
         return Assessment('CARD_SEVERE', '매우 나쁨', detail)
     if name == 'Humidity':
-        detail = 'EPA 권장 습도 30~50%, 60% 미만 유지 참고. 색상은 제품 표시 정책입니다.'
+        detail = ('EPA 권장 습도 30~50%, 60% 미만 유지 참고. '
+                  '라벨은 현재 온도를 함께 반영한 제품 표시 정책입니다.')
         if value < 30:
             return Assessment('CARD_WARNING', '건조', detail)
+        temperature = validate_sensor_value('Temperature', temperature)
+        if temperature is not None:
+            if value >= 60:
+                return Assessment('CARD_BAD', '습함', detail)
+            if temperature < 20:
+                if value <= 50:
+                    return Assessment('CARD_GOOD', '적정·서늘함', detail)
+                return Assessment('CARD_WARNING', '다소 습함', detail)
+            if temperature <= 24:
+                if value <= 50:
+                    return Assessment('CARD_GOOD', '쾌적', detail)
+                return Assessment('CARD_WARNING', '다소 습함', detail)
+            if temperature <= 26:
+                if value <= 45:
+                    return Assessment('CARD_GOOD', '쾌적', detail)
+                return Assessment('CARD_WARNING', '다소 후텁지근', detail)
+            if value <= 45:
+                return Assessment('CARD_WARNING', '온도 높음', detail)
+            return Assessment('CARD_WARNING', '후텁지근', detail)
         if value <= 50:
             return Assessment('CARD_GOOD', '적정', detail)
         if value < 60:

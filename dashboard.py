@@ -412,8 +412,9 @@ class MainWindow(QWidget):
             status = get_status('MAIN', main_value)
             self.main_gauge.set_value(main_value, status)
             self.message.setText(STATUS_MESSAGES[status])
+        temperature = values.get('Temperature')
         for name, (gauge, state) in self.gauges.items():
-            assessment = assess_sensor(name, values[name])
+            assessment = assess_sensor(name, values[name], temperature=temperature)
             status = assessment.level
             gauge.set_value(values[name], status)
             gauge.setAccessibleName(f'{name}: {values[name]} {gauge.unit}, {assessment.message}')

@@ -42,6 +42,21 @@ class AnalyzerTests(unittest.TestCase):
         self.assertEqual(a.confirmed_state, 1)
         self.assertEqual(a.reasons, ['humidity_high'])
 
+    def test_warm_humidity_changes_robot_from_comfortable_to_normal(self):
+        a = self.prepared(dict(GOOD, Temperature=25, Humidity=50))
+        self.assertEqual(a.confirmed_state, AirQualityState.NORMAL)
+        self.assertEqual(a.reasons, ['humidity_high'])
+
+    def test_same_humidity_is_comfortable_at_milder_temperature(self):
+        a = self.prepared(dict(GOOD, Temperature=22, Humidity=50))
+        self.assertEqual(a.confirmed_state, AirQualityState.COMFORTABLE)
+        self.assertEqual(a.reasons, [])
+
+    def test_high_temperature_does_not_blame_normal_humidity(self):
+        a = self.prepared(dict(GOOD, Temperature=28, Humidity=40))
+        self.assertEqual(a.confirmed_state, AirQualityState.NORMAL)
+        self.assertEqual(a.reasons, ['temperature_high'])
+
     def test_invalid_before_average(self):
         for name, value in [('PM1.0', -1), ('Humidity', 101), ('Temperature', None),
                             ('Temperature', float('nan')), ('PM10', 'bad')]:
