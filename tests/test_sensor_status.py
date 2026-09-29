@@ -1,5 +1,6 @@
 import unittest
 from unittest.mock import patch
+from air_quality_analyzer import AirQualityAnalyzer
 from sensor_status import assess_sensor
 from sensor_data import (DataUnavailableError, DummySensorSource,
                          DEMO_THERMAL_HOLD_SAMPLES, PortUnavailableError, get_status)
@@ -99,19 +100,31 @@ class SensorStatusTests(unittest.TestCase):
         with patch('sensor_data.DEMO_DATA_SCENARIO', 'tour'), \
                 patch('sensor_data.AUTO_UPDATE', False):
             source = DummySensorSource()
+            analyzer = AirQualityAnalyzer()
             samples = {}
             errors = {}
-            for attempt in range(1, 62):
+            channel_states = {}
+            for attempt in range(1, 94):
                 try:
                     samples[attempt] = source.read()[0]
                 except (DataUnavailableError, PortUnavailableError) as error:
                     errors[attempt] = type(error)
+                    analyzer.record_failure(attempt, isinstance(error, PortUnavailableError))
+                else:
+                    analyzer.accept_sample(samples[attempt], attempt)
+                if attempt in (57, 58, 87, 88):
+                    channel_states[attempt] = analyzer.channel_display_status('Humidity')
         self.assertEqual(samples[42]['PM2.5'], 100)
         self.assertIsNone(samples[52]['Humidity'])
-        self.assertTrue(all(samples[57][name] is None for name in
+        self.assertIsNotNone(samples[58]['Humidity'])
+        self.assertEqual(channel_states[57], 'checking')
+        self.assertEqual(channel_states[58], 'recovering')
+        self.assertEqual(channel_states[87], 'recovering')
+        self.assertIsNone(channel_states[88])
+        self.assertTrue(all(samples[89][name] is None for name in
                             ('PM1.0', 'PM2.5', 'PM10', 'Temperature', 'Humidity')))
-        self.assertIs(errors[60], DataUnavailableError)
-        self.assertIs(errors[61], PortUnavailableError)
+        self.assertIs(errors[92], DataUnavailableError)
+        self.assertIs(errors[93], PortUnavailableError)
 
 
 if __name__ == '__main__':
