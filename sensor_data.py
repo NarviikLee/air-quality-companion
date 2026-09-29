@@ -69,7 +69,7 @@ DEMO_RECOVER_AFTER = 0  # 0: 계속 실패, 2: 두 번 재시도 후 정상 복�
 DEMO_PM_RISE_START_SAMPLE = 42
 DEMO_PM_RISE_DURATION_SAMPLES = 5
 DEMO_PM_RISE_CYCLE_SAMPLES = 60
-DEMO_TOUR_CYCLE_ATTEMPTS = 140
+DEMO_TOUR_CYCLE_ATTEMPTS = 145
 DEMO_THERMAL_PROFILES = (
     (18.0, 45.0),  # 적정 습도지만 서늘함
     (22.0, 45.0),  # 쾌적
@@ -196,11 +196,11 @@ class DummySensorSource:
                 result['PM2.5'] = 100.0
             elif 52 <= phase <= 57:
                 result['Humidity'] = None
-            elif 89 <= phase <= 91:
+            elif 91 <= phase <= 93:
                 for name in ('PM1.0', 'PM2.5', 'PM10', 'Temperature', 'Humidity'):
                     result[name] = None
-            elif phase == 92:
+            elif phase == 94:
                 raise DataUnavailableError('Demo tour: communication timeout')
-            elif phase == 93:
+            elif phase == 95:
                 raise PortUnavailableError('Demo tour: no serial port')
         return result, self.main_value

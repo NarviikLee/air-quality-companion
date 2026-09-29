@@ -104,15 +104,15 @@ class SensorStatusTests(unittest.TestCase):
             samples = {}
             errors = {}
             channel_states = {}
-            for attempt in range(1, 94):
+            for attempt in range(1, 96):
                 try:
                     samples[attempt] = source.read()[0]
                 except (DataUnavailableError, PortUnavailableError) as error:
                     errors[attempt] = type(error)
-                    analyzer.record_failure(attempt, isinstance(error, PortUnavailableError))
+                    analyzer.record_failure(attempt * 0.99, isinstance(error, PortUnavailableError))
                 else:
-                    analyzer.accept_sample(samples[attempt], attempt)
-                if attempt in (57, 58, 87, 88):
+                    analyzer.accept_sample(samples[attempt], attempt * 0.99)
+                if attempt in (57, 58, 87, 88, 90):
                     channel_states[attempt] = analyzer.channel_display_status('Humidity')
         self.assertEqual(samples[42]['PM2.5'], 100)
         self.assertIsNone(samples[52]['Humidity'])
@@ -120,11 +120,12 @@ class SensorStatusTests(unittest.TestCase):
         self.assertEqual(channel_states[57], 'checking')
         self.assertEqual(channel_states[58], 'recovering')
         self.assertEqual(channel_states[87], 'recovering')
-        self.assertIsNone(channel_states[88])
-        self.assertTrue(all(samples[89][name] is None for name in
+        self.assertEqual(channel_states[88], 'recovering')
+        self.assertIsNone(channel_states[90])
+        self.assertTrue(all(samples[91][name] is None for name in
                             ('PM1.0', 'PM2.5', 'PM10', 'Temperature', 'Humidity')))
-        self.assertIs(errors[92], DataUnavailableError)
-        self.assertIs(errors[93], PortUnavailableError)
+        self.assertIs(errors[94], DataUnavailableError)
+        self.assertIs(errors[95], PortUnavailableError)
 
 
 if __name__ == '__main__':
