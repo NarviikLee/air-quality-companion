@@ -209,6 +209,37 @@ class AnalyzerTests(unittest.TestCase):
         self.assertGreater(a.averages['PM2.5'], 90)
         self.assertEqual(a.confirmed_state, AirQualityState.BAD)
 
+    def test_invalid_pm_does_not_clear_another_pm_rapid_history(self):
+        a = self.prepared()
+        for timestamp in (41, 42, 43, 44):
+            a.accept_sample(dict(GOOD, **{'PM1.0': None, 'PM2.5': 100}), timestamp)
+        self.assertEqual(a.confirmed_state, AirQualityState.BAD)
+        self.assertEqual(a.reasons, ['pm25_bad'])
+
+    def test_short_channel_gap_keeps_existing_window(self):
+        a = self.prepared()
+        a.accept_sample(dict(GOOD, Humidity=None), 41)
+        self.assertEqual(a.channel_display_status('Humidity'), 'invalid')
+        a.accept_sample(GOOD, 42)
+        self.assertIsNone(a.channel_display_status('Humidity'))
+        self.assertTrue(a.ready)
+
+    def test_stale_channel_alone_restarts_its_warmup(self):
+        a = self.prepared()
+        for timestamp in range(41, 46):
+            a.accept_sample(dict(GOOD, Humidity=None), timestamp)
+        self.assertEqual(a.channel_display_status('Humidity'), 'checking')
+        self.assertNotIn('Humidity', a.ready_channels)
+        self.assertIn('PM2.5', a.ready_channels)
+        a.accept_sample(GOOD, 46)
+        self.assertEqual(a.channel_display_status('Humidity'), 'recovering')
+        for timestamp in range(47, 76):
+            a.accept_sample(GOOD, timestamp)
+        self.assertEqual(a.channel_display_status('Humidity'), 'recovering')
+        a.accept_sample(GOOD, 76)
+        self.assertIsNone(a.channel_display_status('Humidity'))
+        self.assertTrue(a.ready)
+
 
 if __name__ == '__main__':
     unittest.main()

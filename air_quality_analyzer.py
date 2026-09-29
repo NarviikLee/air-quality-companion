@@ -39,8 +39,13 @@ class AirQualityAnalyzer:
 
     def reset(self):
         self.samples = deque()
-        self.rapid_samples = deque(maxlen=config.FAST_RISE_WINDOW_SAMPLES)
+        self.rapid_samples = {name: deque(maxlen=config.FAST_RISE_WINDOW_SAMPLES)
+                              for name in NAMES[:3]}
         self.first_valid_at = {name: None for name in NAMES}
+        self.last_valid_at = {name: None for name in NAMES}
+        self.invalid_since = {name: None for name in NAMES}
+        self.recovering_channels = set()
+        self.ready_channels = set()
         self.first_at = self.last_at = None
         self.failures = 0
         self.sensor_check = True
@@ -62,15 +67,10 @@ class AirQualityAnalyzer:
         for target in (AirQualityState.BAD, AirQualityState.NORMAL):
             if target <= self.confirmed_state:
                 continue
-            matching_by_name = {}
-            for index, name in enumerate(NAMES[:3]):
-                matching_by_name[name] = [
-                    sample.timestamp for sample in self.rapid_samples
-                    if (sample.values[index] is not None
-                        and map_robot_state(name, sample.values[index]) >= target)
-                ]
             reasons = []
-            for name, timestamps in matching_by_name.items():
+            for name, samples in self.rapid_samples.items():
+                timestamps = [timestamp for timestamp, value in samples
+                              if map_robot_state(name, value) >= target]
                 if (len(timestamps) >= config.FAST_RISE_REQUIRED_SAMPLES
                         and now - timestamps[0] >= config.FAST_RISE_CONFIRM_DURATION_SEC):
                     reason = {'PM1.0': 'pm1', 'PM2.5': 'pm25', 'PM10': 'pm10'}[name]
@@ -86,6 +86,19 @@ class AirQualityAnalyzer:
             if not any(sample.values[index] is not None for sample in self.samples):
                 self.first_valid_at[name] = None
 
+    def channel_display_status(self, name):
+        """Return the detail-card-only acquisition state for an analysis channel."""
+        if name not in self.first_valid_at:
+            return None
+        if self.invalid_since[name] is not None:
+            last_valid = self.last_valid_at[name]
+            if last_valid is None or self.last_at - last_valid >= config.CHANNEL_STALE_TIMEOUT_SEC:
+                return 'checking'
+            return 'invalid'
+        if name in self.recovering_channels and name not in self.ready_channels:
+            return 'recovering'
+        return None
+
     def check_stale(self, now=None):
         now = self.clock() if now is None else now
         if self.last_at is not None and now - self.last_at >= config.SENSOR_STALE_TIMEOUT_SEC:
@@ -100,7 +113,8 @@ class AirQualityAnalyzer:
     def record_failure(self, now=None, no_port=False):
         now = self.clock() if now is None else now
         self.clear_candidate()
-        self.rapid_samples.clear()
+        for samples in self.rapid_samples.values():
+            samples.clear()
         self.delayed = True
         self.failures += 1
         if no_port or self.failures >= config.MAX_CONSECUTIVE_FAILURES:
@@ -124,29 +138,53 @@ class AirQualityAnalyzer:
             self.first_at = now
         self.last_at = now
         for index, name in enumerate(NAMES):
-            if clean[index] is not None and self.first_valid_at[name] is None:
+            value = clean[index]
+            if value is None:
+                if self.invalid_since[name] is None:
+                    self.invalid_since[name] = now
+                last_valid = self.last_valid_at[name]
+                if (last_valid is None
+                        or now - last_valid >= config.CHANNEL_STALE_TIMEOUT_SEC):
+                    self.first_valid_at[name] = None
+                    self.ready_channels.discard(name)
+                    self.recovering_channels.add(name)
+                if name in self.rapid_samples:
+                    self.rapid_samples[name].clear()
+                continue
+            if (self.invalid_since[name] is not None
+                    and self.last_valid_at[name] is not None
+                    and now - self.last_valid_at[name] >= config.CHANNEL_STALE_TIMEOUT_SEC):
                 self.first_valid_at[name] = now
+                self.ready_channels.discard(name)
+                self.recovering_channels.add(name)
+            elif self.first_valid_at[name] is None:
+                self.first_valid_at[name] = now
+            self.invalid_since[name] = None
+            self.last_valid_at[name] = now
+            if name in self.rapid_samples:
+                self.rapid_samples[name].append((now, value))
         measurement = Measurement(now, clean)
         self.samples.append(measurement)
-        if any(value is None for value in clean[:3]):
-            # Never join a PM rise across a missing/invalid PM measurement.
-            self.rapid_samples.clear()
-        self.rapid_samples.append(measurement)
         self._prune(now)
+        ready_values = {}
+        for index, name in enumerate(NAMES):
+            valid = [(sample.timestamp, sample.values[index]) for sample in self.samples
+                     if (sample.values[index] is not None
+                         and self.first_valid_at[name] is not None
+                         and sample.timestamp >= self.first_valid_at[name])]
+            if (self.first_valid_at[name] is not None
+                    and len(valid) >= config.MIN_SAMPLES_IN_WINDOW
+                    and now - self.first_valid_at[name] >= config.MOVING_AVERAGE_WINDOW_SEC):
+                ready_values[name] = [value for _, value in valid]
+        self.ready_channels = set(ready_values)
+        self.recovering_channels.difference_update(self.ready_channels)
+        self.ready = len(ready_values) == len(NAMES)
         rapid_state, rapid_reasons = self._rapid_worsening(now)
         if rapid_state is not None:
             self.confirmed_state = rapid_state
             self.reasons = rapid_reasons
             self.clear_candidate()
             return True
-        ready_values = {}
-        for index, name in enumerate(NAMES):
-            valid = [(sample.timestamp, sample.values[index]) for sample in self.samples
-                     if sample.values[index] is not None]
-            if (len(valid) >= config.MIN_SAMPLES_IN_WINDOW
-                    and now - self.first_valid_at[name] >= config.MOVING_AVERAGE_WINDOW_SEC):
-                ready_values[name] = [value for _, value in valid]
-        self.ready = len(ready_values) == len(NAMES)
         if not ready_values:
             self.clear_candidate()
             return True

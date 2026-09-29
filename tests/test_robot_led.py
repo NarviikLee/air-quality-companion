@@ -63,6 +63,16 @@ class RobotTests(unittest.TestCase):
         controller.set_purifying(False)
         self.assertEqual(controller.resolve(analyzer)[0], R.MONITORING)
 
+    def test_partial_channel_failure_does_not_change_robot_face(self):
+        analyzer, controller = AirQualityAnalyzer(), RobotLedController()
+        for timestamp in range(41):
+            analyzer.accept_sample(GOOD, timestamp)
+        expected = controller.resolve(analyzer)[:2]
+        for timestamp in range(41, 46):
+            analyzer.accept_sample(dict(GOOD, Humidity=None), timestamp)
+        self.assertEqual(controller.resolve(analyzer)[:2], expected)
+        self.assertEqual(analyzer.channel_display_status('Humidity'), 'checking')
+
     def test_moving_priority_and_candidate_face(self):
         a, c = AirQualityAnalyzer(), RobotLedController()
         c.set_moving(True)

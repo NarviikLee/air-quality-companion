@@ -416,10 +416,22 @@ class MainWindow(QWidget):
         for name, (gauge, state) in self.gauges.items():
             assessment = assess_sensor(name, values[name], temperature=temperature)
             status = assessment.level
+            acquisition_status = self.analyzer.channel_display_status(name)
+            if acquisition_status in ('checking', 'recovering'):
+                status = 'CARD_UNKNOWN'
             gauge.set_value(values[name], status)
             gauge.setAccessibleName(f'{name}: {values[name]} {gauge.unit}, {assessment.message}')
-            state.setText('—' if assessment.message == '기준 미정' else assessment.message)
-            state.setAccessibleName(assessment.message)
+            if acquisition_status == 'checking':
+                message = '센서 확인 중'
+                accessible_message = message
+            elif acquisition_status == 'recovering':
+                message = '데이터 보충 중'
+                accessible_message = message
+            else:
+                message = '—' if assessment.message == '기준 미정' else assessment.message
+                accessible_message = assessment.message
+            state.setText(message)
+            state.setAccessibleName(accessible_message)
             state.setStyleSheet(f'font-size: 13px; font-weight: 400; color: {STATUS_COLORS[status]};')
 
     def mark_detail_delayed(self):
