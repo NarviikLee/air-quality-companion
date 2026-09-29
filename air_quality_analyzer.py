@@ -40,6 +40,7 @@ class AirQualityAnalyzer:
     def reset(self):
         self.samples = deque()
         self.rapid_samples = deque(maxlen=config.FAST_RISE_WINDOW_SAMPLES)
+        self.first_valid_at = {name: None for name in NAMES}
         self.first_at = self.last_at = None
         self.failures = 0
         self.sensor_check = True
@@ -81,6 +82,9 @@ class AirQualityAnalyzer:
     def _prune(self, now):
         while self.samples and self.samples[0].timestamp < now - config.MOVING_AVERAGE_WINDOW_SEC:
             self.samples.popleft()
+        for index, name in enumerate(NAMES):
+            if not any(sample.values[index] is not None for sample in self.samples):
+                self.first_valid_at[name] = None
 
     def check_stale(self, now=None):
         now = self.clock() if now is None else now
@@ -119,6 +123,9 @@ class AirQualityAnalyzer:
         if self.first_at is None:
             self.first_at = now
         self.last_at = now
+        for index, name in enumerate(NAMES):
+            if clean[index] is not None and self.first_valid_at[name] is None:
+                self.first_valid_at[name] = now
         measurement = Measurement(now, clean)
         self.samples.append(measurement)
         if any(value is None for value in clean[:3]):
@@ -137,7 +144,7 @@ class AirQualityAnalyzer:
             valid = [(sample.timestamp, sample.values[index]) for sample in self.samples
                      if sample.values[index] is not None]
             if (len(valid) >= config.MIN_SAMPLES_IN_WINDOW
-                    and now - valid[0][0] >= config.MOVING_AVERAGE_WINDOW_SEC):
+                    and now - self.first_valid_at[name] >= config.MOVING_AVERAGE_WINDOW_SEC):
                 ready_values[name] = [value for _, value in valid]
         self.ready = len(ready_values) == len(NAMES)
         if not ready_values:

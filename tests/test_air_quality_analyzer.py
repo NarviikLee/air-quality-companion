@@ -33,6 +33,13 @@ class AnalyzerTests(unittest.TestCase):
         self.assertFalse(a.ready)
         self.assertIsNone(a.confirmed_state)
 
+    def test_timer_jitter_does_not_prevent_analyzer_from_becoming_ready(self):
+        a = AirQualityAnalyzer()
+        for index in range(42):
+            a.accept_sample(GOOD, index * 1.01)
+        self.assertTrue(a.ready)
+        self.assertEqual(a.confirmed_state, AirQualityState.COMFORTABLE)
+
     def test_mapping_and_reasons(self):
         for name in ('Temperature', 'Humidity'):
             self.assertEqual(map_robot_state(name, 80), 1)
