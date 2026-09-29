@@ -157,6 +157,26 @@ for _ in range(2):
     else:
         raise AssertionError('Expected unavailable data')
 assert len(source.read()[0]) == 8
+
+# New analysis demos: one invalid channel and a sustained PM2.5 rise.
+sensor_data.DEMO_CONNECTION = 'ok'
+sensor_data.DEMO_DATA_SCENARIO = 'partial_error'
+partial_values, _ = sensor_data.DummySensorSource().read()
+window.display_values(partial_values, sensor_data.MAIN_VALUE)
+app.processEvents()
+assert partial_values['Humidity'] is None
+assert window.gauges['Humidity'][0].value is None
+assert window.gauges['Humidity'][1].text() == '값 확인'
+assert window.gauges['PM2.5'][0].value is not None
+
+sensor_data.DEMO_DATA_SCENARIO = 'pm_rise'
+sensor_data.AUTO_UPDATE = False
+rise_source = sensor_data.DummySensorSource()
+rise_values = [rise_source.read()[0] for _ in range(46)]
+assert all(values['PM2.5'] != 100 for values in rise_values[:41])
+assert all(values['PM2.5'] == 100 for values in rise_values[41:46])
+sensor_data.AUTO_UPDATE = True
+sensor_data.DEMO_DATA_SCENARIO = 'normal'
 window.pages.setCurrentWidget(window.dashboard_page)
 window.detail_return_timer.start(20)
 QTest.qWait(50)
@@ -166,4 +186,4 @@ QTest.qWait(200)
 assert not window.sensor_thread.isRunning()
 window.sensor_thread.wait()
 app.processEvents()
-print('PASS: all robot states, PM1.0/PM2.5/PM10 boundaries, 800x480 bounds, labels, timer, data ranges')
+print('PASS: robot states, PM boundaries, partial-error/PM-rise demos, bounds, labels, timer, data ranges')

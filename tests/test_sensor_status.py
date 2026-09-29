@@ -80,6 +80,20 @@ class SensorStatusTests(unittest.TestCase):
             assess_sensor('Humidity', values['Humidity'], values['Temperature']).message,
             '다소 후텁지근')
 
+    def test_demo_partial_error_only_invalidates_humidity(self):
+        with patch('sensor_data.DEMO_DATA_SCENARIO', 'partial_error'):
+            values, _ = DummySensorSource().read()
+        self.assertIsNone(values['Humidity'])
+        self.assertTrue(all(values[name] is not None for name in values if name != 'Humidity'))
+
+    def test_demo_pm_rise_starts_after_initial_confirmation_period(self):
+        with patch('sensor_data.DEMO_DATA_SCENARIO', 'pm_rise'), \
+                patch('sensor_data.AUTO_UPDATE', False):
+            source = DummySensorSource()
+            samples = [source.read()[0] for _ in range(46)]
+        self.assertTrue(all(sample['PM2.5'] != 100 for sample in samples[:41]))
+        self.assertTrue(all(sample['PM2.5'] == 100 for sample in samples[41:46]))
+
 
 if __name__ == '__main__':
     unittest.main()

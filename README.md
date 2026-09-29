@@ -64,6 +64,18 @@ python -m venv .venv
 .\.venv\Scripts\python.exe main.py --demo-states --windowed
 ```
 
+부분 센서 오류와 PM 빠른 악화 로직은 다음 데모로 확인합니다.
+
+```powershell
+# 습도 카드만 '값 확인', 나머지 센서 분석은 계속
+.\.venv\Scripts\python.exe main.py --demo-partial --windowed
+
+# 초기 상태 확정 후 PM2.5가 5초 동안 100 µg/m³로 상승
+.\.venv\Scripts\python.exe main.py --demo-pm-rise --windowed
+```
+
+`--demo-pm-rise`는 최초 상태가 확정될 시간을 확보한 뒤 42번째 정상 수신부터 PM2.5 급상승을 발생시키며, 60회 주기로 반복합니다. `--demo-partial`은 통신 자체는 정상으로 유지하면서 습도값만 무효로 반환합니다.
+
 Raspberry Pi/Linux에서는 같은 옵션을 `python3 main.py --demo-states --windowed` 형식으로 실행합니다. 전체화면 확인 시 `--windowed`를 생략합니다.
 
 공개본에는 실제 센서 프로토콜과 통신 값이 없습니다. 먼저 `--demo`로 실행하세요. 전체화면은 `--windowed`를 생략합니다. Linux에서는 해당 환경의 PySide2 또는 PySide6와 pySerial을 별도로 준비하세요. 기존 Raspberry Pi의 Python 3.7/PySide2 호환을 고려하지만 장비에서 직접 검증해야 합니다.

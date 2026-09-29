@@ -62,8 +62,12 @@ MAIN_VALUE = 24.0  # 센서와 독립적인 임시 점수. 실제 AQI가 아닙�
 MAIN_STEP = 2.0
 MAIN_MAX = 100.0
 DEMO_CONNECTION = 'ok'  # 'ok', 'waiting' (수신 실패), 'no_port' (포트 없음)
+DEMO_DATA_SCENARIO = 'normal'  # 'normal', 'partial_error', 'pm_rise'
 RETRY_INTERVAL_SECONDS = 3
 DEMO_RECOVER_AFTER = 0  # 0: 계속 실패, 2: 두 번 재시도 후 정상 복구
+DEMO_PM_RISE_START_SAMPLE = 42
+DEMO_PM_RISE_DURATION_SAMPLES = 5
+DEMO_PM_RISE_CYCLE_SAMPLES = 60
 DEMO_THERMAL_PROFILES = (
     (18.0, 45.0),  # 적정 습도지만 서늘함
     (22.0, 45.0),  # 쾌적
@@ -138,6 +142,7 @@ class DummySensorSource:
         self.values = {spec.name: spec.initial for spec in SENSORS}
         self.main_value = MAIN_VALUE
         self.failed_reads = 0
+        self.successful_reads = 0
         self.thermal_profile = None
         self.thermal_reads_remaining = 0
 
@@ -161,6 +166,8 @@ class DummySensorSource:
             if DEMO_CONNECTION == 'no_port':
                 raise PortUnavailableError()
             raise DataUnavailableError()
+        if DEMO_DATA_SCENARIO not in ('normal', 'partial_error', 'pm_rise'):
+            raise ValueError('DEMO_DATA_SCENARIO must be normal, partial_error or pm_rise')
         if AUTO_UPDATE:
             for spec in SENSORS:
                 if spec.name in ('Temperature', 'Humidity'):
@@ -170,4 +177,13 @@ class DummySensorSource:
             self._update_thermal_demo()
             self.main_value = max(0, min(MAIN_MAX,
                 self.main_value + random.uniform(-MAIN_STEP, MAIN_STEP)))
-        return dict(self.values), self.main_value
+        self.successful_reads += 1
+        result = dict(self.values)
+        if DEMO_DATA_SCENARIO == 'partial_error':
+            result['Humidity'] = None
+        elif DEMO_DATA_SCENARIO == 'pm_rise':
+            phase = (self.successful_reads - 1) % DEMO_PM_RISE_CYCLE_SAMPLES + 1
+            rise_end = DEMO_PM_RISE_START_SAMPLE + DEMO_PM_RISE_DURATION_SAMPLES
+            if DEMO_PM_RISE_START_SAMPLE <= phase < rise_end:
+                result['PM2.5'] = 100.0
+        return result, self.main_value
