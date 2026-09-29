@@ -95,6 +95,16 @@ if (!(Test-Path sensor_connection_local.py)) { Copy-Item sensor_connection_examp
 - 기존 장비의 두 로컬 파일은 유지하세요. 배포 시 공유 코드와 로컬 설정이 함께 필요합니다. Git clone/pull만으로 비공개 파일이 복원되지는 않습니다.
 - `read_sensor_data(ser, cancel_event=None)`는 정상 프레임 전체 검증 후 센서 key의 dict를 반환해야 합니다. CRC/프레임 오류를 부분 성공으로 처리하지 않습니다.
 
+### 2026-09-29 분석 변경 Raspberry Pi 배포
+
+오늘 변경한 실제 분석 동작을 Raspberry Pi에 적용하려면 다음 세 파일을 함께 복사해야 합니다.
+
+- `air_quality_analyzer.py`: 항목별 이동평균, PM 빠른 악화, 부분 오류 처리
+- `sensor_status.py`: PM·온도·습도의 절대 유효 범위
+- `sensor_data.py`: 빠른 악화 설정값과 데모 시나리오
+
+새 `--demo-partial`, `--demo-pm-rise` 실행 옵션도 Raspberry Pi에서 사용하려면 `main.py`를 추가로 복사합니다. `tests/check_demo.py`와 테스트 파일은 검증용이므로 운영 실행에는 필요하지 않습니다. 장비 고유의 `sensor_protocol.py`, `sensor_connection_local.py`는 덮어쓰지 않으며, 로컬 UI 설정을 유지하려면 `app_config.ini`도 기존 파일을 유지합니다.
+
 ## 검사
 
 위 예제 복사 후 센서 없이 실행할 수 있습니다.
