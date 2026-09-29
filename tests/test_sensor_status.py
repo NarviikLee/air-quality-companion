@@ -1,7 +1,8 @@
 import unittest
 from unittest.mock import patch
 from sensor_status import assess_sensor
-from sensor_data import DummySensorSource, DEMO_THERMAL_HOLD_SAMPLES, get_status
+from sensor_data import (DataUnavailableError, DummySensorSource,
+                         DEMO_THERMAL_HOLD_SAMPLES, PortUnavailableError, get_status)
 
 
 class SensorStatusTests(unittest.TestCase):
@@ -93,6 +94,24 @@ class SensorStatusTests(unittest.TestCase):
             samples = [source.read()[0] for _ in range(46)]
         self.assertTrue(all(sample['PM2.5'] != 100 for sample in samples[:41]))
         self.assertTrue(all(sample['PM2.5'] == 100 for sample in samples[41:46]))
+
+    def test_demo_tour_runs_analysis_and_connection_scenarios(self):
+        with patch('sensor_data.DEMO_DATA_SCENARIO', 'tour'), \
+                patch('sensor_data.AUTO_UPDATE', False):
+            source = DummySensorSource()
+            samples = {}
+            errors = {}
+            for attempt in range(1, 62):
+                try:
+                    samples[attempt] = source.read()[0]
+                except (DataUnavailableError, PortUnavailableError) as error:
+                    errors[attempt] = type(error)
+        self.assertEqual(samples[42]['PM2.5'], 100)
+        self.assertIsNone(samples[52]['Humidity'])
+        self.assertTrue(all(samples[57][name] is None for name in
+                            ('PM1.0', 'PM2.5', 'PM10', 'Temperature', 'Humidity')))
+        self.assertIs(errors[60], DataUnavailableError)
+        self.assertIs(errors[61], PortUnavailableError)
 
 
 if __name__ == '__main__':
