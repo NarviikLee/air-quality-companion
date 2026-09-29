@@ -76,7 +76,7 @@ class RobotTests(unittest.TestCase):
                 a.accept_sample(GOOD, t)
             c.set_moving(True)
             self.assertEqual(c.resolve(a)[0], R.MOVING)
-            a.accept_sample(dict(GOOD, **{'PM2.5': 10000}), 41)
+            a.accept_sample(dict(GOOD, **{'PM2.5': 1000}), 41)
             c.set_moving(False)
             state, _, detail = c.resolve(a)
             self.assertEqual(state, R.COMFORTABLE)

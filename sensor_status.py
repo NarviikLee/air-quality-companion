@@ -15,6 +15,18 @@ PM_LIMITS = {'PM1.0': (10, 25, 50), 'PM2.5': (15, 35, 75), 'PM10': (30, 80, 150)
 # Product comfort preference, not a regulatory or health threshold.
 TEMPERATURE_COMFORT = (20, 26)
 
+# Broad sanity limits used only to reject implausible measurements. These are
+# deliberately wider than the display/assessment thresholds and must be
+# replaced with the manufacturer's specified ranges when the sensor model is
+# confirmed.
+SENSOR_VALID_RANGES = {
+    'PM1.0': (0, 5000),
+    'PM2.5': (0, 5000),
+    'PM10': (0, 5000),
+    'Temperature': (-50, 100),
+    'Humidity': (0, 100),
+}
+
 
 @dataclass(frozen=True)
 class Assessment:
@@ -24,14 +36,23 @@ class Assessment:
 
 
 def validate_sensor_value(name, value):
-    """Return a finite measurement or None; display limits are not sensor limits."""
+    """Return a finite, plausible measurement or None.
+
+    Validity limits reject obvious sensor/protocol faults. They are separate
+    from the narrower display and air-quality assessment thresholds.
+    """
     if isinstance(value, bool):
         return None
     try:
         value = float(value)
     except (TypeError, ValueError, OverflowError):
         return None
-    if not math.isfinite(value) or (name != 'Temperature' and value < 0) or (name == 'Humidity' and value > 100):
+    if not math.isfinite(value):
+        return None
+    valid_range = SENSOR_VALID_RANGES.get(name)
+    if valid_range is not None and not valid_range[0] <= value <= valid_range[1]:
+        return None
+    if valid_range is None and value < 0:
         return None
     return value
 

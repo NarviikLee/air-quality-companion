@@ -1,5 +1,5 @@
 import unittest
-from air_quality_analyzer import AirQualityAnalyzer, AirQualityState, map_robot_state
+from air_quality_analyzer import AirQualityAnalyzer, AirQualityState, NAMES, map_robot_state
 from sensor_status import validate_sensor_value
 
 GOOD = {'PM1.0': 8, 'PM2.5': 12, 'PM10': 18, 'Temperature': 24, 'Humidity': 45}
@@ -59,15 +59,18 @@ class AnalyzerTests(unittest.TestCase):
 
     def test_invalid_before_average(self):
         for name, value in [('PM1.0', -1), ('Humidity', 101), ('Temperature', None),
-                            ('Temperature', float('nan')), ('PM10', 'bad')]:
+                            ('Temperature', float('nan')), ('Temperature', 100.1),
+                            ('PM2.5', 5000.1), ('PM10', 'bad')]:
             a = AirQualityAnalyzer()
-            self.assertFalse(a.accept_sample(dict(GOOD, **{name: value}), 0))
-            self.assertFalse(a.samples)
+            self.assertTrue(a.accept_sample(dict(GOOD, **{name: value}), 0))
+            self.assertEqual(len(a.samples), 1)
+            self.assertIsNone(a.samples[0].values[NAMES.index(name)])
+            self.assertFalse(a.ready)
         self.assertEqual(validate_sensor_value('Temperature', -5), -5)
 
     def test_failure_retains_confirmed_but_breaks_candidate(self):
         a = self.prepared()
-        a.accept_sample(dict(GOOD, **{'PM2.5': 10000}), 41)
+        a.accept_sample(dict(GOOD, **{'PM2.5': 1000}), 41)
         self.assertEqual(a.candidate_state, 2)
         a.record_failure(42)
         self.assertEqual(a.confirmed_state, 0)
@@ -102,13 +105,102 @@ class AnalyzerTests(unittest.TestCase):
         a = self.prepared()
         # Use a stable full window to isolate candidate transitions.
         from unittest.mock import patch
-        with patch('air_quality_analyzer.map_robot_state', return_value=AirQualityState.BAD):
-            a.accept_sample(GOOD, 41)
-        with patch('air_quality_analyzer.map_robot_state', return_value=AirQualityState.NORMAL):
-            a.accept_sample(GOOD, 42)
-        self.assertEqual(a.candidate_started_at, 42)
-        a.accept_sample(GOOD, 43)
+        with patch.object(a, '_rapid_worsening', return_value=(None, [])):
+            with patch('air_quality_analyzer.map_robot_state', return_value=AirQualityState.BAD):
+                a.accept_sample(GOOD, 41)
+            with patch('air_quality_analyzer.map_robot_state', return_value=AirQualityState.NORMAL):
+                a.accept_sample(GOOD, 42)
+            self.assertEqual(a.candidate_started_at, 42)
+            a.accept_sample(GOOD, 43)
         self.assertIsNone(a.candidate_state)
+
+    def test_sustained_pm_rise_changes_state_without_waiting_for_average(self):
+        a = self.prepared()
+        bad = dict(GOOD, **{'PM2.5': 100})
+        a.accept_sample(bad, 41)
+        a.accept_sample(bad, 42)
+        a.accept_sample(bad, 43)
+        self.assertEqual(a.confirmed_state, AirQualityState.COMFORTABLE)
+        a.accept_sample(bad, 44)
+        self.assertEqual(a.confirmed_state, AirQualityState.BAD)
+        self.assertEqual(a.reasons, ['pm25_bad'])
+
+    def test_single_pm_spike_does_not_change_confirmed_state(self):
+        a = self.prepared()
+        bad = dict(GOOD, **{'PM2.5': 100})
+        for timestamp, values in [(41, bad), (42, GOOD), (43, GOOD),
+                                  (44, GOOD), (45, GOOD)]:
+            a.accept_sample(values, timestamp)
+        self.assertEqual(a.confirmed_state, AirQualityState.COMFORTABLE)
+
+    def test_four_of_five_pm_readings_tolerate_one_normal_reading(self):
+        a = self.prepared()
+        bad = dict(GOOD, **{'PM10': 200})
+        for timestamp, values in [(41, bad), (42, bad), (43, GOOD),
+                                  (44, bad), (45, bad)]:
+            a.accept_sample(values, timestamp)
+        self.assertEqual(a.confirmed_state, AirQualityState.BAD)
+        self.assertEqual(a.reasons, ['pm10_bad'])
+
+    def test_three_of_five_pm_readings_are_not_enough(self):
+        a = self.prepared()
+        bad = dict(GOOD, **{'PM2.5': 100})
+        for timestamp, values in [(41, bad), (42, GOOD), (43, bad),
+                                  (44, GOOD), (45, bad)]:
+            a.accept_sample(values, timestamp)
+        self.assertEqual(a.confirmed_state, AirQualityState.COMFORTABLE)
+
+    def test_sustained_normal_pm_level_fast_tracks_one_step_worse(self):
+        a = self.prepared()
+        normal = dict(GOOD, **{'PM2.5': 20})
+        for timestamp in (41, 42, 43, 44):
+            a.accept_sample(normal, timestamp)
+        self.assertEqual(a.confirmed_state, AirQualityState.NORMAL)
+        self.assertEqual(a.reasons, ['pm25_normal'])
+
+    def test_failure_clears_rapid_rise_history(self):
+        a = self.prepared()
+        bad = dict(GOOD, **{'PM1.0': 100})
+        for timestamp in (41, 42, 43):
+            a.accept_sample(bad, timestamp)
+        a.record_failure(44)
+        a.accept_sample(bad, 45)
+        self.assertEqual(a.confirmed_state, AirQualityState.COMFORTABLE)
+
+    def test_one_invalid_channel_does_not_discard_other_measurements(self):
+        a = self.prepared()
+        partial = dict(GOOD, Humidity=None)
+        self.assertTrue(a.accept_sample(partial, 41))
+        self.assertEqual(a.failures, 0)
+        self.assertFalse(a.delayed)
+        self.assertIsNone(a.samples[-1].values[NAMES.index('Humidity')])
+        self.assertEqual(a.samples[-1].values[NAMES.index('PM2.5')], GOOD['PM2.5'])
+
+    def test_all_invalid_analysis_channels_are_a_frame_failure(self):
+        a = self.prepared()
+        invalid = {name: None for name in NAMES}
+        self.assertFalse(a.accept_sample(invalid, 41))
+        self.assertEqual(a.failures, 1)
+        self.assertTrue(a.delayed)
+
+    def test_missing_channel_cannot_make_confirmed_state_improve(self):
+        bad = dict(GOOD, Humidity=80)
+        a = self.prepared(bad)
+        for timestamp in range(41, 76):
+            a.accept_sample(dict(GOOD, Humidity=None), timestamp)
+        self.assertFalse(a.ready)
+        self.assertEqual(a.confirmed_state, AirQualityState.NORMAL)
+
+    def test_valid_channels_keep_averaging_while_one_channel_is_missing(self):
+        a = self.prepared()
+        partial = dict(GOOD, Humidity=None, **{'PM2.5': 100})
+        for timestamp in range(41, 76):
+            a.accept_sample(partial, timestamp)
+        self.assertFalse(a.ready)
+        self.assertIn('PM2.5', a.averages)
+        self.assertNotIn('Humidity', a.averages)
+        self.assertGreater(a.averages['PM2.5'], 90)
+        self.assertEqual(a.confirmed_state, AirQualityState.BAD)
 
 
 if __name__ == '__main__':

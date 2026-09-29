@@ -49,8 +49,20 @@ class SensorStatusTests(unittest.TestCase):
 
     def test_invalid_measurements(self):
         for name, value in [('PM2.5', -1), ('Humidity', 101),
-                            ('Temperature', float('nan')), ('VOC', float('inf'))]:
+                            ('PM10', 5000.1), ('Temperature', -50.1),
+                            ('Temperature', 100.1), ('Temperature', float('nan')),
+                            ('VOC', float('inf'))]:
             self.assertEqual(assess_sensor(name, value).message, '값 확인')
+
+    def test_sanity_range_boundaries_are_valid(self):
+        for name, values in [('PM1.0', (0, 5000)),
+                             ('PM2.5', (0, 5000)),
+                             ('PM10', (0, 5000)),
+                             ('Temperature', (-50, 100)),
+                             ('Humidity', (0, 100))]:
+            for value in values:
+                with self.subTest(name=name, value=value):
+                    self.assertNotEqual(assess_sensor(name, value).message, '값 확인')
 
     def test_central_demo_policy_unchanged(self):
         for value, expected in [(30, 'GOOD'), (55, 'NORMAL'), (80, 'BAD'), (81, 'VERY BAD')]:

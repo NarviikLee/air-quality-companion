@@ -39,6 +39,7 @@ class AirQualityAnalyzer:
 
     def reset(self):
         self.samples = deque()
+        self.rapid_samples = deque(maxlen=config.FAST_RISE_WINDOW_SAMPLES)
         self.first_at = self.last_at = None
         self.failures = 0
         self.sensor_check = True
@@ -52,6 +53,30 @@ class AirQualityAnalyzer:
     def clear_candidate(self):
         self.candidate_state = self.candidate_started_at = None
         self.candidate_reasons = []
+
+    def _rapid_worsening(self, now):
+        """Return a sustained, worse PM state without waiting for the long average."""
+        if self.confirmed_state is None:
+            return None, []
+        for target in (AirQualityState.BAD, AirQualityState.NORMAL):
+            if target <= self.confirmed_state:
+                continue
+            matching_by_name = {}
+            for index, name in enumerate(NAMES[:3]):
+                matching_by_name[name] = [
+                    sample.timestamp for sample in self.rapid_samples
+                    if (sample.values[index] is not None
+                        and map_robot_state(name, sample.values[index]) >= target)
+                ]
+            reasons = []
+            for name, timestamps in matching_by_name.items():
+                if (len(timestamps) >= config.FAST_RISE_REQUIRED_SAMPLES
+                        and now - timestamps[0] >= config.FAST_RISE_CONFIRM_DURATION_SEC):
+                    reason = {'PM1.0': 'pm1', 'PM2.5': 'pm25', 'PM10': 'pm10'}[name]
+                    reasons.append(reason + ('_bad' if target == AirQualityState.BAD else '_normal'))
+            if reasons:
+                return target, reasons
+        return None, []
 
     def _prune(self, now):
         while self.samples and self.samples[0].timestamp < now - config.MOVING_AVERAGE_WINDOW_SEC:
@@ -71,6 +96,7 @@ class AirQualityAnalyzer:
     def record_failure(self, now=None, no_port=False):
         now = self.clock() if now is None else now
         self.clear_candidate()
+        self.rapid_samples.clear()
         self.delayed = True
         self.failures += 1
         if no_port or self.failures >= config.MAX_CONSECUTIVE_FAILURES:
@@ -84,7 +110,7 @@ class AirQualityAnalyzer:
             return False  # Duplicate/out-of-order samples cannot advance confirmation.
         self.check_stale(now)  # Check the gap BEFORE updating last_at.
         clean = tuple(validate_sensor_value(name, values.get(name)) for name in NAMES)
-        if any(value is None for value in clean):
+        if all(value is None for value in clean):
             self.record_failure(now)
             return False
         self.sensor_check = False
@@ -93,22 +119,39 @@ class AirQualityAnalyzer:
         if self.first_at is None:
             self.first_at = now
         self.last_at = now
-        self.samples.append(Measurement(now, clean))
+        measurement = Measurement(now, clean)
+        self.samples.append(measurement)
+        if any(value is None for value in clean[:3]):
+            # Never join a PM rise across a missing/invalid PM measurement.
+            self.rapid_samples.clear()
+        self.rapid_samples.append(measurement)
         self._prune(now)
-        self.ready = (now - self.first_at >= config.MOVING_AVERAGE_WINDOW_SEC
-                      and len(self.samples) >= config.MIN_SAMPLES_IN_WINDOW)
-        if not self.ready:
+        rapid_state, rapid_reasons = self._rapid_worsening(now)
+        if rapid_state is not None:
+            self.confirmed_state = rapid_state
+            self.reasons = rapid_reasons
             self.clear_candidate()
             return True
-        self.averages = {name: sum(s.values[i] for s in self.samples) / len(self.samples)
-                         for i, name in enumerate(NAMES)}
-        temperature = self.averages['Temperature']
+        ready_values = {}
+        for index, name in enumerate(NAMES):
+            valid = [(sample.timestamp, sample.values[index]) for sample in self.samples
+                     if sample.values[index] is not None]
+            if (len(valid) >= config.MIN_SAMPLES_IN_WINDOW
+                    and now - valid[0][0] >= config.MOVING_AVERAGE_WINDOW_SEC):
+                ready_values[name] = [value for _, value in valid]
+        self.ready = len(ready_values) == len(NAMES)
+        if not ready_values:
+            self.clear_candidate()
+            return True
+        self.averages = {name: sum(values) / len(values)
+                         for name, values in ready_values.items()}
+        temperature = self.averages.get('Temperature')
         states = {name: map_robot_state(name, value, temperature=temperature)
                   for name, value in self.averages.items()}
         state = max(states.values())
         reasons = []
         for name in NAMES:
-            if states[name] != state or state == AirQualityState.COMFORTABLE:
+            if states.get(name) != state or state == AirQualityState.COMFORTABLE:
                 continue
             value = self.averages[name]
             if name == 'Temperature':
@@ -123,8 +166,14 @@ class AirQualityAnalyzer:
             else:
                 reason = {'PM1.0': 'pm1', 'PM2.5': 'pm25', 'PM10': 'pm10'}[name] + ('_bad' if state == 2 else '_normal')
             reasons.append(reason)
-        if state == self.confirmed_state:
-            self.reasons = reasons
+        if self.confirmed_state is None and not self.ready:
+            self.clear_candidate()
+        elif self.confirmed_state is not None and state < self.confirmed_state and not self.ready:
+            # Missing channels cannot prove that the overall environment improved.
+            self.clear_candidate()
+        elif state == self.confirmed_state:
+            if self.ready:
+                self.reasons = reasons
             self.clear_candidate()
         elif state != self.candidate_state:
             self.candidate_state = state
