@@ -57,6 +57,16 @@ class SerialSourceTests(unittest.TestCase):
         self.source.read()
         self.assertEqual(len(self.opened), 1)
 
+    def test_reconnect_metadata_only_for_reopened_verified_connection(self):
+        self.names = ['COM1']
+        self.source.read()
+        self.assertFalse(self.source.reconnected)
+        self.source.close()
+        self.source.read()
+        self.assertTrue(self.source.reconnected)
+        self.source.read()
+        self.assertFalse(self.source.reconnected)
+
     def test_unchanged_protocol_template_fails_before_opening_port(self):
         opener = Mock()
         with patch('serial_source.import_module', return_value=protocol_template):
@@ -175,8 +185,19 @@ class SerialSourceTests(unittest.TestCase):
         self.assertEqual(values['PM2.5'], 12)
         self.assertFalse(self.source.connection.closed)
 
+    def test_all_invalid_values_do_not_lock_discovery_to_bad_port(self):
+        self.names = ['COM1', 'COM2']
+        self.source.reader = lambda port, cancel_event=None: (
+            {key: None for key in RAW} if port.port == 'COM1' else RAW.copy())
+        with self.assertRaises(config.DataUnavailableError):
+            self.source.read()
+        self.assertTrue(self.opened[0].closed)
+        values, _ = self.source.read()
+        self.assertEqual(self.source.connection.port, 'COM2')
+        self.assertEqual(values['PM2.5'], 12)
+
     def test_protocol_exceptions_are_whole_response_failures(self):
-        from sensor_protocol import CRCError, FrameError
+        from sensor_protocol_template import CRCError, FrameError
         self.names = ['COM1']
         for error in (CRCError, FrameError):
             self.source.reader = lambda port, cancel_event=None: (_ for _ in ()).throw(

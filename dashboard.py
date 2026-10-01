@@ -172,6 +172,11 @@ class MainWindow(QWidget):
         self.last_frame_delayed = False
         self.request_started_at = None
         self.last_received_at = None
+        self.has_received_valid_frame = False
+        self.reconnect_pending = False
+        self.last_confirmed_state = None
+        self.last_confirmed_reasons = []
+        self.last_confirmed_face = None
         self._closing = False
         self.last_error = ''
         self.source_factory = source_factory
@@ -249,10 +254,15 @@ class MainWindow(QWidget):
     def check_worker_health(self):
         now = time.monotonic()
         if self.analyzer.check_stale(now):
+            self.reconnect_pending = self.has_received_valid_frame
             self.mark_detail_delayed()
         if not self._closing:
             self.refresh_robot()
             self.refresh_reception_status(now)
+            if (self.last_received_at is not None
+                    and now - self.last_received_at >= config.DISCONNECT_FACE_HOLD_SEC
+                    and self.pages.currentWidget() is self.dashboard_page):
+                self.show_robot_home()
         if self._closing:
             if self.shutdown_deadline is not None and now > self.shutdown_deadline:
                 self.connection_detail.setText('장치 응답 지연으로 종료를 기다리고 있습니다.')
@@ -285,6 +295,8 @@ class MainWindow(QWidget):
         self.last_error = detail
         self.last_frame_delayed = True
         self.analyzer.record_failure(no_port=state == 'no_port')
+        if state == 'no_port' or self.analyzer.sensor_check:
+            self.reconnect_pending = self.has_received_valid_frame
         self.mark_detail_delayed()
         self.show_connection_state(state == 'no_port')
         self.refresh_robot()
@@ -303,7 +315,20 @@ class MainWindow(QWidget):
         self.last_frame_delayed = False
         self.retry_deadline = None
         self.retry_count = 0
-        self.last_received_at = getattr(values, 'timestamp', time.monotonic())
+        now = getattr(values, 'timestamp', time.monotonic())
+        if self.has_received_valid_frame and (self.reconnect_pending
+                or getattr(values, 'reconnected', False)
+                or (self.last_received_at is not None
+                    and now - self.last_received_at >= config.SENSOR_STALE_TIMEOUT_SEC)):
+            retain = (self.last_received_at is not None
+                      and now - self.last_received_at < config.DISCONNECT_FACE_HOLD_SEC)
+            self.analyzer.begin_reconnect(
+                self.last_confirmed_state if retain else None,
+                self.last_confirmed_reasons if retain else ())
+            logging.getLogger(__name__).info('Reconnected: fresh 10s window and 5s confirmation; retain face=%s', retain)
+        self.reconnect_pending = False
+        self.has_received_valid_frame = True
+        self.last_received_at = now
         self.analyzer.accept_sample(values, self.last_received_at)
         self.display_values(values, main_value)
         # self.connection_label.setText('● ' + self.mode_label)
@@ -328,7 +353,17 @@ class MainWindow(QWidget):
             position = f'{self.demo_state_index + 1}/{len(DEMO_ROBOT_STATES)}'
             self.robot_home_page.show_state(state, title, f'{detail} · {position} · 4초마다 전환')
             return
-        self.robot_home_page.show_state(*self.robot_controller.resolve(self.analyzer))
+        face = self.robot_controller.resolve(self.analyzer)
+        if self.analyzer.confirmed_state is not None and not self.analyzer.sensor_check:
+            self.last_confirmed_state = self.analyzer.confirmed_state
+            self.last_confirmed_reasons = list(self.analyzer.reasons)
+            self.last_confirmed_face = face
+        if (self.reconnect_pending and self.analyzer.sensor_check
+                and self.last_confirmed_face is not None
+                and self.last_received_at is not None
+                and time.monotonic() - self.last_received_at < config.DISCONNECT_FACE_HOLD_SEC):
+            face = self.last_confirmed_face
+        self.robot_home_page.show_state(*face)
 
     def show_next_demo_state(self):
         if self._closing or not self.demo_states:
@@ -370,6 +405,11 @@ class MainWindow(QWidget):
                 self.worker.cancel_event.set()
                 self.stop_requested.emit()
         else:
+            # Closing during the restart delay must also cancel future work.
+            self._closing = True
+            self.data_timer.stop()
+            self.detail_return_timer.stop()
+            self.demo_state_timer.stop()
             self.sensor_thread.wait()
             event.accept()
 
@@ -387,7 +427,9 @@ class MainWindow(QWidget):
 
     def on_recovery_notice(self):
         self.analyzer.reset()
+        self.reconnect_pending = self.has_received_valid_frame
         self.last_frame_delayed = True
+        self.mark_detail_delayed()
         self.refresh_robot()
         self.data_timer.stop()
         self.retry_deadline = None

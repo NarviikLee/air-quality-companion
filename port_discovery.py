@@ -20,7 +20,9 @@ def resolve_os_mode(mode, platform=None):
 def discover_ports(enumerator, mode):
     mode = resolve_os_mode(mode)
     # Preserve the exact device path supplied by pySerial when opening it.
-    pattern = r'COM[1-9][0-9]*' if mode == 'windows' else r'/dev/tty[^/]+'
+    # USB serial adapters and USB CDC devices only; onboard UARTs such as
+    # ttyAMA0/ttyS0 cause unnecessary probe timeouts during USB reconnects.
+    pattern = r'COM[1-9][0-9]*' if mode == 'windows' else r'/dev/tty(?:USB|ACM)[0-9]+'
     names = {item.device for item in enumerator()
              if re.fullmatch(pattern, item.device, flags=re.IGNORECASE if mode == 'windows' else 0)}
     return sorted(names, key=lambda name: [int(part) if part.isdigit() else part

@@ -64,6 +64,7 @@ class AirQualityAnalyzer:
             None. All accumulated samples, averages, candidates, confirmed
             state, and failure counters are cleared as a side effect.
         """
+        self.reconnect_mode = False
         self.samples = deque()
         self.rapid_samples = {name: deque(maxlen=config.FAST_RISE_WINDOW_SAMPLES)
                               for name in NAMES[:3]}
@@ -85,6 +86,13 @@ class AirQualityAnalyzer:
     def clear_candidate(self):
         self.candidate_state = self.candidate_started_at = None
         self.candidate_reasons = []
+
+    def begin_reconnect(self, previous_state=None, previous_reasons=()):
+        """Start a fresh recovery window; retained state is display history only."""
+        self.reset()
+        self.reconnect_mode = True
+        self.confirmed_state = previous_state
+        self.reasons = list(previous_reasons)
 
     def _rapid_worsening(self, now):
         """Return a sustained, worse PM state without waiting for the long average."""
@@ -152,7 +160,8 @@ class AirQualityAnalyzer:
             self.reset()
             return True
         self._prune(now)
-        if self.ready and len(self.samples) < config.MIN_SAMPLES_IN_WINDOW:
+        minimum = config.RECONNECT_MIN_SAMPLES if self.reconnect_mode else config.MIN_SAMPLES_IN_WINDOW
+        if self.ready and len(self.samples) < minimum:
             self.ready = False
             self.clear_candidate()
         return False
@@ -245,14 +254,17 @@ class AirQualityAnalyzer:
         self.samples.append(measurement)
         self._prune(now)
         ready_values = {}
+        minimum = config.RECONNECT_MIN_SAMPLES if self.reconnect_mode else config.MIN_SAMPLES_IN_WINDOW
+        window = config.RECONNECT_WINDOW_SEC if self.reconnect_mode else config.MOVING_AVERAGE_WINDOW_SEC
         for index, name in enumerate(NAMES):
             valid = [(sample.timestamp, sample.values[index]) for sample in self.samples
                      if (sample.values[index] is not None
                          and self.first_valid_at[name] is not None
-                         and sample.timestamp >= self.first_valid_at[name])]
+                          and sample.timestamp >= self.first_valid_at[name]
+                          and sample.timestamp >= now - window)]
             if (self.first_valid_at[name] is not None
-                    and len(valid) >= config.MIN_SAMPLES_IN_WINDOW
-                    and now - self.first_valid_at[name] >= config.MOVING_AVERAGE_WINDOW_SEC):
+                    and len(valid) >= minimum
+                    and now - self.first_valid_at[name] >= window):
                 ready_values[name] = [value for _, value in valid]
         self.ready_channels = set(ready_values)
         self.recovering_channels.difference_update(self.ready_channels)
@@ -294,7 +306,7 @@ class AirQualityAnalyzer:
         elif self.confirmed_state is not None and state < self.confirmed_state and not self.ready:
             # Missing channels cannot prove that the overall environment improved.
             self.clear_candidate()
-        elif state == self.confirmed_state:
+        elif state == self.confirmed_state and not self.reconnect_mode:
             if self.ready:
                 self.reasons = reasons
             self.clear_candidate()
@@ -304,7 +316,9 @@ class AirQualityAnalyzer:
             self.candidate_reasons = reasons
         else:
             self.candidate_reasons = reasons
-            if now - self.candidate_started_at >= config.STATE_CONFIRM_DURATION_SEC:
+            duration = config.RECONNECT_CONFIRM_SEC if self.reconnect_mode else config.STATE_CONFIRM_DURATION_SEC
+            if now - self.candidate_started_at >= duration:
                 self.confirmed_state, self.reasons = state, reasons
+                self.reconnect_mode = False
                 self.clear_candidate()
         return True

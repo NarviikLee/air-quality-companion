@@ -6,6 +6,37 @@ GOOD = {'PM1.0': 8, 'PM2.5': 12, 'PM10': 18, 'Temperature': 24, 'Humidity': 45}
 
 
 class AnalyzerTests(unittest.TestCase):
+    def test_reconnect_confirms_with_fresh_samples_in_fifteen_seconds(self):
+        a = self.prepared(dict(GOOD, Humidity=80))
+        a.begin_reconnect(a.confirmed_state, a.reasons)
+        self.assertFalse(a.samples)
+        for t in range(100, 115):
+            a.accept_sample(GOOD, t)
+            a.check_stale(t + .25)
+        self.assertEqual(a.confirmed_state, AirQualityState.NORMAL)
+        a.accept_sample(GOOD, 115)
+        self.assertEqual(a.confirmed_state, AirQualityState.COMFORTABLE)
+        self.assertFalse(a.reconnect_mode)
+        a.accept_sample(GOOD, 116)
+        self.assertFalse(a.ready)
+        self.assertEqual(a.confirmed_state, AirQualityState.COMFORTABLE)
+
+    def test_missing_channel_cannot_complete_reconnect_recovery(self):
+        a = self.prepared(dict(GOOD, Humidity=80))
+        a.begin_reconnect(a.confirmed_state)
+        for t in range(100, 121):
+            a.accept_sample(dict(GOOD, Humidity=None), t)
+        self.assertEqual(a.confirmed_state, AirQualityState.NORMAL)
+        self.assertTrue(a.reconnect_mode)
+
+    def test_long_disconnect_recovery_without_retained_face(self):
+        a = AirQualityAnalyzer()
+        a.begin_reconnect()
+        for t in range(16):
+            a.accept_sample(GOOD, t)
+        self.assertEqual(a.confirmed_state, AirQualityState.COMFORTABLE)
+        self.assertFalse(a.reconnect_mode)
+
     def prepared(self, values=GOOD):
         a = AirQualityAnalyzer()
         for t in range(41):

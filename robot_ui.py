@@ -185,6 +185,7 @@ class RobotHomeWidget(QWidget):
         self.setStyleSheet('QWidget#robotHome {background-color: #080F16;}')
         self.face.setGeometry(24, 15, 752, 304)
         self.face.clicked.connect(self.request_detail)
+        self.face.installEventFilter(self)
         self.title = QLabel(self)
         self.title.setGeometry(24, 335, 752, 42)
         self.title.setAlignment(Qt.AlignCenter)
@@ -195,6 +196,13 @@ class RobotHomeWidget(QWidget):
     def request_detail(self):
         if self.face.isEnabled():
             self.detail_requested.emit()
+
+    def eventFilter(self, watched, event):
+        if watched is self.face and event.type() == QEvent.MouseButtonPress:
+            if event.button() == Qt.LeftButton:
+                self.request_detail()
+                return True
+        return super().eventFilter(watched, event)
 
     def mousePressEvent(self, event):
         if event.button() == Qt.LeftButton:

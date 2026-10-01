@@ -19,6 +19,107 @@ APP.setQuitOnLastWindowClosed(False)
 
 
 class RobotTests(unittest.TestCase):
+    def test_long_disconnect_returns_detail_home_but_short_recovery_keeps_page(self):
+        class Source:
+            def read(self):
+                return {s.name: s.initial for s in config.SENSORS}, None
+        w = MainWindow(Source)
+        try:
+            wait_until(lambda: not w._busy)
+            w.data_timer.stop()
+            now = w.last_received_at
+            w.show_sensor_detail()
+            w.on_failed('no_port', 'USB unplugged')
+            with patch('dashboard.time.monotonic', return_value=now + 29.9):
+                w.check_worker_health()
+            self.assertIs(w.pages.currentWidget(), w.dashboard_page)
+            values = {s.name: s.initial for s in config.SENSORS}
+            w.on_received(SensorSnapshot(values, now + 29.9), None)
+            with patch('dashboard.time.monotonic', return_value=now + 30):
+                w.check_worker_health()
+            self.assertIs(w.pages.currentWidget(), w.dashboard_page)
+            w.on_failed('no_port', 'USB unplugged again')
+            with patch('dashboard.time.monotonic', return_value=now + 60):
+                w.check_worker_health()
+            self.assertIs(w.pages.currentWidget(), w.robot_home_page)
+            self.assertEqual(w.robot_home_page.display_state, R.SENSOR_CHECK)
+            self.assertFalse(w.detail_return_timer.isActive())
+            w.on_received(SensorSnapshot(values, now + 61), None)
+            self.assertIs(w.pages.currentWidget(), w.robot_home_page)
+        finally:
+            w.close()
+            wait_until(lambda: not w.sensor_thread.isRunning())
+            w.sensor_thread.wait()
+            APP.processEvents()
+
+    def test_disconnect_face_hold_expires_and_reconnect_uses_fresh_window(self):
+        class Source:
+            def read(self):
+                return {s.name: s.initial for s in config.SENSORS}, None
+        w = MainWindow(Source)
+        try:
+            wait_until(lambda: not w._busy)
+            w.data_timer.stop()
+            now = time.monotonic()
+            w.analyzer.reset()
+            for t in range(41):
+                w.analyzer.accept_sample(GOOD, now - 40 + t)
+            w.last_received_at = now
+            w.refresh_robot()
+            w.on_failed('no_port', 'USB unplugged')
+            self.assertEqual(w.robot_home_page.display_state, R.COMFORTABLE)
+            self.assertTrue(all(state.text() == '수신 지연' for _, state in w.gauges.values()))
+            with patch('dashboard.time.monotonic', return_value=now + 31):
+                w.refresh_robot()
+                self.assertEqual(w.robot_home_page.display_state, R.SENSOR_CHECK)
+            values = {s.name: s.initial for s in config.SENSORS}
+            w.on_received(SensorSnapshot(values, now + 32), None)
+            self.assertTrue(w.analyzer.reconnect_mode)
+            self.assertIsNone(w.analyzer.confirmed_state)
+            self.assertEqual(len(w.analyzer.samples), 1)
+            self.assertEqual(w.robot_home_page.display_state, R.MONITORING)
+            w.on_failed('no_port', 'USB unplugged again')
+            w.on_received(SensorSnapshot(values, now + 33), None)
+            self.assertEqual(len(w.analyzer.samples), 1)
+        finally:
+            w.close()
+            wait_until(lambda: not w.sensor_thread.isRunning())
+            w.sensor_thread.wait()
+            APP.processEvents()
+
+    def test_press_navigation_release_and_animation_lifecycle(self):
+        class Source:
+            def read(self):
+                return {s.name: s.initial for s in config.SENSORS}, None
+        w = MainWindow(Source)
+        w.show()
+        try:
+            wait_until(lambda: not w._busy)
+            w.data_timer.stop()
+            face = w.robot_home_page.face
+            self.assertTrue(face.animation_timer.isActive())
+            for target in (face, w.robot_home_page.title, w.robot_home_page):
+                QTest.mousePress(target, Qt.LeftButton)
+                self.assertIs(w.pages.currentWidget(), w.dashboard_page)
+                self.assertFalse(face.animation_timer.isActive())
+                QTest.mouseRelease(w.dashboard_page, Qt.LeftButton)
+                self.assertIs(w.pages.currentWidget(), w.dashboard_page)
+                QTest.mousePress(w.gauges['PM1.0'][0].number, Qt.LeftButton)
+                self.assertIs(w.pages.currentWidget(), w.robot_home_page)
+                QTest.mouseRelease(face, Qt.LeftButton)
+                self.assertIs(w.pages.currentWidget(), w.robot_home_page)
+                self.assertTrue(face.animation_timer.isActive())
+                self.assertFalse(w.detail_return_timer.isActive())
+            started = face.animation_started_at
+            w.refresh_robot()
+            self.assertEqual(face.animation_started_at, started)
+        finally:
+            w.close()
+            wait_until(lambda: not w.sensor_thread.isRunning())
+            w.sensor_thread.wait()
+            APP.processEvents()
+        self.assertFalse(face.animation_timer.isActive())
+
     def test_detail_timeout_config_falls_back_safely(self):
         with TemporaryDirectory() as folder:
             path = Path(folder) / 'app_config.ini'
@@ -147,12 +248,12 @@ class RobotTests(unittest.TestCase):
             self.assertIn('수신 지연', w.connection_label.text())
             w.on_failed('waiting', 'timeout')
             w.on_failed('waiting', 'timeout')
-            self.assertEqual(w.robot_home_page.display_state, R.SENSOR_CHECK)
+            self.assertEqual(w.robot_home_page.display_state, R.COMFORTABLE)
             self.assertIs(w.pages.currentWidget(), w.dashboard_page)
             QTest.mouseClick(w.gauges['PM1.0'][0], Qt.LeftButton)
             self.assertIs(w.pages.currentWidget(), w.robot_home_page)
             self.assertFalse(w.detail_return_timer.isActive())
-            self.assertFalse(w.robot_home_page.face.isEnabled())
+            self.assertTrue(w.robot_home_page.face.isEnabled())
             QTest.mouseClick(w.robot_home_page.face, Qt.LeftButton)
             self.assertIs(w.pages.currentWidget(), w.robot_home_page)
         finally:

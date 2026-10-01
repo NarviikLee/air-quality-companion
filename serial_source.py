@@ -46,6 +46,8 @@ class SerialSensorSource:
         self.cancel_event = None
         self.on_checking = lambda: None
         self._last_available = None
+        self.has_received_valid_frame = False
+        self.reconnected = False
 
     def discover(self):
         available = discover_ports(self.ports, self.os_mode)
@@ -68,6 +70,7 @@ class SerialSensorSource:
                 LOG.exception('Failed to close serial port')
 
     def read(self):
+        self.reconnected = False
         if self.cancel_event is not None and self.cancel_event.is_set():
             raise config.DataUnavailableError('Acquisition cancelled')
         probing = self.connection is None
@@ -101,6 +104,8 @@ class SerialSensorSource:
             # reader must return only after whole-frame validation succeeds.
             values = {s.name: validate_sensor_value(s.name, raw[KEYS[s.name]])
                       for s in config.SENSORS}
+            if all(value is None for value in values.values()):
+                raise config.DataUnavailableError('No valid sensor measurements')
         except Exception as error:
             self.failures += 1
             if probing or isinstance(error, OSError) or self.failures >= config.PORT_FAILURE_LIMIT:
@@ -115,6 +120,8 @@ class SerialSensorSource:
         self.failures = 0
         if probing:
             LOG.info('Sensor verified on %s', name)
+        self.reconnected = probing and self.has_received_valid_frame
+        self.has_received_valid_frame = True
         self.last_success = name
         self.attempted.clear()
         # Representative sensor is undecided: never fabricate an AQI for live data.

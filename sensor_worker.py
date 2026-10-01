@@ -46,6 +46,7 @@ class SensorWorker(QObject):
             timestamp = time.monotonic()
             snapshot = SensorSnapshot({spec.name: validate_sensor_value(spec.name, values[spec.name])
                                        for spec in SENSORS}, timestamp)
+            snapshot.reconnected = bool(getattr(self.source, 'reconnected', False))
             main_value = float(main_value) if main_value is not None else None
             if main_value is not None and not math.isfinite(main_value):
                 raise ValueError('Non-finite sensor value')

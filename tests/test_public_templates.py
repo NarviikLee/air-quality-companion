@@ -16,7 +16,12 @@ class PublicTemplateTests(unittest.TestCase):
         self.assertEqual(port.mock_calls, [])
 
     def test_parameter_names_match_local_interface(self):
-        import sensor_protocol as local
+        try:
+            import sensor_protocol as local
+        except ModuleNotFoundError as error:
+            if error.name != 'sensor_protocol':
+                raise
+            self.skipTest('Private protocol is absent in the public distribution')
         for name in ('modbus_crc', 'convert_modbus_address', 'create_read_request',
                      'parse_registers', 'receive_frame', 'read_sensor_data'):
             self.assertEqual(list(inspect.signature(getattr(local, name)).parameters),

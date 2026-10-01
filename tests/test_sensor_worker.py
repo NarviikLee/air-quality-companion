@@ -144,6 +144,36 @@ class WorkerTests(unittest.TestCase):
         wait_until(lambda: not window.sensor_thread.isRunning(), 2)
         self.assertLess(time.monotonic() - start, 2)
 
+    def test_close_during_restart_delay_does_not_restart_hidden_window(self):
+        sources = []
+        def factory():
+            source = SlowSource()
+            sources.append(source)
+            return source
+        window = self.create(factory)
+        wait_until(lambda: not window._busy)
+        window.data_timer.stop()
+        window.sensor_thread.quit()
+        wait_until(lambda: window._recovering)
+        window.close()
+        self.assertTrue(window._closing)
+        window.restart_worker()
+        self.assertEqual(len(sources), 1)
+        self.assertFalse(window.sensor_thread.isRunning())
+
+    def test_recovery_marks_existing_detail_values_delayed(self):
+        window = self.create(SlowSource)
+        wait_until(lambda: not window._busy)
+        window.data_timer.stop()
+        window.show_sensor_detail()
+        before = {name: gauge.value for name, (gauge, _) in window.gauges.items()}
+        window.sensor_thread.quit()
+        wait_until(lambda: window._recovering)
+        self.assertIs(window.pages.currentWidget(), window.dashboard_page)
+        for name, (gauge, state) in window.gauges.items():
+            self.assertEqual(gauge.value, before[name])
+            self.assertEqual(state.text(), '수신 지연')
+
     def test_no_port_retry_does_not_show_waiting_before_discovery(self):
         from sensor_data import PortUnavailableError
         class Source(SlowSource):

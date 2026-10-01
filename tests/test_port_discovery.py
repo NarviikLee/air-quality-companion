@@ -19,8 +19,13 @@ class DiscoveryTests(unittest.TestCase):
         ports = lambda: [SimpleNamespace(device=name) for name in names]
         self.assertEqual(discover_ports(ports, 'windows'), ['COM2', 'COM10'])
         self.assertEqual(discover_ports(ports, 'linux'), [
-            '/dev/ttyACM0', '/dev/ttyAMA0', '/dev/ttyS0',
+            '/dev/ttyACM0',
             '/dev/ttyUSB0', '/dev/ttyUSB2', '/dev/ttyUSB10'])
+
+    def test_onboard_uart_alone_is_not_a_sensor_candidate(self):
+        ports = lambda: [SimpleNamespace(device='/dev/ttyAMA0'),
+                         SimpleNamespace(device='/dev/ttyS0')]
+        self.assertEqual(discover_ports(ports, 'linux'), [])
 
     def test_empty(self):
         self.assertEqual(discover_ports(lambda: [], 'linux'), [])
