@@ -432,7 +432,7 @@ class MainWindow(QWidget):
                 accessible_message = assessment.message
             state.setText(message)
             state.setAccessibleName(accessible_message)
-            state.setStyleSheet(f'font-size: 13px; font-weight: 400; color: {STATUS_COLORS[status]};')
+            state.setStyleSheet(f'font-size: 14px; font-weight: 400; color: {STATUS_COLORS[status]};')
 
     def mark_detail_delayed(self):
         """Keep the last value visible but make its delayed status explicit per card."""
@@ -442,4 +442,4 @@ class MainWindow(QWidget):
             state.setText('수신 지연')
             state.setAccessibleName('수신 지연 · 마지막 정상값')
             state.setStyleSheet(
-                f'font-size: 13px; font-weight: 400; color: {color};')
+                f'font-size: 14px; font-weight: 400; color: {color};')

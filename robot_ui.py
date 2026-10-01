@@ -196,12 +196,12 @@ class RobotHomeWidget(QWidget):
         if self.face.isEnabled():
             self.detail_requested.emit()
 
-    def mouseReleaseEvent(self, event):
+    def mousePressEvent(self, event):
         if event.button() == Qt.LeftButton:
             self.request_detail()
             event.accept()
             return
-        super().mouseReleaseEvent(event)
+        super().mousePressEvent(event)
 
     def show_state(self, state, title, detail):
         self.display_state = state
@@ -219,15 +219,15 @@ class SensorDetailCard(QWidget):
         self.unit, self.decimals = spec.unit, spec.decimals
         self.name = QLabel({'Temperature': '온도', 'Humidity': '습도'}.get(spec.name, spec.name), self)
         self.name.setGeometry(16, 21, 150, 25)
-        self.name.setStyleSheet('font-size: 17px; color: #91AFBA;')
+        self.name.setStyleSheet('font-size: 17px; color: #AAC4CC;')
         self.number = QLabel('—', self)
         self.number.setGeometry(16, 46, 150, 44)
         self.number.setStyleSheet('font-size: 34px; font-weight: 700; color: #C8FFF2;')
         self.units = QLabel(spec.unit, self)
-        self.units.setGeometry(16, 98, 65, 22)
-        self.units.setStyleSheet('font-size: 14px; color: #819DA8;')
+        self.units.setGeometry(16, 97, 46, 24)
+        self.units.setStyleSheet('font-size: 14px; color: #9BB4BD;')
         self.assessment_label = QLabel('—', self)
-        self.assessment_label.setGeometry(84, 98, 82, 22)
+        self.assessment_label.setGeometry(62, 97, 104, 24)
         self.assessment_label.setAlignment(Qt.AlignRight | Qt.AlignVCenter)
 
     def set_value(self, value, status):

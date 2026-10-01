@@ -8,7 +8,7 @@ CARD_COLORS = {
     'CARD_WARNING': '#C86516',
     'CARD_BAD': '#D63B3B',
     'CARD_SEVERE': '#D63B3B',
-    'CARD_UNKNOWN': '#73817C',
+    'CARD_UNKNOWN': '#91A6A0',
 }
 # PM1.0 is a user-selected product reference, not an AirKorea standard.
 PM_LIMITS = {'PM1.0': (10, 25, 50), 'PM2.5': (15, 35, 75), 'PM10': (30, 80, 150)}
