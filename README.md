@@ -26,11 +26,11 @@ Pi의 Qt 5와 Windows Qt 6에서 헤더·상세·홈·종료 화면 및 바깥 �
 
 ### UI 설정
 
-센서 상세 화면의 자동 복귀 시간은 `app_config.ini`에서 초 단위로 변경합니다. 설정은 프로그램을 다시 시작할 때 적용됩니다. 파일이 없거나, INI 문법이 잘못됐거나, 값을 읽을 수 없거나, 값이 0 이하이면 5초를 사용합니다.
+센서 상세 화면의 자동 복귀 시간은 `app_config.ini`에서 초 단위로 변경합니다. 설정은 프로그램을 다시 시작할 때 적용됩니다. 현재 기본 설정은 30초입니다. 파일이 없거나, INI 문법이 잘못됐거나, 값을 읽을 수 없거나, 값이 0 이하이거나, 무한대 또는 Qt 타이머 범위를 넘는 값이면 5초를 사용합니다.
 
 ```ini
 [ui]
-sensor_detail_timeout_sec = 5
+sensor_detail_timeout_sec = 30
 ```
 
 ### V2 얼굴 애니메이션
@@ -98,7 +98,7 @@ python -m venv .venv
 | 95 | 포트 없음 | `센서 확인 중`, 자동 재시도 |
 | 96~145 | 정상값 | 전체 분석 초기화 후 새 표본 수집과 상태 복구 |
 
-Raspberry Pi/Linux에서는 같은 옵션을 `python3 main.py --demo-states --windowed` 형식으로 실행합니다. 전체화면 확인 시 `--windowed`를 생략합니다.
+Raspberry Pi/Linux에서는 같은 옵션을 `python3 main.py --demo-states --windowed` 형식으로 실행합니다. 전체화면 확인 시 `--windowed`를 생략합니다. 전체화면에서는 터치 디스플레이 위에 마우스 포인터가 남지 않도록 커서를 숨기며, `--windowed` 실행에서는 개발과 점검을 위해 커서를 계속 표시합니다.
 
 공개본에는 실제 센서 프로토콜과 통신 값이 없습니다. 먼저 `--demo`로 실행하세요. 전체화면은 `--windowed`를 생략합니다. Linux에서는 해당 환경의 PySide2 또는 PySide6와 pySerial을 별도로 준비하세요. 기존 Raspberry Pi의 Python 3.7/PySide2 호환을 고려하지만 장비에서 직접 검증해야 합니다.
 
@@ -192,6 +192,17 @@ README에 사용하는 현재 런타임 UI 이미지는 다음 명령으로 다�
 - 일부 항목이 부족할 때는 상태 회복을 확정하지 않아 누락된 센서 때문에 환경이 좋아졌다고 오판하지 않도록 했습니다.
 - `--demo-tour`에서 정상 수집, PM 급상승, 부분·전체 값 오류, 통신 timeout, 포트 없음과 정상 복구를 한 번에 확인할 수 있도록 했습니다.
 - 전체 단위·통합 테스트 116개를 통과했습니다.
+
+### 2026-10-01 · Raspberry Pi 표시와 설정 안정성 보완
+
+- 센서 상세 화면의 기본 자동 복귀 시간을 30초로 조정했습니다.
+- `app_config.ini`에 `inf`나 Qt 타이머 범위를 넘는 값이 들어와도 화면 진입 중 예외가 발생하지 않고 5초 기본값으로 복구하도록 검증을 강화했습니다.
+- Raspberry Pi 전체화면 실행에서는 마우스 커서를 숨기고, `--windowed` 실행에서는 커서를 유지하도록 했습니다.
+- 얼굴 모서리 프레임을 렌더링 옵션으로 분리하고 `designs/render_preview_compare.py`와 `demo_images/preview_compare.png`로 전체 상태의 프레임 유무를 비교할 수 있게 했습니다. 실제 런타임 기본값은 프레임 표시입니다.
+- Windows용 PySide6와 Raspberry Pi OS Buster용 apt PySide2·pySerial 설치 범위를 `requirements.txt`에 명확히 구분했습니다.
+- 전체 단위·통합 테스트 116개, 데모 통합 검사, Python 문법 컴파일과 Git diff 검사를 통과했습니다.
+
+오늘 변경을 Raspberry Pi에 반영할 때는 `main.py`, `sensor_data.py`, `app_config.ini`를 복사합니다. 얼굴 프레임 옵션과 분석 코드 문서화 변경까지 동일하게 맞추려면 `robot_ui.py`, `air_quality_analyzer.py`도 함께 복사합니다. `tests/`, `designs/`, `demo_images/`는 운영 실행에 필요하지 않으며 장비 고유의 `sensor_protocol.py`, `sensor_connection_local.py`는 유지합니다.
 
 ## 공개 범위와 현재 상태
 

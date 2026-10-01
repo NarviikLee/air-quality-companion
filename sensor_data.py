@@ -2,6 +2,7 @@
 from dataclasses import dataclass
 from configparser import ConfigParser, Error as ConfigError
 from pathlib import Path
+import math
 import random
 from sensor_status import CARD_COLORS, assess_sensor
 
@@ -53,7 +54,10 @@ def _sensor_detail_timeout_sec(path=None):
         value = parser.getfloat('ui', 'sensor_detail_timeout_sec')
     except (ConfigError, ValueError):
         return 5.0
-    return value if value > 0 else 5.0
+    # QTimer uses a signed 32-bit millisecond interval on the supported Qt 5
+    # target. Reject non-finite or unrepresentable values before UI code calls
+    # round(value * 1000), which would otherwise raise or overflow.
+    return value if math.isfinite(value) and 0 < value <= 2147483.0 else 5.0
 
 
 SENSOR_DETAIL_TIMEOUT_SEC = _sensor_detail_timeout_sec()

@@ -10,6 +10,7 @@ class RobotFaceWidget(QPushButton):
     def __init__(self, parent=None):
         super().__init__(parent)
         self.expression = 'waiting'
+        self.show_corner_frame = True
         self.animation = RobotAnimationController(self.expression)
         self.animation_started_at = time.monotonic()
         self.animation_timer = QTimer(self)
@@ -65,12 +66,13 @@ class RobotFaceWidget(QPushButton):
         p.setPen(Qt.NoPen)
         p.setBrush(gradient)
         p.drawRoundedRect(QRectF(0, 0, 752, 304), 35, 35)
-        p.setPen(QPen(QColor('#3E6570'), 2))
-        for x, direction in ((22, 1), (730, -1)):
-            p.drawLine(x, 40, x, 22)
-            p.drawLine(x, 22, x + direction * 22, 22)
-            p.drawLine(x, 264, x, 282)
-            p.drawLine(x, 282, x + direction * 22, 282)
+        if self.show_corner_frame:
+            p.setPen(QPen(QColor('#3E6570'), 2))
+            for x, direction in ((22, 1), (730, -1)):
+                p.drawLine(x, 40, x, 22)
+                p.drawLine(x, 22, x + direction * 22, 22)
+                p.drawLine(x, 264, x, 282)
+                p.drawLine(x, 282, x + direction * 22, 282)
 
     def paint_eye(self, p, x, accent, frame):
         if self.expression == 'waiting':

@@ -31,6 +31,10 @@ class RobotTests(unittest.TestCase):
             self.assertEqual(config._sensor_detail_timeout_sec(path), 5.0)
             path.write_text('[ui]\nsensor_detail_timeout_sec = 0\n', encoding='utf-8')
             self.assertEqual(config._sensor_detail_timeout_sec(path), 5.0)
+            path.write_text('[ui]\nsensor_detail_timeout_sec = inf\n', encoding='utf-8')
+            self.assertEqual(config._sensor_detail_timeout_sec(path), 5.0)
+            path.write_text('[ui]\nsensor_detail_timeout_sec = 2147484\n', encoding='utf-8')
+            self.assertEqual(config._sensor_detail_timeout_sec(path), 5.0)
 
     def test_demo_states_cycle_through_every_expression(self):
         class Source:

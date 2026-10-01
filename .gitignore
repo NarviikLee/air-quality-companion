@@ -44,6 +44,9 @@ PROGRAM_LOGIC_LOCAL.md
 !/main.py
 !/port_discovery.py
 !/preview_robot.py
+!/designs/
+/designs/*
+!/designs/render_preview_compare.py
 !/qt_compat.py
 !/repeated_error_log.py
 !/robot_led.py
@@ -76,6 +79,7 @@ PROGRAM_LOGIC_LOCAL.md
 /demo_images/*
 !/demo_images/demo_robot_home.png
 !/demo_images/demo_preview.png
+!/demo_images/preview_compare.png
 
 # Private implementation, packet fixtures and copies in local records/archives.
 sensor_protocol.py

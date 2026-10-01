@@ -68,6 +68,8 @@ if __name__ == '__main__':
     from dashboard import MainWindow
     logging.info('Python %s / %s / Qt %s', sys.version.split()[0], BINDING, QtCore.qVersion())
     app = QApplication(sys.argv)
+    if '--windowed' not in sys.argv:
+        app.setOverrideCursor(QtCore.Qt.BlankCursor)
     window = MainWindow(demo_states=demo_states)
     shutdown_signals = ShutdownSignals(window)
     service_watchdog = ServiceWatchdog(window)

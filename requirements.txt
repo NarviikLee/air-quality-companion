@@ -1,4 +1,15 @@
-# Raspberry Pi Buster: install PySide2 and python3-serial using apt (see README).
-# Windows development only:
+# Runtime dependencies
+#
+# Windows development (Python 3.9+):
 PySide6>=6.8,<7; sys_platform == 'win32'
+
+# Serial communication. The public demo also runs without attached hardware.
 pyserial>=3.4,<4
+
+# Raspberry Pi OS Buster / Python 3.7:
+# Install Qt and serial support from the OS repository for compatibility:
+#   sudo apt update
+#   sudo apt install python3-pyside2.qtwidgets python3-pyside2.qtgui \
+#       python3-pyside2.qtcore python3-pyside2.qttest python3-serial
+# Do not install PySide6 from this file on Raspberry Pi; qt_compat.py selects
+# the available PySide2 binding automatically.

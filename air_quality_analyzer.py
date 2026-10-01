@@ -22,6 +22,19 @@ class Measurement:
 
 
 def map_robot_state(name, value, temperature=None):
+    """Map one validated display assessment to the robot's three states.
+
+    Args:
+        name: Sensor name from ``NAMES``.
+        value: Numeric sensor measurement to assess.
+        temperature: Optional temperature context used when assessing humidity.
+
+    Returns:
+        The corresponding ``AirQualityState`` value.
+
+    Raises:
+        ValueError: If the sensor name or measurement cannot be assessed.
+    """
     level = assess_sensor(name, value, temperature=temperature).level
     if level == 'CARD_UNKNOWN':
         raise ValueError('Invalid analysis value')
@@ -33,11 +46,24 @@ def map_robot_state(name, value, temperature=None):
 
 
 class AirQualityAnalyzer:
+    """Aggregate sensor samples and confirm a stable air-quality state.
+
+    Args:
+        clock: Callable returning monotonic time in seconds. Supplying a clock
+            is useful for deterministic tests; the default is ``time.monotonic``.
+    """
+
     def __init__(self, clock=time.monotonic):
         self.clock = clock
         self.reset()
 
     def reset(self):
+        """Discard all samples and return to the initial sensor-check state.
+
+        Returns:
+            None. All accumulated samples, averages, candidates, confirmed
+            state, and failure counters are cleared as a side effect.
+        """
         self.samples = deque()
         self.rapid_samples = {name: deque(maxlen=config.FAST_RISE_WINDOW_SAMPLES)
                               for name in NAMES[:3]}
@@ -87,7 +113,18 @@ class AirQualityAnalyzer:
                 self.first_valid_at[name] = None
 
     def channel_display_status(self, name):
-        """Return the detail-card-only acquisition state for an analysis channel."""
+        """Return the acquisition status shown on one sensor detail card.
+
+        Args:
+            name: Sensor name to inspect.
+
+        Returns:
+            ``'checking'`` when no recent valid value is available,
+            ``'invalid'`` for a short invalid-value gap, ``'recovering'`` while
+            rebuilding that channel's averaging window, or ``None`` when the
+            channel has no special display status. Unknown names also return
+            ``None``.
+        """
         if name not in self.first_valid_at:
             return None
         if self.invalid_since[name] is not None:
@@ -100,6 +137,16 @@ class AirQualityAnalyzer:
         return None
 
     def check_stale(self, now=None):
+        """Expire stale data and update readiness for the current window.
+
+        Args:
+            now: Current monotonic time in seconds. When omitted, ``clock``
+                supplied to the analyzer is used.
+
+        Returns:
+            ``True`` if the most recent sample was stale and the analyzer was
+            fully reset; otherwise ``False``.
+        """
         now = self.clock() if now is None else now
         if self.last_at is not None and now - self.last_at >= config.SENSOR_STALE_TIMEOUT_SEC:
             self.reset()
@@ -111,6 +158,19 @@ class AirQualityAnalyzer:
         return False
 
     def record_failure(self, now=None, no_port=False):
+        """Record one failed acquisition attempt.
+
+        Args:
+            now: Failure time in monotonic seconds. When omitted, ``clock``
+                supplied to the analyzer is used.
+            no_port: Whether the failure means that no sensor port is present.
+                This causes an immediate full reset when true.
+
+        Returns:
+            None. Transient failures preserve the confirmed state but clear
+            pending and rapid-rise candidates. A missing port or too many
+            consecutive failures resets the analyzer completely.
+        """
         now = self.clock() if now is None else now
         self.clear_candidate()
         for samples in self.rapid_samples.values():
@@ -123,6 +183,24 @@ class AirQualityAnalyzer:
             self.check_stale(now)
 
     def accept_sample(self, values, timestamp=None):
+        """Validate and record one frame of sensor measurements.
+
+        Args:
+            values: Mapping whose keys are sensor names from ``NAMES`` and
+                whose values are raw measurements. Missing, non-numeric, and
+                out-of-range channel values are treated as invalid.
+            timestamp: Sample time in monotonic seconds. When omitted, ``clock``
+                supplied to the analyzer is used.
+
+        Returns:
+            ``True`` when at least one analysis value was accepted. ``False``
+            when the sample was duplicate or out of order, or when every
+            analysis value was invalid.
+
+        Valid channels continue averaging when another channel is invalid.
+        Accepted samples may update readiness, moving averages, candidates,
+        the confirmed state, and the reasons associated with that state.
+        """
         now = self.clock() if timestamp is None else timestamp
         if self.last_at is not None and now <= self.last_at:
             return False  # Duplicate/out-of-order samples cannot advance confirmation.
@@ -204,7 +282,7 @@ class AirQualityAnalyzer:
             elif name == 'Humidity':
                 if value < 30:
                     reason = 'humidity_low'
-                elif value >= 60 or value > 50 or (temperature > 24 and value > 45):
+                elif value > 50 or (temperature > 24 and value > 45):
                     reason = 'humidity_high'
                 else:
                     continue  # The temperature card already explains this thermal state.
