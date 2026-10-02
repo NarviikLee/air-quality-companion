@@ -1,0 +1,19 @@
+-- Logs begin at Thu 2019-02-14 19:11:59 KST. --
+2026-09-23T00:14:03+0900 device python3[1084]: 2026-09-23 00:14:03,930 INFO root: Python 3.7.3 / PySide2 / Qt 5.11.3
+2026-09-23T00:14:05+0900 device python3[1084]: 2026-09-23 00:14:05,151 INFO service_watchdog: Service watchdog enabled (timeout 30.0s)
+2026-09-23T00:14:05+0900 device python3[1084]: 2026-09-23 00:14:05,186 INFO serial_source: Serial port discovery mode: linux
+2026-09-23T00:14:05+0900 device python3[1084]: 2026-09-23 00:14:05,196 INFO serial_source: Serial port candidates: /dev/ttyAMA0
+2026-09-23T00:14:06+0900 device python3[1084]: 2026-09-23 00:14:06,207 WARNING sensor_worker: Sensor read failed: DataUnavailableError: /dev/ttyAMA0: SerialTimeoutException: Write timeout
+2026-09-23T00:15:10+0900 device python3[1084]: 2026-09-23 00:15:10,171 WARNING sensor_worker: Sensor error summary (still failing): DataUnavailableError: /dev/ttyAMA0: SerialTimeoutException: Write timeout; repeated=16, total=17
+2026-09-23T00:16:10+0900 device python3[1084]: 2026-09-23 00:16:10,175 WARNING sensor_worker: Sensor error summary (still failing): DataUnavailableError: /dev/ttyAMA0: SerialTimeoutException: Write timeout; repeated=15, total=32
+2026-09-23T00:17:10+0900 device python3[1084]: 2026-09-23 00:17:10,177 WARNING sensor_worker: Sensor error summary (still failing): DataUnavailableError: /dev/ttyAMA0: SerialTimeoutException: Write timeout; repeated=15, total=47
+2026-09-23T00:18:14+0900 device python3[1084]: 2026-09-23 00:18:14,171 WARNING sensor_worker: Sensor error summary (still failing): DataUnavailableError: /dev/ttyAMA0: SerialTimeoutException: Write timeout; repeated=16, total=63
+2026-09-23T00:19:14+0900 device python3[1084]: 2026-09-23 00:19:14,174 WARNING sensor_worker: Sensor error summary (still failing): DataUnavailableError: /dev/ttyAMA0: SerialTimeoutException: Write timeout; repeated=15, total=78
+2026-09-23T00:20:18+0900 device python3[1084]: 2026-09-23 00:20:18,174 WARNING sensor_worker: Sensor error summary (still failing): DataUnavailableError: /dev/ttyAMA0: SerialTimeoutException: Write timeout; repeated=16, total=94
+2026-09-23T00:21:22+0900 device python3[1084]: 2026-09-23 00:21:22,171 WARNING sensor_worker: Sensor error summary (still failing): DataUnavailableError: /dev/ttyAMA0: SerialTimeoutException: Write timeout; repeated=16, total=110
+2026-09-23T00:22:21+0900 device python3[1084]: 2026-09-23 00:22:21,162 INFO serial_source: Serial port candidates: /dev/ttyAMA0, /dev/ttyUSB0
+2026-09-23T00:22:22+0900 device python3[1084]: 2026-09-23 00:22:22,191 WARNING sensor_worker: Sensor error summary (error changed): DataUnavailableError: /dev/ttyAMA0: SerialTimeoutException: Write timeout; repeated=14, total=124
+2026-09-23T00:22:22+0900 device python3[1084]: 2026-09-23 00:22:22,194 WARNING sensor_worker: Sensor read failed: DataUnavailableError: /dev/ttyUSB0: ReceiveTimeoutError: No response before timeout
+2026-09-23T00:22:26+0900 device python3[1084]: 2026-09-23 00:22:26,175 WARNING sensor_worker: Sensor read failed: DataUnavailableError: /dev/ttyAMA0: SerialTimeoutException: Write timeout
+2026-09-23T00:22:29+0900 device python3[1084]: 2026-09-23 00:22:29,200 INFO serial_source: Sensor verified on /dev/ttyUSB0
+2026-09-23T00:22:29+0900 device python3[1084]: 2026-09-23 00:22:29,202 INFO sensor_worker: Sensor data recovered after 1 failures (unlogged repeats=0); last error: DataUnavailableError: /dev/ttyAMA0: SerialTimeoutException: Write timeout

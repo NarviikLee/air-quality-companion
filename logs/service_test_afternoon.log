@@ -1,0 +1,36 @@
+-- Logs begin at Wed 2026-09-23 10:19:33 KST, end at Wed 2026-09-23 16:28:34 KST. --
+ 9월 23 14:50:22.355076 device python3[1111]: 2026-09-23 14:50:22,354 INFO serial_source: Serial port candidates: (none)
+ 9월 23 14:50:22.356281 device python3[1111]: 2026-09-23 14:50:22,355 WARNING sensor_worker: Sensor read failed: PortUnavailableError: All serial ports disconnected
+ 9월 23 14:50:25.221560 device python3[1111]: 2026-09-23 14:50:25,221 WARNING sensor_worker: Sensor read failed: PortUnavailableError: No serial ports found
+ 9월 23 14:50:49.209651 device python3[1111]: 2026-09-23 14:50:49,209 INFO serial_source: Serial port candidates: /dev/ttyUSB0
+ 9월 23 14:50:49.239720 device python3[1111]: 2026-09-23 14:50:49,239 INFO serial_source: Sensor verified on /dev/ttyUSB0
+ 9월 23 14:50:49.240027 device python3[1111]: 2026-09-23 14:50:49,239 INFO sensor_worker: Sensor data recovered after 8 failures (unlogged repeats=7); last error: PortUnavailableError: No serial ports found
+ 9월 23 14:50:49.240666 device python3[1111]: 2026-09-23 14:50:49,240 INFO dashboard: Reconnected: fresh 10s window and 5s confirmation; retain face=True
+ 9월 23 15:15:23.217741 device python3[1111]: 2026-09-23 15:15:23,217 INFO serial_source: Serial port candidates: (none)
+ 9월 23 15:15:23.220266 device python3[1111]: 2026-09-23 15:15:23,219 WARNING sensor_worker: Sensor read failed: PortUnavailableError: All serial ports disconnected
+ 9월 23 15:15:26.215503 device python3[1111]: 2026-09-23 15:15:26,215 WARNING sensor_worker: Sensor read failed: PortUnavailableError: No serial ports found
+ 9월 23 15:16:08.217476 device python3[1111]: 2026-09-23 15:16:08,217 INFO serial_source: Serial port candidates: /dev/ttyUSB0
+ 9월 23 15:16:08.249799 device python3[1111]: 2026-09-23 15:16:08,249 INFO serial_source: Sensor verified on /dev/ttyUSB0
+ 9월 23 15:16:08.250310 device python3[1111]: 2026-09-23 15:16:08,249 INFO sensor_worker: Sensor data recovered after 14 failures (unlogged repeats=13); last error: PortUnavailableError: No serial ports found
+ 9월 23 15:16:08.251067 device python3[1111]: 2026-09-23 15:16:08,250 INFO dashboard: Reconnected: fresh 10s window and 5s confirmation; retain face=False
+ 9월 23 15:40:24.218725 device python3[1111]: 2026-09-23 15:40:24,218 INFO serial_source: Serial port candidates: (none)
+ 9월 23 15:40:24.221143 device python3[1111]: 2026-09-23 15:40:24,220 WARNING sensor_worker: Sensor read failed: PortUnavailableError: All serial ports disconnected
+ 9월 23 15:40:27.220899 device python3[1111]: 2026-09-23 15:40:27,220 WARNING sensor_worker: Sensor read failed: PortUnavailableError: No serial ports found
+ 9월 23 15:40:42.226468 device python3[1111]: 2026-09-23 15:40:42,226 INFO serial_source: Serial port candidates: /dev/ttyUSB0
+ 9월 23 15:40:42.261823 device python3[1111]: 2026-09-23 15:40:42,261 INFO serial_source: Sensor verified on /dev/ttyUSB0
+ 9월 23 15:40:42.262387 device python3[1111]: 2026-09-23 15:40:42,262 INFO sensor_worker: Sensor data recovered after 5 failures (unlogged repeats=4); last error: PortUnavailableError: No serial ports found
+ 9월 23 15:40:42.263145 device python3[1111]: 2026-09-23 15:40:42,262 INFO dashboard: Reconnected: fresh 10s window and 5s confirmation; retain face=True
+ 9월 23 16:05:28.205126 device python3[1111]: 2026-09-23 16:05:28,204 INFO serial_source: Serial port candidates: (none)
+ 9월 23 16:05:28.206295 device python3[1111]: 2026-09-23 16:05:28,205 WARNING sensor_worker: Sensor read failed: PortUnavailableError: All serial ports disconnected
+ 9월 23 16:05:31.211166 device python3[1111]: 2026-09-23 16:05:31,210 WARNING sensor_worker: Sensor read failed: PortUnavailableError: No serial ports found
+ 9월 23 16:06:16.207550 device python3[1111]: 2026-09-23 16:06:16,207 INFO serial_source: Serial port candidates: /dev/ttyUSB0
+ 9월 23 16:06:16.237958 device python3[1111]: 2026-09-23 16:06:16,237 INFO serial_source: Sensor verified on /dev/ttyUSB0
+ 9월 23 16:06:16.238274 device python3[1111]: 2026-09-23 16:06:16,238 INFO sensor_worker: Sensor data recovered after 15 failures (unlogged repeats=14); last error: PortUnavailableError: No serial ports found
+ 9월 23 16:06:16.238864 device python3[1111]: 2026-09-23 16:06:16,238 INFO dashboard: Reconnected: fresh 10s window and 5s confirmation; retain face=False
+ 9월 23 16:15:28.205692 device python3[1111]: 2026-09-23 16:15:28,205 INFO serial_source: Serial port candidates: (none)
+ 9월 23 16:15:28.207537 device python3[1111]: 2026-09-23 16:15:28,207 WARNING sensor_worker: Sensor read failed: PortUnavailableError: All serial ports disconnected
+ 9월 23 16:15:31.213135 device python3[1111]: 2026-09-23 16:15:31,212 WARNING sensor_worker: Sensor read failed: PortUnavailableError: No serial ports found
+ 9월 23 16:16:10.218938 device python3[1111]: 2026-09-23 16:16:10,218 INFO serial_source: Serial port candidates: /dev/ttyUSB0
+ 9월 23 16:16:10.249213 device python3[1111]: 2026-09-23 16:16:10,248 INFO serial_source: Sensor verified on /dev/ttyUSB0
+ 9월 23 16:16:10.249822 device python3[1111]: 2026-09-23 16:16:10,249 INFO sensor_worker: Sensor data recovered after 13 failures (unlogged repeats=12); last error: PortUnavailableError: No serial ports found
+ 9월 23 16:16:10.250978 device python3[1111]: 2026-09-23 16:16:10,250 INFO dashboard: Reconnected: fresh 10s window and 5s confirmation; retain face=False

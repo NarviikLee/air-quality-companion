@@ -1,0 +1,5399 @@
+2026. 09. 21. (월) 18:29:40 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       30:28 11.9  2.0 81620 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 18:29:50 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       30:38 11.8  2.0 81628 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.6'C
+
+2026. 09. 21. (월) 18:30:00 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       30:49 11.8  2.0 81628 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.6'C
+
+2026. 09. 21. (월) 18:30:10 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       30:59 11.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.6'C
+
+2026. 09. 21. (월) 18:30:20 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       31:09 11.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 18:30:30 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       31:19 12.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.6'C
+
+2026. 09. 21. (월) 18:30:40 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       31:29 12.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 18:30:51 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       31:39 12.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 18:31:01 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       31:49 12.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 18:31:11 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       31:59 12.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 18:31:21 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       32:09 12.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 18:31:31 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       32:19 12.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 18:31:41 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       32:29 12.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 18:31:51 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       32:39 12.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 18:32:01 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       32:49 12.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 18:32:11 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       32:59 12.4  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 18:32:21 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       33:10 12.4  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 18:32:31 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       33:20 12.5  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 18:32:41 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       33:30 12.5  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 18:32:51 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       33:40 12.5  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 18:33:01 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       33:50 12.6  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=52.1'C
+
+2026. 09. 21. (월) 18:33:12 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       34:00 12.6  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 18:33:22 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       34:10 12.7  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.6'C
+
+2026. 09. 21. (월) 18:33:32 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       34:20 12.7  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 18:33:42 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       34:30 12.7  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 18:33:52 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       34:40 12.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.6'C
+
+2026. 09. 21. (월) 18:34:02 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       34:50 12.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 18:34:12 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       35:00 12.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 18:34:22 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       35:10 12.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 18:34:32 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       35:20 12.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 18:34:42 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       35:31 13.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 18:34:52 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       35:41 13.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.6'C
+
+2026. 09. 21. (월) 18:35:02 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       35:51 13.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 18:35:12 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       36:01 13.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 18:35:22 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       36:11 13.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.2'C
+
+2026. 09. 21. (월) 18:35:33 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       36:21 13.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.7'C
+
+2026. 09. 21. (월) 18:35:43 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       36:31 13.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 18:35:53 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       36:41 13.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 18:36:03 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       36:51 13.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 18:36:13 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       37:01 13.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 18:36:23 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       37:11 13.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 18:36:33 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       37:21 13.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=47.7'C
+
+2026. 09. 21. (월) 18:36:43 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       37:31 13.4  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 18:36:53 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       37:41 13.4  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 18:37:03 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       37:52 13.4  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.2'C
+
+2026. 09. 21. (월) 18:37:13 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       38:02 13.5  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.7'C
+
+2026. 09. 21. (월) 18:37:23 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       38:12 13.5  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.2'C
+
+2026. 09. 21. (월) 18:37:33 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       38:22 13.5  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=47.7'C
+
+2026. 09. 21. (월) 18:37:43 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       38:32 13.5  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.7'C
+
+2026. 09. 21. (월) 18:37:54 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       38:42 13.6  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=47.7'C
+
+2026. 09. 21. (월) 18:38:04 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       38:52 13.6  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.2'C
+
+2026. 09. 21. (월) 18:38:14 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       39:02 13.6  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.7'C
+
+2026. 09. 21. (월) 18:38:24 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       39:12 13.7  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 18:38:34 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       39:22 13.7  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.7'C
+
+2026. 09. 21. (월) 18:38:44 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       39:32 13.7  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 18:38:54 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       39:42 13.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 18:39:04 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       39:52 13.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 18:39:14 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       40:02 13.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 18:39:24 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       40:13 13.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 18:39:34 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       40:23 13.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 18:39:44 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       40:33 13.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 18:39:54 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       40:43 13.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 18:40:05 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       40:53 14.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 18:40:15 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       41:03 14.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 18:40:25 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       41:13 14.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 18:40:35 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       41:23 14.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 18:40:45 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       41:33 14.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 18:40:55 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       41:43 14.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 18:41:05 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       41:53 14.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 18:41:15 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       42:03 14.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 18:41:25 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       42:13 14.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 18:41:35 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       42:23 14.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 18:41:45 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       42:34 14.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 18:41:55 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       42:44 14.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 18:42:05 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       42:54 14.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 18:42:15 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       43:04 14.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.6'C
+
+2026. 09. 21. (월) 18:42:26 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       43:14 14.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 18:42:36 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       43:24 14.4  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 18:42:46 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       43:34 14.4  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 18:42:56 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       43:44 14.4  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 18:43:06 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       43:54 14.4  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 18:43:16 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       44:04 14.5  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 18:43:26 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       44:14 14.5  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 18:43:36 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       44:24 14.5  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.7'C
+
+2026. 09. 21. (월) 18:43:46 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       44:34 14.5  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 18:43:56 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       44:44 14.5  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.7'C
+
+2026. 09. 21. (월) 18:44:06 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       44:55 14.6  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 18:44:16 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       45:05 14.6  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 18:44:26 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       45:15 14.6  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 18:44:36 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       45:25 14.6  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 18:44:47 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       45:35 14.7  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 18:44:57 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       45:45 14.7  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 18:45:07 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       45:55 14.7  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 18:45:17 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       46:05 14.7  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 18:45:27 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       46:15 14.7  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 18:45:37 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       46:25 14.7  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 18:45:47 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       46:35 14.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 18:45:57 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       46:45 14.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 18:46:07 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       46:55 14.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 18:46:17 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       47:06 14.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 18:46:27 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       47:16 14.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 18:46:37 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       47:26 14.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 18:46:47 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       47:36 14.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 18:46:57 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       47:46 14.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 18:47:08 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       47:56 14.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.7'C
+
+2026. 09. 21. (월) 18:47:18 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       48:06 14.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.7'C
+
+2026. 09. 21. (월) 18:47:28 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       48:16 15.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 18:47:38 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       48:26 15.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 18:47:48 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       48:36 15.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 18:47:58 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       48:46 15.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 18:48:08 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       48:56 15.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.7'C
+
+2026. 09. 21. (월) 18:48:18 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       49:06 15.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 18:48:28 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       49:16 15.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 18:48:38 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       49:27 15.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.2'C
+
+2026. 09. 21. (월) 18:48:48 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       49:37 15.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 18:48:58 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       49:47 15.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 18:49:08 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       49:57 15.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.7'C
+
+2026. 09. 21. (월) 18:49:18 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       50:07 15.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 18:49:29 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       50:17 15.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 18:49:39 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       50:27 15.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 18:49:49 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       50:37 15.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 18:49:59 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       50:47 15.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 18:50:09 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       50:57 15.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 18:50:19 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       51:07 15.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 18:50:29 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       51:17 15.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 18:50:39 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       51:27 15.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 18:50:49 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       51:37 15.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 18:50:59 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       51:48 15.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 18:51:09 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       51:58 15.4  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 18:51:19 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       52:08 15.4  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.6'C
+
+2026. 09. 21. (월) 18:51:29 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       52:18 15.4  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.6'C
+
+2026. 09. 21. (월) 18:51:39 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       52:28 15.4  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 18:51:50 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       52:38 15.4  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=52.1'C
+
+2026. 09. 21. (월) 18:52:00 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       52:48 15.4  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 18:52:10 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       52:58 15.5  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.6'C
+
+2026. 09. 21. (월) 18:52:20 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       53:08 15.5  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 18:52:30 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       53:18 15.5  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.6'C
+
+2026. 09. 21. (월) 18:52:40 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       53:28 15.5  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 18:52:50 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       53:38 15.5  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 18:53:00 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       53:48 15.5  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 18:53:10 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       53:58 15.6  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.6'C
+
+2026. 09. 21. (월) 18:53:20 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       54:09 15.6  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.6'C
+
+2026. 09. 21. (월) 18:53:30 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       54:19 15.6  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 18:53:40 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       54:29 15.6  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 18:53:50 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       54:39 15.6  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 18:54:00 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       54:49 15.6  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 18:54:11 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       54:59 15.6  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 18:54:21 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       55:09 15.7  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 18:54:31 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       55:19 15.7  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 18:54:41 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       55:29 15.7  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 18:54:51 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       55:39 15.7  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 18:55:01 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       55:49 15.7  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 18:55:11 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       55:59 15.7  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 18:55:21 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       56:09 15.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 18:55:31 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       56:19 15.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 18:55:41 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       56:30 15.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 18:55:51 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       56:40 15.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 18:56:01 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       56:50 15.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 18:56:11 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       57:00 15.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 18:56:22 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       57:10 15.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 18:56:32 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       57:20 15.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.2'C
+
+2026. 09. 21. (월) 18:56:42 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       57:30 15.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.7'C
+
+2026. 09. 21. (월) 18:56:52 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       57:40 15.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.7'C
+
+2026. 09. 21. (월) 18:57:02 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       57:50 15.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.2'C
+
+2026. 09. 21. (월) 18:57:12 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       58:00 15.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 18:57:22 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       58:10 15.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 18:57:32 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       58:20 15.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.2'C
+
+2026. 09. 21. (월) 18:57:42 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       58:30 15.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.2'C
+
+2026. 09. 21. (월) 18:57:52 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       58:40 16.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 18:58:02 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       58:51 16.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 18:58:12 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       59:01 16.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 18:58:22 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       59:11 16.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 18:58:32 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       59:21 16.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 18:58:43 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       59:31 16.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 18:58:53 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       59:41 16.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 18:59:03 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073       59:51 16.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 18:59:13 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:00:01 16.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 18:59:23 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:00:11 16.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 18:59:33 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:00:21 16.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 18:59:43 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:00:31 16.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 18:59:53 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:00:41 16.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 19:00:03 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:00:51 16.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 19:00:13 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:01:01 16.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 19:00:23 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:01:12 16.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 19:00:33 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:01:22 16.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 19:00:43 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:01:32 16.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 19:00:53 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:01:42 16.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 19:01:04 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:01:52 16.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 19:01:14 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:02:02 16.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 19:01:24 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:02:12 16.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 19:01:34 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:02:22 16.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 19:01:44 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:02:32 16.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 19:01:54 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:02:42 16.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.2'C
+
+2026. 09. 21. (월) 19:02:04 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:02:52 16.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 19:02:14 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:03:02 16.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 19:02:24 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:03:12 16.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 19:02:34 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:03:22 16.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.7'C
+
+2026. 09. 21. (월) 19:02:44 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:03:33 16.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.7'C
+
+2026. 09. 21. (월) 19:02:54 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:03:43 16.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.7'C
+
+2026. 09. 21. (월) 19:03:04 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:03:53 16.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.7'C
+
+2026. 09. 21. (월) 19:03:14 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:04:03 16.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 19:03:25 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:04:13 16.4  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 19:03:35 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:04:23 16.4  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 19:03:45 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:04:33 16.4  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 19:03:55 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:04:43 16.4  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 19:04:05 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:04:53 16.4  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 19:04:15 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:05:03 16.4  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 19:04:25 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:05:13 16.4  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 19:04:35 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:05:23 16.4  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 19:04:45 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:05:33 16.5  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 19:04:55 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:05:43 16.5  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.6'C
+
+2026. 09. 21. (월) 19:05:05 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:05:54 16.5  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 19:05:15 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:06:04 16.5  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 19:05:25 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:06:14 16.5  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.6'C
+
+2026. 09. 21. (월) 19:05:35 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:06:24 16.5  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=52.1'C
+
+2026. 09. 21. (월) 19:05:46 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:06:34 16.5  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 19:05:56 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:06:44 16.5  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=52.5'C
+
+2026. 09. 21. (월) 19:06:06 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:06:54 16.5  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 19:06:16 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:07:04 16.5  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 19:06:26 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:07:14 16.6  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 19:06:36 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:07:24 16.6  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 19:06:46 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:07:34 16.6  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 19:06:56 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:07:44 16.6  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 19:07:06 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:07:54 16.6  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 19:07:16 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:08:05 16.6  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 19:07:26 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:08:15 16.6  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 19:07:36 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:08:25 16.6  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 19:07:46 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:08:35 16.6  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 19:07:56 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:08:45 16.6  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.7'C
+
+2026. 09. 21. (월) 19:08:07 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:08:55 16.7  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.7'C
+
+2026. 09. 21. (월) 19:08:17 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:09:05 16.7  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.7'C
+
+2026. 09. 21. (월) 19:08:27 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:09:15 16.7  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.2'C
+
+2026. 09. 21. (월) 19:08:37 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:09:25 16.7  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.2'C
+
+2026. 09. 21. (월) 19:08:47 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:09:35 16.7  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.7'C
+
+2026. 09. 21. (월) 19:08:57 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:09:45 16.7  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.7'C
+
+2026. 09. 21. (월) 19:09:07 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:09:55 16.7  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 19:09:17 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:10:05 16.7  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.7'C
+
+2026. 09. 21. (월) 19:09:27 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:10:15 16.7  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.2'C
+
+2026. 09. 21. (월) 19:09:37 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:10:26 16.7  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.7'C
+
+2026. 09. 21. (월) 19:09:47 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:10:36 16.7  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 19:09:57 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:10:46 16.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 19:10:07 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:10:56 16.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 19:10:18 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:11:06 16.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 19:10:28 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:11:16 16.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 19:10:38 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:11:26 16.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 19:10:48 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:11:36 16.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 19:10:58 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:11:46 16.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 19:11:08 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:11:56 16.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 19:11:18 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:12:06 16.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 19:11:28 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:12:16 16.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 19:11:38 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:12:26 16.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.7'C
+
+2026. 09. 21. (월) 19:11:48 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:12:36 16.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 19:11:58 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:12:47 16.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 19:12:08 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:12:57 16.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 19:12:18 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:13:07 16.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 19:12:28 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:13:17 16.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 19:12:39 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:13:27 16.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 19:12:49 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:13:37 16.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 19:12:59 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:13:47 16.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 19:13:09 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:13:57 16.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=47.2'C
+
+2026. 09. 21. (월) 19:13:19 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:14:07 16.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.7'C
+
+2026. 09. 21. (월) 19:13:29 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:14:17 16.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 19:13:39 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:14:27 17.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 19:13:49 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:14:37 17.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 19:13:59 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:14:47 17.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.7'C
+
+2026. 09. 21. (월) 19:14:09 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:14:58 17.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.7'C
+
+2026. 09. 21. (월) 19:14:19 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:15:08 17.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.2'C
+
+2026. 09. 21. (월) 19:14:29 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:15:18 17.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 19:14:39 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:15:28 17.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 19:14:49 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:15:38 17.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 19:15:00 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:15:48 17.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 19:15:10 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:15:58 17.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 19:15:20 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:16:08 17.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 19:15:30 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:16:18 17.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 19:15:40 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:16:28 17.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 19:15:50 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:16:38 17.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 19:16:00 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:16:48 17.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.6'C
+
+2026. 09. 21. (월) 19:16:10 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:16:58 17.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 19:16:20 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:17:08 17.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 19:16:30 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:17:19 17.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 19:16:40 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:17:29 17.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 19:16:50 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:17:39 17.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 19:17:00 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:17:49 17.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=52.1'C
+
+2026. 09. 21. (월) 19:17:11 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:17:59 17.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 19:17:21 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:18:09 17.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 19:17:31 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:18:19 17.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 19:17:41 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:18:29 17.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 19:17:51 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:18:39 17.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 19:18:01 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:18:49 17.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 19:18:11 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:18:59 17.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 19:18:21 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:19:09 17.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 19:18:31 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:19:19 17.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 19:18:41 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:19:29 17.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 19:18:51 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:19:40 17.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 19:19:01 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:19:50 17.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 19:19:11 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:20:00 17.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 19:19:21 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:20:10 17.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 19:19:32 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:20:20 17.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 19:19:42 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:20:30 17.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 19:19:52 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:20:40 17.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 19:20:02 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:20:50 17.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 19:20:12 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:21:00 17.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 19:20:22 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:21:10 17.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.7'C
+
+2026. 09. 21. (월) 19:20:32 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:21:20 17.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.7'C
+
+2026. 09. 21. (월) 19:20:42 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:21:30 17.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.7'C
+
+2026. 09. 21. (월) 19:20:52 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:21:40 17.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 19:21:02 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:21:50 17.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 19:21:12 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:22:01 17.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 19:21:22 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:22:11 17.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.7'C
+
+2026. 09. 21. (월) 19:21:32 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:22:21 17.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 19:21:42 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:22:31 17.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 19:21:53 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:22:41 17.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 19:22:03 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:22:51 17.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 19:22:13 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:23:01 17.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.6'C
+
+2026. 09. 21. (월) 19:22:23 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:23:11 17.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 19:22:33 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:23:21 17.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 19:22:43 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:23:31 17.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 19:22:53 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:23:41 17.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 19:23:03 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:23:51 17.4  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 19:23:13 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:24:01 17.4  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 19:23:23 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:24:11 17.4  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 19:23:33 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:24:22 17.4  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 19:23:43 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:24:32 17.4  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 19:23:53 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:24:42 17.4  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=52.5'C
+
+2026. 09. 21. (월) 19:24:03 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:24:52 17.4  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 19:24:13 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:25:02 17.4  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 19:24:24 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:25:12 17.4  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 19:24:34 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:25:22 17.4  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 19:24:44 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:25:32 17.4  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 19:24:54 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:25:42 17.4  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 19:25:04 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:25:52 17.4  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 19:25:14 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:26:02 17.4  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 19:25:24 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:26:12 17.4  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 19:25:34 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:26:22 17.5  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 19:25:44 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:26:32 17.5  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 19:25:54 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:26:43 17.5  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 19:26:04 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:26:53 17.5  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 19:26:14 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:27:03 17.5  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 19:26:24 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:27:13 17.5  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 19:26:34 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:27:23 17.5  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 19:26:45 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:27:33 17.5  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 19:26:55 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:27:43 17.5  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 19:27:05 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:27:53 17.5  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.7'C
+
+2026. 09. 21. (월) 19:27:15 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:28:03 17.5  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 19:27:25 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:28:13 17.5  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 19:27:35 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:28:23 17.5  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 19:27:45 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:28:33 17.5  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 19:27:55 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:28:43 17.5  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 19:28:05 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:28:53 17.5  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 19:28:15 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:29:04 17.5  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 19:28:25 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:29:14 17.6  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 19:28:35 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:29:24 17.6  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 19:28:45 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:29:34 17.6  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 19:28:56 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:29:44 17.6  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 19:29:06 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:29:54 17.6  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 19:29:16 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:30:04 17.6  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 19:29:26 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:30:14 17.6  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 19:29:36 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:30:24 17.6  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 19:29:46 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:30:34 17.6  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 19:29:56 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:30:44 17.6  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 19:30:06 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:30:54 17.6  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 19:30:16 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:31:04 17.6  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 19:30:26 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:31:14 17.6  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.7'C
+
+2026. 09. 21. (월) 19:30:36 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:31:25 17.6  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 19:30:46 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:31:35 17.6  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.7'C
+
+2026. 09. 21. (월) 19:30:56 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:31:45 17.6  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.7'C
+
+2026. 09. 21. (월) 19:31:06 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:31:55 17.6  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 19:31:17 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:32:05 17.6  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.7'C
+
+2026. 09. 21. (월) 19:31:27 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:32:15 17.7  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.7'C
+
+2026. 09. 21. (월) 19:31:37 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:32:25 17.7  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.7'C
+
+2026. 09. 21. (월) 19:31:47 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:32:35 17.7  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 19:31:57 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:32:45 17.7  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 19:32:07 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:32:55 17.7  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.7'C
+
+2026. 09. 21. (월) 19:32:17 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:33:05 17.7  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 19:32:27 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:33:15 17.7  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 19:32:37 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:33:25 17.7  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 19:32:47 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:33:36 17.7  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 19:32:57 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:33:46 17.7  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 19:33:07 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:33:56 17.7  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 19:33:17 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:34:06 17.7  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 19:33:28 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:34:16 17.7  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 19:33:38 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:34:26 17.7  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 19:33:48 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:34:36 17.7  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 19:33:58 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:34:46 17.7  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 19:34:08 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:34:56 17.7  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 19:34:18 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:35:06 17.7  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 19:34:28 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:35:16 17.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 19:34:38 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:35:26 17.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 19:34:48 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:35:36 17.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 19:34:58 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:35:46 17.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 19:35:08 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:35:57 17.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.6'C
+
+2026. 09. 21. (월) 19:35:18 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:36:07 17.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 19:35:28 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:36:17 17.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 19:35:38 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:36:27 17.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 19:35:49 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:36:37 17.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 19:35:59 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:36:47 17.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 19:36:09 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:36:57 17.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 19:36:19 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:37:07 17.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 19:36:29 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:37:17 17.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 19:36:39 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:37:27 17.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 19:36:49 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:37:37 17.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 19:36:59 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:37:47 17.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 19:37:09 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:37:57 17.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 19:37:19 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:38:07 17.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 19:37:29 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:38:18 17.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 19:37:39 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:38:28 17.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 19:37:49 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:38:38 17.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 19:37:59 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:38:48 17.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 19:38:10 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:38:58 17.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 19:38:20 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:39:08 17.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 19:38:30 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:39:18 17.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 19:38:40 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:39:28 17.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 19:38:50 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:39:38 17.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 19:39:00 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:39:48 17.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 19:39:10 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:39:58 17.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 19:39:20 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:40:08 17.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 19:39:30 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:40:18 17.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.6'C
+
+2026. 09. 21. (월) 19:39:40 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:40:28 17.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 19:39:50 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:40:39 17.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 19:40:00 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:40:49 17.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 19:40:10 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:40:59 17.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 19:40:20 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:41:09 17.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.6'C
+
+2026. 09. 21. (월) 19:40:31 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:41:19 17.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 19:40:41 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:41:29 17.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 19:40:51 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:41:39 17.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 19:41:01 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:41:49 17.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 19:41:11 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:41:59 17.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 19:41:21 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:42:09 17.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=52.1'C
+
+2026. 09. 21. (월) 19:41:31 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:42:19 17.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 19:41:41 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:42:29 18.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 19:41:51 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:42:39 18.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.6'C
+
+2026. 09. 21. (월) 19:42:01 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:42:50 18.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 19:42:11 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:43:00 18.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 19:42:21 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:43:10 18.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 19:42:31 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:43:20 18.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 19:42:41 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:43:30 18.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 19:42:52 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:43:40 18.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 19:43:02 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:43:50 18.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 19:43:12 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:44:00 18.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 19:43:22 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:44:10 18.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 19:43:32 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:44:20 18.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 19:43:42 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:44:30 18.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 19:43:52 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:44:40 18.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 19:44:02 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:44:50 18.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 19:44:12 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:45:00 18.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 19:44:22 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:45:11 18.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 19:44:32 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:45:21 18.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 19:44:42 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:45:31 18.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 19:44:52 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:45:41 18.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 19:45:02 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:45:51 18.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 19:45:13 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:46:01 18.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 19:45:23 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:46:11 18.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 19:45:33 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:46:21 18.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 19:45:43 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:46:31 18.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=52.1'C
+
+2026. 09. 21. (월) 19:45:53 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:46:41 18.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 19:46:03 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:46:51 18.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 19:46:13 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:47:01 18.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 19:46:23 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:47:11 18.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 19:46:33 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:47:21 18.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 19:46:43 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:47:32 18.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 19:46:53 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:47:42 18.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 19:47:03 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:47:52 18.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 19:47:13 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:48:02 18.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 19:47:24 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:48:12 18.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 19:47:34 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:48:22 18.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 19:47:44 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:48:32 18.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 19:47:54 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:48:42 18.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 19:48:04 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:48:52 18.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 19:48:14 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:49:02 18.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 19:48:24 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:49:12 18.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 19:48:34 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:49:22 18.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 19:48:44 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:49:32 18.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 19:48:54 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:49:43 18.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 19:49:04 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:49:53 18.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 19:49:14 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:50:03 18.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 19:49:24 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:50:13 18.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 19:49:34 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:50:23 18.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.6'C
+
+2026. 09. 21. (월) 19:49:45 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:50:33 18.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 19:49:55 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:50:43 18.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 19:50:05 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:50:53 18.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 19:50:15 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:51:03 18.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 19:50:25 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:51:13 18.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 19:50:35 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:51:23 18.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 19:50:45 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:51:33 18.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 19:50:55 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:51:43 18.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 19:51:05 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:51:53 18.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 19:51:15 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:52:04 18.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 19:51:25 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:52:14 18.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.6'C
+
+2026. 09. 21. (월) 19:51:35 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:52:24 18.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 19:51:45 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:52:34 18.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.7'C
+
+2026. 09. 21. (월) 19:51:55 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:52:44 18.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 19:52:06 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:52:54 18.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 19:52:16 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:53:04 18.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 19:52:26 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:53:14 18.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.2'C
+
+2026. 09. 21. (월) 19:52:36 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:53:24 18.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.7'C
+
+2026. 09. 21. (월) 19:52:46 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:53:34 18.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 19:52:56 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:53:44 18.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 19:53:06 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:53:54 18.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.2'C
+
+2026. 09. 21. (월) 19:53:16 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:54:04 18.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.2'C
+
+2026. 09. 21. (월) 19:53:26 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:54:14 18.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=47.2'C
+
+2026. 09. 21. (월) 19:53:36 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:54:25 18.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.2'C
+
+2026. 09. 21. (월) 19:53:46 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:54:35 18.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.2'C
+
+2026. 09. 21. (월) 19:53:56 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:54:45 18.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=47.2'C
+
+2026. 09. 21. (월) 19:54:06 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:54:55 18.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.7'C
+
+2026. 09. 21. (월) 19:54:16 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:55:05 18.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=46.7'C
+
+2026. 09. 21. (월) 19:54:27 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:55:15 18.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=47.7'C
+
+2026. 09. 21. (월) 19:54:37 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:55:25 18.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=47.2'C
+
+2026. 09. 21. (월) 19:54:47 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:55:35 18.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=47.7'C
+
+2026. 09. 21. (월) 19:54:57 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:55:45 18.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=46.7'C
+
+2026. 09. 21. (월) 19:55:07 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:55:55 18.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=46.2'C
+
+2026. 09. 21. (월) 19:55:17 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:56:05 18.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=46.7'C
+
+2026. 09. 21. (월) 19:55:27 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:56:15 18.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=46.2'C
+
+2026. 09. 21. (월) 19:55:37 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:56:25 18.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=46.2'C
+
+2026. 09. 21. (월) 19:55:47 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:56:35 18.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=45.2'C
+
+2026. 09. 21. (월) 19:55:57 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:56:46 18.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=45.7'C
+
+2026. 09. 21. (월) 19:56:07 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:56:56 18.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=46.7'C
+
+2026. 09. 21. (월) 19:56:17 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:57:06 18.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=45.7'C
+
+2026. 09. 21. (월) 19:56:27 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:57:16 18.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=46.2'C
+
+2026. 09. 21. (월) 19:56:38 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:57:26 18.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=46.2'C
+
+2026. 09. 21. (월) 19:56:48 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:57:36 18.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=47.2'C
+
+2026. 09. 21. (월) 19:56:58 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:57:46 18.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=46.2'C
+
+2026. 09. 21. (월) 19:57:08 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:57:56 18.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=47.2'C
+
+2026. 09. 21. (월) 19:57:18 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:58:06 18.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=47.2'C
+
+2026. 09. 21. (월) 19:57:28 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:58:16 18.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=47.2'C
+
+2026. 09. 21. (월) 19:57:38 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:58:26 18.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=47.2'C
+
+2026. 09. 21. (월) 19:57:48 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:58:36 18.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=47.7'C
+
+2026. 09. 21. (월) 19:57:58 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:58:46 18.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=47.2'C
+
+2026. 09. 21. (월) 19:58:08 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:58:56 18.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=47.7'C
+
+2026. 09. 21. (월) 19:58:18 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:59:07 18.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=46.7'C
+
+2026. 09. 21. (월) 19:58:28 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:59:17 18.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=47.7'C
+
+2026. 09. 21. (월) 19:58:38 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:59:27 18.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=46.7'C
+
+2026. 09. 21. (월) 19:58:48 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:59:37 18.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=47.7'C
+
+2026. 09. 21. (월) 19:58:59 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:59:47 18.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=46.7'C
+
+2026. 09. 21. (월) 19:59:09 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    01:59:57 18.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=46.2'C
+
+2026. 09. 21. (월) 19:59:19 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:00:07 18.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=46.2'C
+
+2026. 09. 21. (월) 19:59:29 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:00:17 18.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=45.7'C
+
+2026. 09. 21. (월) 19:59:39 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:00:27 18.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=46.2'C
+
+2026. 09. 21. (월) 19:59:49 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:00:37 18.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=46.2'C
+
+2026. 09. 21. (월) 19:59:59 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:00:47 18.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=45.7'C
+
+2026. 09. 21. (월) 20:00:09 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:00:57 18.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=45.2'C
+
+2026. 09. 21. (월) 20:00:19 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:01:07 18.4  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=46.2'C
+
+2026. 09. 21. (월) 20:00:29 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:01:17 18.4  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=45.2'C
+
+2026. 09. 21. (월) 20:00:39 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:01:28 18.4  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=44.8'C
+
+2026. 09. 21. (월) 20:00:49 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:01:38 18.4  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=45.7'C
+
+2026. 09. 21. (월) 20:00:59 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:01:48 18.4  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=44.8'C
+
+2026. 09. 21. (월) 20:01:09 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:01:58 18.4  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=43.8'C
+
+2026. 09. 21. (월) 20:01:20 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:02:08 18.4  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=45.2'C
+
+2026. 09. 21. (월) 20:01:30 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:02:18 18.4  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=44.8'C
+
+2026. 09. 21. (월) 20:01:40 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:02:28 18.4  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=45.2'C
+
+2026. 09. 21. (월) 20:01:50 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:02:38 18.4  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=43.3'C
+
+2026. 09. 21. (월) 20:02:00 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:02:48 18.4  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=44.8'C
+
+2026. 09. 21. (월) 20:02:10 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:02:58 18.4  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=44.8'C
+
+2026. 09. 21. (월) 20:02:20 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:03:08 18.4  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=43.8'C
+
+2026. 09. 21. (월) 20:02:30 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:03:18 18.4  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=43.8'C
+
+2026. 09. 21. (월) 20:02:40 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:03:28 18.4  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=43.3'C
+
+2026. 09. 21. (월) 20:02:50 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:03:39 18.4  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=43.8'C
+
+2026. 09. 21. (월) 20:03:00 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:03:49 18.4  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=42.3'C
+
+2026. 09. 21. (월) 20:03:10 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:03:59 18.4  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=43.3'C
+
+2026. 09. 21. (월) 20:03:20 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:04:09 18.4  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=43.8'C
+
+2026. 09. 21. (월) 20:03:30 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:04:19 18.4  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=42.8'C
+
+2026. 09. 21. (월) 20:03:41 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:04:29 18.4  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=42.8'C
+
+2026. 09. 21. (월) 20:03:51 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:04:39 18.4  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=42.3'C
+
+2026. 09. 21. (월) 20:04:01 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:04:49 18.4  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=44.8'C
+
+2026. 09. 21. (월) 20:04:11 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:04:59 18.4  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=44.3'C
+
+2026. 09. 21. (월) 20:04:21 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:05:09 18.4  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=43.3'C
+
+2026. 09. 21. (월) 20:04:31 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:05:19 18.4  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=43.8'C
+
+2026. 09. 21. (월) 20:04:41 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:05:29 18.4  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=43.8'C
+
+2026. 09. 21. (월) 20:04:51 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:05:39 18.4  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=42.8'C
+
+2026. 09. 21. (월) 20:05:01 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:05:49 18.4  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=45.2'C
+
+2026. 09. 21. (월) 20:05:11 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:06:00 18.4  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=44.8'C
+
+2026. 09. 21. (월) 20:05:21 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:06:10 18.4  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=44.8'C
+
+2026. 09. 21. (월) 20:05:31 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:06:20 18.4  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=43.8'C
+
+2026. 09. 21. (월) 20:05:41 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:06:30 18.5  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=44.8'C
+
+2026. 09. 21. (월) 20:05:52 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:06:40 18.5  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=44.8'C
+
+2026. 09. 21. (월) 20:06:02 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:06:50 18.5  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=44.8'C
+
+2026. 09. 21. (월) 20:06:12 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:07:00 18.5  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=45.7'C
+
+2026. 09. 21. (월) 20:06:22 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:07:10 18.5  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=46.2'C
+
+2026. 09. 21. (월) 20:06:32 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:07:20 18.5  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=45.7'C
+
+2026. 09. 21. (월) 20:06:42 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:07:30 18.5  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=45.2'C
+
+2026. 09. 21. (월) 20:06:52 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:07:40 18.5  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=46.7'C
+
+2026. 09. 21. (월) 20:07:02 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:07:50 18.5  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=46.7'C
+
+2026. 09. 21. (월) 20:07:12 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:08:00 18.5  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=47.2'C
+
+2026. 09. 21. (월) 20:07:22 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:08:10 18.5  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=47.7'C
+
+2026. 09. 21. (월) 20:07:32 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:08:21 18.5  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=45.7'C
+
+2026. 09. 21. (월) 20:07:42 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:08:31 18.5  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=47.2'C
+
+2026. 09. 21. (월) 20:07:52 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:08:41 18.5  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=46.7'C
+
+2026. 09. 21. (월) 20:08:02 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:08:51 18.5  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=46.7'C
+
+2026. 09. 21. (월) 20:08:13 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:09:01 18.5  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 20:08:23 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:09:11 18.5  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.2'C
+
+2026. 09. 21. (월) 20:08:33 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:09:21 18.5  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.2'C
+
+2026. 09. 21. (월) 20:08:43 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:09:31 18.5  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=47.7'C
+
+2026. 09. 21. (월) 20:08:53 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:09:41 18.5  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=47.7'C
+
+2026. 09. 21. (월) 20:09:03 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:09:51 18.5  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.7'C
+
+2026. 09. 21. (월) 20:09:13 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:10:01 18.5  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=47.2'C
+
+2026. 09. 21. (월) 20:09:23 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:10:11 18.5  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.7'C
+
+2026. 09. 21. (월) 20:09:33 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:10:21 18.5  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.7'C
+
+2026. 09. 21. (월) 20:09:43 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:10:32 18.5  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.2'C
+
+2026. 09. 21. (월) 20:09:53 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:10:42 18.5  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=47.7'C
+
+2026. 09. 21. (월) 20:10:03 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:10:52 18.5  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=47.7'C
+
+2026. 09. 21. (월) 20:10:13 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:11:02 18.5  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=47.2'C
+
+2026. 09. 21. (월) 20:10:23 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:11:12 18.5  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=46.2'C
+
+2026. 09. 21. (월) 20:10:34 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:11:22 18.5  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=46.2'C
+
+2026. 09. 21. (월) 20:10:44 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:11:32 18.5  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.2'C
+
+2026. 09. 21. (월) 20:10:54 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:11:42 18.5  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=47.7'C
+
+2026. 09. 21. (월) 20:11:04 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:11:52 18.5  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=47.2'C
+
+2026. 09. 21. (월) 20:11:14 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:12:02 18.5  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=47.7'C
+
+2026. 09. 21. (월) 20:11:24 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:12:12 18.6  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=47.7'C
+
+2026. 09. 21. (월) 20:11:34 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:12:22 18.6  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.2'C
+
+2026. 09. 21. (월) 20:11:44 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:12:32 18.6  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=47.2'C
+
+2026. 09. 21. (월) 20:11:54 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:12:42 18.6  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.2'C
+
+2026. 09. 21. (월) 20:12:04 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:12:53 18.6  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 20:12:14 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:13:03 18.6  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 20:12:24 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:13:13 18.6  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 20:12:34 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:13:23 18.6  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.7'C
+
+2026. 09. 21. (월) 20:12:45 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:13:33 18.6  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.7'C
+
+2026. 09. 21. (월) 20:12:55 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:13:43 18.6  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 20:13:05 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:13:53 18.6  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 20:13:15 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:14:03 18.6  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.7'C
+
+2026. 09. 21. (월) 20:13:25 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:14:13 18.6  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 20:13:35 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:14:23 18.6  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 20:13:45 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:14:33 18.6  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 20:13:55 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:14:43 18.6  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 20:14:05 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:14:53 18.6  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 20:14:15 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:15:03 18.6  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 20:14:25 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:15:14 18.6  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 20:14:35 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:15:24 18.6  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 20:14:45 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:15:34 18.6  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 20:14:55 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:15:44 18.6  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 20:15:06 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:15:54 18.6  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 20:15:16 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:16:04 18.6  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 20:15:26 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:16:14 18.6  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 20:15:36 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:16:24 18.6  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 20:15:46 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:16:34 18.6  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 20:15:56 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:16:44 18.6  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 20:16:06 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:16:54 18.6  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 20:16:16 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:17:04 18.6  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.7'C
+
+2026. 09. 21. (월) 20:16:26 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:17:14 18.6  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 20:16:36 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:17:24 18.6  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 20:16:46 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:17:35 18.6  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 20:16:56 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:17:45 18.6  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 20:17:06 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:17:55 18.6  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.2'C
+
+2026. 09. 21. (월) 20:17:16 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:18:05 18.6  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.7'C
+
+2026. 09. 21. (월) 20:17:27 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:18:15 18.6  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 20:17:37 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:18:25 18.6  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.2'C
+
+2026. 09. 21. (월) 20:17:47 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:18:35 18.6  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 20:17:57 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:18:45 18.6  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.7'C
+
+2026. 09. 21. (월) 20:18:07 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:18:55 18.7  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 20:18:17 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:19:05 18.7  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 20:18:27 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:19:15 18.7  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 20:18:37 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:19:25 18.7  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 20:18:47 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:19:35 18.7  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=47.7'C
+
+2026. 09. 21. (월) 20:18:57 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:19:46 18.7  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 20:19:07 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:19:56 18.7  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 20:19:17 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:20:06 18.7  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 20:19:27 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:20:16 18.7  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.7'C
+
+2026. 09. 21. (월) 20:19:37 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:20:26 18.7  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 20:19:48 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:20:36 18.7  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 20:19:58 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:20:46 18.7  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 20:20:08 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:20:56 18.7  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 20:20:18 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:21:06 18.7  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 20:20:28 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:21:16 18.7  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 20:20:38 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:21:26 18.7  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 20:20:48 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:21:36 18.7  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 20:20:58 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:21:46 18.7  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 20:21:08 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:21:56 18.7  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 20:21:18 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:22:07 18.7  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 20:21:28 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:22:17 18.7  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 20:21:38 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:22:27 18.7  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 20:21:48 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:22:37 18.7  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 20:21:59 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:22:47 18.7  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 20:22:09 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:22:57 18.7  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 20:22:19 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:23:07 18.7  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 20:22:29 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:23:17 18.7  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 20:22:39 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:23:27 18.7  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 20:22:49 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:23:37 18.7  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 20:22:59 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:23:47 18.7  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 20:23:09 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:23:57 18.7  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 20:23:19 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:24:07 18.7  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 20:23:29 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:24:17 18.7  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 20:23:39 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:24:28 18.7  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 20:23:49 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:24:38 18.7  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.7'C
+
+2026. 09. 21. (월) 20:23:59 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:24:48 18.7  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 20:24:09 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:24:58 18.7  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.7'C
+
+2026. 09. 21. (월) 20:24:20 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:25:08 18.7  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 20:24:30 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:25:18 18.7  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 20:24:40 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:25:28 18.7  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 20:24:50 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:25:38 18.7  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 20:25:00 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:25:48 18.7  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 20:25:10 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:25:58 18.7  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 20:25:20 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:26:08 18.7  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 20:25:30 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:26:18 18.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 20:25:40 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:26:28 18.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 20:25:50 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:26:39 18.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 20:26:00 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:26:49 18.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 20:26:10 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:26:59 18.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 20:26:20 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:27:09 18.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 20:26:30 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:27:19 18.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 20:26:41 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:27:29 18.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 20:26:51 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:27:39 18.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 20:27:01 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:27:49 18.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 20:27:11 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:27:59 18.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 20:27:21 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:28:09 18.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 20:27:31 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:28:19 18.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 20:27:41 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:28:29 18.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 20:27:51 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:28:39 18.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=52.1'C
+
+2026. 09. 21. (월) 20:28:01 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:28:49 18.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.6'C
+
+2026. 09. 21. (월) 20:28:11 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:29:00 18.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 20:28:21 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:29:10 18.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 20:28:31 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:29:20 18.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 20:28:41 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:29:30 18.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 20:28:51 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:29:40 18.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 20:29:02 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:29:50 18.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 20:29:12 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:30:00 18.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 20:29:22 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:30:10 18.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 20:29:32 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:30:20 18.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 20:29:42 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:30:30 18.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 20:29:52 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:30:40 18.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.7'C
+
+2026. 09. 21. (월) 20:30:02 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:30:50 18.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.7'C
+
+2026. 09. 21. (월) 20:30:12 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:31:00 18.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.2'C
+
+2026. 09. 21. (월) 20:30:22 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:31:10 18.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=47.7'C
+
+2026. 09. 21. (월) 20:30:32 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:31:21 18.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 20:30:42 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:31:31 18.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 20:30:52 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:31:41 18.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 20:31:02 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:31:51 18.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 20:31:13 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:32:01 18.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 20:31:23 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:32:11 18.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 20:31:33 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:32:21 18.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.7'C
+
+2026. 09. 21. (월) 20:31:43 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:32:31 18.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 20:31:53 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:32:41 18.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 20:32:03 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:32:51 18.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 20:32:13 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:33:01 18.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 20:32:23 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:33:11 18.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 20:32:33 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:33:21 18.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 20:32:43 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:33:32 18.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 20:32:53 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:33:42 18.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 20:33:03 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:33:52 18.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 20:33:13 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:34:02 18.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 20:33:23 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:34:12 18.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=52.1'C
+
+2026. 09. 21. (월) 20:33:34 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:34:22 18.8  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 20:33:44 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:34:32 18.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=52.1'C
+
+2026. 09. 21. (월) 20:33:54 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:34:42 18.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 20:34:04 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:34:52 18.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 20:34:14 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:35:02 18.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=52.1'C
+
+2026. 09. 21. (월) 20:34:24 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:35:12 18.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 20:34:34 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:35:22 18.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.6'C
+
+2026. 09. 21. (월) 20:34:44 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:35:32 18.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 20:34:54 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:35:42 18.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 20:35:04 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:35:53 18.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 20:35:14 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:36:03 18.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.6'C
+
+2026. 09. 21. (월) 20:35:24 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:36:13 18.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 20:35:34 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:36:23 18.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 20:35:44 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:36:33 18.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.6'C
+
+2026. 09. 21. (월) 20:35:55 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:36:43 18.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 20:36:05 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:36:53 18.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 20:36:15 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:37:03 18.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 20:36:25 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:37:13 18.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 20:36:35 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:37:23 18.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 20:36:45 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:37:33 18.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 20:36:55 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:37:43 18.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 20:37:05 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:37:53 18.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 20:37:15 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:38:03 18.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 20:37:25 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:38:14 18.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 20:37:35 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:38:24 18.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 20:37:45 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:38:34 18.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.2'C
+
+2026. 09. 21. (월) 20:37:55 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:38:44 18.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.7'C
+
+2026. 09. 21. (월) 20:38:06 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:38:54 18.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.7'C
+
+2026. 09. 21. (월) 20:38:16 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:39:04 18.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.7'C
+
+2026. 09. 21. (월) 20:38:26 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:39:14 18.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.7'C
+
+2026. 09. 21. (월) 20:38:36 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:39:24 18.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=47.7'C
+
+2026. 09. 21. (월) 20:38:46 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:39:34 18.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=47.7'C
+
+2026. 09. 21. (월) 20:38:56 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:39:44 18.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.2'C
+
+2026. 09. 21. (월) 20:39:06 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:39:54 18.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.2'C
+
+2026. 09. 21. (월) 20:39:16 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:40:04 18.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.2'C
+
+2026. 09. 21. (월) 20:39:26 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:40:14 18.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 20:39:36 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:40:25 18.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.2'C
+
+2026. 09. 21. (월) 20:39:46 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:40:35 18.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 20:39:56 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:40:45 18.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.7'C
+
+2026. 09. 21. (월) 20:40:06 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:40:55 18.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 20:40:16 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:41:05 18.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 20:40:27 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:41:15 18.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 20:40:37 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:41:25 18.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 20:40:47 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:41:35 18.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 20:40:57 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:41:45 18.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 20:41:07 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:41:55 18.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 20:41:17 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:42:05 18.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 20:41:27 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:42:15 18.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 20:41:37 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:42:25 18.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 20:41:47 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:42:35 18.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 20:41:57 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:42:46 18.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 20:42:07 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:42:56 18.9  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 20:42:17 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:43:06 19.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.2'C
+
+2026. 09. 21. (월) 20:42:27 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:43:16 19.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 20:42:38 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:43:26 19.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=47.2'C
+
+2026. 09. 21. (월) 20:42:48 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:43:36 19.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.7'C
+
+2026. 09. 21. (월) 20:42:58 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:43:46 19.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=47.2'C
+
+2026. 09. 21. (월) 20:43:08 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:43:56 19.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=46.7'C
+
+2026. 09. 21. (월) 20:43:18 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:44:06 19.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=45.7'C
+
+2026. 09. 21. (월) 20:43:28 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:44:16 19.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=46.2'C
+
+2026. 09. 21. (월) 20:43:38 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:44:26 19.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=45.7'C
+
+2026. 09. 21. (월) 20:43:48 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:44:36 19.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=43.8'C
+
+2026. 09. 21. (월) 20:43:58 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:44:46 19.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=45.2'C
+
+2026. 09. 21. (월) 20:44:08 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:44:56 19.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=46.2'C
+
+2026. 09. 21. (월) 20:44:18 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:45:07 19.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=44.8'C
+
+2026. 09. 21. (월) 20:44:28 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:45:17 19.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=45.2'C
+
+2026. 09. 21. (월) 20:44:38 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:45:27 19.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=45.7'C
+
+2026. 09. 21. (월) 20:44:48 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:45:37 19.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=44.8'C
+
+2026. 09. 21. (월) 20:44:59 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:45:47 19.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=45.2'C
+
+2026. 09. 21. (월) 20:45:09 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:45:57 19.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=44.8'C
+
+2026. 09. 21. (월) 20:45:19 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:46:07 19.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=44.3'C
+
+2026. 09. 21. (월) 20:45:29 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:46:17 19.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=43.8'C
+
+2026. 09. 21. (월) 20:45:39 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:46:27 19.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=43.8'C
+
+2026. 09. 21. (월) 20:45:49 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:46:37 19.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=44.3'C
+
+2026. 09. 21. (월) 20:45:59 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:46:47 19.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=43.8'C
+
+2026. 09. 21. (월) 20:46:09 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:46:57 19.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=44.3'C
+
+2026. 09. 21. (월) 20:46:19 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:47:07 19.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=43.8'C
+
+2026. 09. 21. (월) 20:46:29 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:47:18 19.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=43.3'C
+
+2026. 09. 21. (월) 20:46:39 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:47:28 19.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=42.8'C
+
+2026. 09. 21. (월) 20:46:49 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:47:38 19.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=43.3'C
+
+2026. 09. 21. (월) 20:46:59 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:47:48 19.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=43.8'C
+
+2026. 09. 21. (월) 20:47:09 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:47:58 19.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=42.8'C
+
+2026. 09. 21. (월) 20:47:20 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:48:08 19.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=44.3'C
+
+2026. 09. 21. (월) 20:47:30 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:48:18 19.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=44.3'C
+
+2026. 09. 21. (월) 20:47:40 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:48:28 19.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=43.3'C
+
+2026. 09. 21. (월) 20:47:50 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:48:38 19.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=43.8'C
+
+2026. 09. 21. (월) 20:48:00 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:48:48 19.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=43.8'C
+
+2026. 09. 21. (월) 20:48:10 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:48:58 19.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=43.8'C
+
+2026. 09. 21. (월) 20:48:20 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:49:08 19.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=42.8'C
+
+2026. 09. 21. (월) 20:48:30 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:49:18 19.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=43.8'C
+
+2026. 09. 21. (월) 20:48:40 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:49:28 19.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=43.3'C
+
+2026. 09. 21. (월) 20:48:50 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:49:39 19.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=42.8'C
+
+2026. 09. 21. (월) 20:49:00 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:49:49 19.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=44.3'C
+
+2026. 09. 21. (월) 20:49:10 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:49:59 19.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=43.3'C
+
+2026. 09. 21. (월) 20:49:20 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:50:09 19.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=42.3'C
+
+2026. 09. 21. (월) 20:49:31 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:50:19 19.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=43.3'C
+
+2026. 09. 21. (월) 20:49:41 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:50:29 19.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=43.8'C
+
+2026. 09. 21. (월) 20:49:51 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:50:39 19.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=42.3'C
+
+2026. 09. 21. (월) 20:50:01 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:50:49 19.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=42.8'C
+
+2026. 09. 21. (월) 20:50:11 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:50:59 19.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=43.3'C
+
+2026. 09. 21. (월) 20:50:21 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:51:09 19.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=42.3'C
+
+2026. 09. 21. (월) 20:50:31 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:51:19 19.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=43.8'C
+
+2026. 09. 21. (월) 20:50:41 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:51:29 19.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=42.3'C
+
+2026. 09. 21. (월) 20:50:51 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:51:39 19.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=43.3'C
+
+2026. 09. 21. (월) 20:51:01 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:51:49 19.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=42.3'C
+
+2026. 09. 21. (월) 20:51:11 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:52:00 19.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=42.3'C
+
+2026. 09. 21. (월) 20:51:21 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:52:10 19.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=42.8'C
+
+2026. 09. 21. (월) 20:51:31 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:52:20 19.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=42.3'C
+
+2026. 09. 21. (월) 20:51:41 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:52:30 19.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=42.8'C
+
+2026. 09. 21. (월) 20:51:52 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:52:40 19.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=41.3'C
+
+2026. 09. 21. (월) 20:52:02 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:52:50 19.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=42.8'C
+
+2026. 09. 21. (월) 20:52:12 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:53:00 19.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=42.8'C
+
+2026. 09. 21. (월) 20:52:22 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:53:10 19.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=43.3'C
+
+2026. 09. 21. (월) 20:52:32 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:53:20 19.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=42.8'C
+
+2026. 09. 21. (월) 20:52:42 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:53:30 19.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=43.3'C
+
+2026. 09. 21. (월) 20:52:52 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:53:40 19.0  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=42.3'C
+
+2026. 09. 21. (월) 20:53:02 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:53:50 19.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=42.8'C
+
+2026. 09. 21. (월) 20:53:12 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:54:00 19.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=41.3'C
+
+2026. 09. 21. (월) 20:53:22 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:54:11 19.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=42.3'C
+
+2026. 09. 21. (월) 20:53:32 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:54:21 19.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=42.8'C
+
+2026. 09. 21. (월) 20:53:42 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:54:31 19.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=43.3'C
+
+2026. 09. 21. (월) 20:53:52 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:54:41 19.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=41.3'C
+
+2026. 09. 21. (월) 20:54:02 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:54:51 19.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=42.8'C
+
+2026. 09. 21. (월) 20:54:13 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:55:01 19.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=42.3'C
+
+2026. 09. 21. (월) 20:54:23 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:55:11 19.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=42.8'C
+
+2026. 09. 21. (월) 20:54:33 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:55:21 19.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=42.3'C
+
+2026. 09. 21. (월) 20:54:43 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:55:31 19.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=40.9'C
+
+2026. 09. 21. (월) 20:54:53 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:55:41 19.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=42.3'C
+
+2026. 09. 21. (월) 20:55:03 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:55:51 19.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=42.3'C
+
+2026. 09. 21. (월) 20:55:13 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:56:01 19.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=42.8'C
+
+2026. 09. 21. (월) 20:55:23 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:56:11 19.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=42.3'C
+
+2026. 09. 21. (월) 20:55:33 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:56:21 19.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=42.3'C
+
+2026. 09. 21. (월) 20:55:43 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:56:32 19.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=41.8'C
+
+2026. 09. 21. (월) 20:55:53 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:56:42 19.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=41.8'C
+
+2026. 09. 21. (월) 20:56:03 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:56:52 19.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=41.3'C
+
+2026. 09. 21. (월) 20:56:13 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:57:02 19.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=42.3'C
+
+2026. 09. 21. (월) 20:56:24 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:57:12 19.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=41.8'C
+
+2026. 09. 21. (월) 20:56:34 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:57:22 19.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=41.8'C
+
+2026. 09. 21. (월) 20:56:44 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:57:32 19.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=41.8'C
+
+2026. 09. 21. (월) 20:56:54 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:57:42 19.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=41.8'C
+
+2026. 09. 21. (월) 20:57:04 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:57:52 19.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=42.3'C
+
+2026. 09. 21. (월) 20:57:14 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:58:02 19.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=40.9'C
+
+2026. 09. 21. (월) 20:57:24 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:58:12 19.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=42.3'C
+
+2026. 09. 21. (월) 20:57:34 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:58:22 19.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=41.3'C
+
+2026. 09. 21. (월) 20:57:44 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:58:32 19.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=43.3'C
+
+2026. 09. 21. (월) 20:57:54 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:58:42 19.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=42.3'C
+
+2026. 09. 21. (월) 20:58:04 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:58:53 19.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=43.3'C
+
+2026. 09. 21. (월) 20:58:14 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:59:03 19.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=42.3'C
+
+2026. 09. 21. (월) 20:58:24 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:59:13 19.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=42.3'C
+
+2026. 09. 21. (월) 20:58:34 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:59:23 19.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=41.8'C
+
+2026. 09. 21. (월) 20:58:45 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:59:33 19.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=41.8'C
+
+2026. 09. 21. (월) 20:58:55 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:59:43 19.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=41.8'C
+
+2026. 09. 21. (월) 20:59:05 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    02:59:53 19.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=41.8'C
+
+2026. 09. 21. (월) 20:59:15 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:00:03 19.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=42.3'C
+
+2026. 09. 21. (월) 20:59:25 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:00:13 19.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=41.3'C
+
+2026. 09. 21. (월) 20:59:35 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:00:23 19.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=42.8'C
+
+2026. 09. 21. (월) 20:59:45 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:00:33 19.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=42.8'C
+
+2026. 09. 21. (월) 20:59:55 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:00:43 19.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=42.3'C
+
+2026. 09. 21. (월) 21:00:05 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:00:53 19.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=42.8'C
+
+2026. 09. 21. (월) 21:00:15 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:01:03 19.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=42.3'C
+
+2026. 09. 21. (월) 21:00:25 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:01:14 19.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=42.3'C
+
+2026. 09. 21. (월) 21:00:35 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:01:24 19.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=41.8'C
+
+2026. 09. 21. (월) 21:00:45 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:01:34 19.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=41.8'C
+
+2026. 09. 21. (월) 21:00:55 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:01:44 19.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=41.8'C
+
+2026. 09. 21. (월) 21:01:06 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:01:54 19.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=41.3'C
+
+2026. 09. 21. (월) 21:01:16 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:02:04 19.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=41.8'C
+
+2026. 09. 21. (월) 21:01:26 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:02:14 19.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=41.8'C
+
+2026. 09. 21. (월) 21:01:36 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:02:24 19.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=42.3'C
+
+2026. 09. 21. (월) 21:01:46 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:02:34 19.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=42.3'C
+
+2026. 09. 21. (월) 21:01:56 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:02:44 19.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=42.8'C
+
+2026. 09. 21. (월) 21:02:06 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:02:54 19.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=42.8'C
+
+2026. 09. 21. (월) 21:02:16 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:03:04 19.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=42.8'C
+
+2026. 09. 21. (월) 21:02:26 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:03:14 19.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=42.8'C
+
+2026. 09. 21. (월) 21:02:36 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:03:25 19.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=42.8'C
+
+2026. 09. 21. (월) 21:02:46 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:03:35 19.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=43.3'C
+
+2026. 09. 21. (월) 21:02:56 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:03:45 19.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=43.3'C
+
+2026. 09. 21. (월) 21:03:06 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:03:55 19.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=43.3'C
+
+2026. 09. 21. (월) 21:03:17 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:04:05 19.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=43.3'C
+
+2026. 09. 21. (월) 21:03:27 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:04:15 19.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=43.8'C
+
+2026. 09. 21. (월) 21:03:37 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:04:25 19.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=43.8'C
+
+2026. 09. 21. (월) 21:03:47 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:04:35 19.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=43.8'C
+
+2026. 09. 21. (월) 21:03:57 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:04:45 19.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=44.3'C
+
+2026. 09. 21. (월) 21:04:07 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:04:55 19.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=43.3'C
+
+2026. 09. 21. (월) 21:04:17 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:05:05 19.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=43.8'C
+
+2026. 09. 21. (월) 21:04:27 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:05:15 19.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=44.3'C
+
+2026. 09. 21. (월) 21:04:37 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:05:25 19.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=42.8'C
+
+2026. 09. 21. (월) 21:04:47 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:05:36 19.1  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=44.8'C
+
+2026. 09. 21. (월) 21:04:57 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:05:46 19.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=43.8'C
+
+2026. 09. 21. (월) 21:05:07 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:05:56 19.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=44.8'C
+
+2026. 09. 21. (월) 21:05:17 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:06:06 19.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=45.2'C
+
+2026. 09. 21. (월) 21:05:27 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:06:16 19.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=45.2'C
+
+2026. 09. 21. (월) 21:05:38 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:06:26 19.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=45.7'C
+
+2026. 09. 21. (월) 21:05:48 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:06:36 19.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=43.8'C
+
+2026. 09. 21. (월) 21:05:58 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:06:46 19.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=45.2'C
+
+2026. 09. 21. (월) 21:06:08 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:06:56 19.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=44.3'C
+
+2026. 09. 21. (월) 21:06:18 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:07:06 19.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=44.3'C
+
+2026. 09. 21. (월) 21:06:28 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:07:16 19.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=44.3'C
+
+2026. 09. 21. (월) 21:06:38 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:07:26 19.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=43.8'C
+
+2026. 09. 21. (월) 21:06:48 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:07:36 19.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=44.8'C
+
+2026. 09. 21. (월) 21:06:58 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:07:46 19.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=44.3'C
+
+2026. 09. 21. (월) 21:07:08 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:07:57 19.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=44.3'C
+
+2026. 09. 21. (월) 21:07:18 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:08:07 19.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=44.8'C
+
+2026. 09. 21. (월) 21:07:28 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:08:17 19.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=44.8'C
+
+2026. 09. 21. (월) 21:07:38 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:08:27 19.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=44.3'C
+
+2026. 09. 21. (월) 21:07:48 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:08:37 19.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=45.2'C
+
+2026. 09. 21. (월) 21:07:59 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:08:47 19.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=45.2'C
+
+2026. 09. 21. (월) 21:08:09 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:08:57 19.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=45.2'C
+
+2026. 09. 21. (월) 21:08:19 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:09:07 19.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=45.7'C
+
+2026. 09. 21. (월) 21:08:29 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:09:17 19.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=44.8'C
+
+2026. 09. 21. (월) 21:08:39 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:09:27 19.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=45.2'C
+
+2026. 09. 21. (월) 21:08:49 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:09:37 19.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=45.7'C
+
+2026. 09. 21. (월) 21:08:59 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:09:47 19.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=45.2'C
+
+2026. 09. 21. (월) 21:09:09 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:09:57 19.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=45.2'C
+
+2026. 09. 21. (월) 21:09:19 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:10:07 19.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=45.7'C
+
+2026. 09. 21. (월) 21:09:29 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:10:18 19.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=46.7'C
+
+2026. 09. 21. (월) 21:09:39 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:10:28 19.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=46.7'C
+
+2026. 09. 21. (월) 21:09:49 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:10:38 19.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=47.2'C
+
+2026. 09. 21. (월) 21:09:59 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:10:48 19.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=47.2'C
+
+2026. 09. 21. (월) 21:10:09 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:10:58 19.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=46.2'C
+
+2026. 09. 21. (월) 21:10:20 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:11:08 19.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.2'C
+
+2026. 09. 21. (월) 21:10:30 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:11:18 19.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=47.7'C
+
+2026. 09. 21. (월) 21:10:40 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:11:28 19.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.2'C
+
+2026. 09. 21. (월) 21:10:50 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:11:38 19.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=47.2'C
+
+2026. 09. 21. (월) 21:11:00 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:11:48 19.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.7'C
+
+2026. 09. 21. (월) 21:11:10 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:11:58 19.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=47.7'C
+
+2026. 09. 21. (월) 21:11:20 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:12:08 19.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=47.7'C
+
+2026. 09. 21. (월) 21:11:30 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:12:18 19.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.2'C
+
+2026. 09. 21. (월) 21:11:40 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:12:28 19.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.2'C
+
+2026. 09. 21. (월) 21:11:50 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:12:39 19.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.7'C
+
+2026. 09. 21. (월) 21:12:00 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:12:49 19.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.7'C
+
+2026. 09. 21. (월) 21:12:10 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:12:59 19.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 21:12:20 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:13:09 19.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.7'C
+
+2026. 09. 21. (월) 21:12:31 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:13:19 19.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 21:12:41 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:13:29 19.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 21:12:51 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:13:39 19.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.7'C
+
+2026. 09. 21. (월) 21:13:01 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:13:49 19.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 21:13:11 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:13:59 19.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=47.7'C
+
+2026. 09. 21. (월) 21:13:21 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:14:09 19.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 21:13:31 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:14:19 19.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 21:13:41 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:14:29 19.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 21:13:51 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:14:39 19.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 21:14:01 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:14:50 19.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 21:14:11 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:15:00 19.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 21:14:21 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:15:10 19.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 21:14:31 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:15:20 19.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 21:14:41 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:15:30 19.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 21:14:52 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:15:40 19.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 21:15:02 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:15:50 19.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 21:15:12 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:16:00 19.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 21:15:22 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:16:10 19.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 21:15:32 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:16:20 19.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 21:15:42 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:16:30 19.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 21:15:52 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:16:40 19.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 21:16:02 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:16:50 19.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 21:16:12 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:17:00 19.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 21:16:22 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:17:11 19.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 21:16:32 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:17:21 19.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 21:16:42 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:17:31 19.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 21:16:52 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:17:41 19.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 21:17:03 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:17:51 19.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 21:17:13 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:18:01 19.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 21:17:23 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:18:11 19.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.7'C
+
+2026. 09. 21. (월) 21:17:33 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:18:21 19.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 21:17:43 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:18:31 19.2  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 21:17:53 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:18:41 19.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 21:18:03 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:18:51 19.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 21:18:13 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:19:01 19.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.6'C
+
+2026. 09. 21. (월) 21:18:23 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:19:11 19.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 21:18:33 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:19:21 19.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 21:18:43 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:19:32 19.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 21:18:53 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:19:42 19.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 21:19:03 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:19:52 19.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 21:19:13 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:20:02 19.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 21:19:24 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:20:12 19.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.7'C
+
+2026. 09. 21. (월) 21:19:34 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:20:22 19.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.7'C
+
+2026. 09. 21. (월) 21:19:44 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:20:32 19.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.7'C
+
+2026. 09. 21. (월) 21:19:54 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:20:42 19.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 21:20:04 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:20:52 19.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.7'C
+
+2026. 09. 21. (월) 21:20:14 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:21:02 19.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 21:20:24 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:21:12 19.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 21:20:34 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:21:22 19.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 21:20:44 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:21:32 19.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 21:20:54 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:21:43 19.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.2'C
+
+2026. 09. 21. (월) 21:21:04 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:21:53 19.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 21:21:14 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:22:03 19.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.2'C
+
+2026. 09. 21. (월) 21:21:24 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:22:13 19.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 21:21:35 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:22:23 19.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.2'C
+
+2026. 09. 21. (월) 21:21:45 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:22:33 19.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 21:21:55 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:22:43 19.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.7'C
+
+2026. 09. 21. (월) 21:22:05 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:22:53 19.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 21:22:15 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:23:03 19.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.7'C
+
+2026. 09. 21. (월) 21:22:25 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:23:13 19.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 21:22:35 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:23:23 19.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 21:22:45 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:23:33 19.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 21:22:55 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:23:43 19.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 21:23:05 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:23:54 19.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 21:23:15 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:24:04 19.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 21:23:25 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:24:14 19.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 21:23:35 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:24:24 19.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 21:23:45 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:24:34 19.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 21:23:56 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:24:44 19.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 21:24:06 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:24:54 19.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 21:24:16 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:25:04 19.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 21:24:26 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:25:14 19.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.6'C
+
+2026. 09. 21. (월) 21:24:36 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:25:24 19.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 21:24:46 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:25:34 19.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 21:24:56 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:25:44 19.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 21:25:06 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:25:54 19.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 21:25:16 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:26:04 19.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 21:25:26 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:26:15 19.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 21:25:36 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:26:25 19.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 21:25:46 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:26:35 19.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 21:25:56 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:26:45 19.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 21:26:06 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:26:55 19.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 21:26:17 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:27:05 19.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 21:26:27 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:27:15 19.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 21:26:37 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:27:25 19.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 21:26:47 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:27:35 19.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 21:26:57 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:27:45 19.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.7'C
+
+2026. 09. 21. (월) 21:27:07 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:27:55 19.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 21:27:17 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:28:05 19.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 21:27:27 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:28:15 19.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 21:27:37 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:28:25 19.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 21:27:47 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:28:36 19.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 21:27:57 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:28:46 19.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 21:28:07 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:28:56 19.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.7'C
+
+2026. 09. 21. (월) 21:28:17 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:29:06 19.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C
+
+2026. 09. 21. (월) 21:28:27 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:29:16 19.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 21:28:38 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:29:26 19.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 21:28:48 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:29:36 19.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 21:28:58 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:29:46 19.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=48.7'C
+
+2026. 09. 21. (월) 21:29:08 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:29:56 19.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 21:29:18 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:30:06 19.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 21:29:28 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:30:16 19.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 21:29:38 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:30:26 19.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.1'C
+
+2026. 09. 21. (월) 21:29:48 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:30:36 19.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 21:29:58 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:30:46 19.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 21:30:08 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:30:57 19.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 21:30:18 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:31:07 19.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=51.1'C
+
+2026. 09. 21. (월) 21:30:28 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:31:17 19.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.6'C
+
+2026. 09. 21. (월) 21:30:38 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:31:27 19.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=49.6'C
+
+2026. 09. 21. (월) 21:30:49 KST
+  PID     ELAPSED %CPU %MEM   RSS CMD
+ 1073    03:31:37 19.3  2.0 82252 /usr/bin/python3 /home/user/app/main.py --fullscreen
+temp=50.1'C

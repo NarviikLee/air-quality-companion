@@ -100,3 +100,76 @@ RASPBERRY_PI.md
 V1_*.md
 UI_V1_NATIVE.md
 PUBLISH_CHECKPOINT.md
+
+# Device operation records remain private unless explicitly reviewed below.
+/logs/
+pi_monitor_*.tsv
+air-quality-health-*.csv
+air-quality-service-*.log
+service_test_*.log
+demo_states_*hours*.log
+
+# Machine-specific deployment files and private control-code preparation.
+/deploy/
+/prepare_control_fix.py
+/preview_design.py
+*.original
+*.diff
+*.patch
+
+# Internal configuration/fixtures at any depth; keep public templates allowed.
+*_local.*
+*_secret.*
+*.private.*
+*.local.ini
+*.local.json
+*.local.yaml
+*.local.yml
+sensor_protocol_example.py
+sensor_protocol_local.py
+sensor_packet*.bin
+sensor_packet*.hex
+register_dump*
+
+# Credentials, session state and certificates must never be public assets.
+.aws/
+.ssh/
+.codex/
+.agents/
+.netrc
+.npmrc
+.pypirc
+credentials.json
+credentials*.json
+client_secret*.json
+service-account*.json
+service_account*.json
+token.json
+tokens.json
+secrets.json
+secrets.yaml
+secrets.yml
+*.p12
+*.pfx
+*.jks
+*.keystore
+id_rsa*
+id_ed25519*
+
+# Archives can contain private settings even when their contents are ignored.
+*.7z
+*.rar
+*.tar
+*.tar.gz
+*.tgz
+*.dump
+
+# Reviewed anonymized test records only; new logs still require review.
+!/logs/
+/logs/*
+!/logs/air-quality-health-20260923-004131.csv
+!/logs/air-quality-service-20260923-004539.log
+!/logs/demo_states_2hours_with_sensor.log
+!/logs/pi_monitor_20260923_102149.tsv
+!/logs/pi_monitor_20260923_142509.tsv
+!/logs/service_test_afternoon.log
