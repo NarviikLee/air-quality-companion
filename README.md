@@ -140,16 +140,18 @@ if (!(Test-Path sensor_connection_local.py)) { Copy-Item sensor_connection_examp
 .\.venv\Scripts\python.exe tests\check_demo.py
 ```
 
-테스트는 가짜 포트/데이터와 offscreen Qt를 사용합니다. 실제 장비 전용 패킷 테스트는 공개하지 않습니다. `tests/check_demo.py`는 `demo_images/`에 미리보기 PNG를 생성합니다.
+테스트는 가짜 포트/데이터와 offscreen Qt를 사용합니다. 실제 장비 전용 패킷 테스트는 공개하지 않습니다. `tests/check_demo.py`는 `previews/images/`에 미리보기 PNG를 생성합니다.
 
-README에 사용하는 현재 런타임 UI 이미지는 다음 명령으로 다시 생성합니다. `preview_robot.py`는 별도의 목업을 그리지 않고 실제 `MainWindow`, 로봇 홈 위젯, 센서 카드 위젯을 캡처합니다. 홈 이미지는 `MONITORING / 환경 확인 중` 상태로 고정됩니다.
+README에 사용하는 현재 런타임 UI 이미지는 다음 명령으로 다시 생성합니다. `previews/preview_robot.py`는 별도의 목업을 그리지 않고 실제 `MainWindow`, 로봇 홈 위젯, 센서 카드 위젯을 캡처합니다. 홈 이미지는 `MONITORING / 환경 확인 중` 상태로 고정됩니다.
+
+미리보기 생성 코드는 `previews/`, 생성된 이미지는 `previews/images/`에서 관리합니다. `previews/render_preview_compare.py`는 표정별 프레임 비교 이미지를 생성합니다. 이전 정적 시안 코드인 `previews/preview_design.py`와 검토하지 않은 이미지는 로컬에만 유지합니다.
 
 ```powershell
-.\.venv\Scripts\python.exe preview_robot.py
+.\.venv\Scripts\python.exe previews/preview_robot.py
 ```
 
-- `demo_images/demo_robot_home.png`: MONITORING 로봇 홈 화면
-- `demo_images/demo_preview.png`: 고정 예시값을 표시한 8개 센서 카드 화면
+- `previews/images/demo_robot_home.png`: MONITORING 로봇 홈 화면
+- `previews/images/demo_preview.png`: 고정 예시값을 표시한 8개 센서 카드 화면
 
 ## 유지보수 이력
 
@@ -183,7 +185,7 @@ README에 사용하는 현재 런타임 UI 이미지는 다음 명령으로 다�
 
 방법 논의: 터치 제품에 불필요한 포커스·hover 표시를 줄이되 접근성 이름은 유지하고, 미리보기는 실제 위젯을 고정된 상태·시각으로 캡처하는 접근을 선택했습니다. 설정 오류는 기본값으로 복구하고 지연 상태는 카드 내부에서 표시하기로 했습니다.
 
-해결 방법: 얼굴 포커스 테두리와 카드 hover 설명을 제거하고 접근성 이름을 유지했습니다. `preview_robot.py`를 실제 런타임 위젯 캡처로 바꾸고 홈 상태와 애니메이션 시각을 고정했습니다. 설정 문법·인코딩·읽기·숫자 오류 및 0 이하 값은 5초 기본값으로 복구하도록 했습니다. 카드에 `수신 지연`을 표시하고 정상 수신 시 기존 판정으로 복구하며, Pi 확인 결과에 맞춰 애니메이션 주기를 75ms로 통일했습니다. 당시 테스트 90개와 offscreen 데모 검사를 통과했습니다.
+해결 방법: 얼굴 포커스 테두리와 카드 hover 설명을 제거하고 접근성 이름을 유지했습니다. `previews/preview_robot.py`를 실제 런타임 위젯 캡처로 바꾸고 홈 상태와 애니메이션 시각을 고정했습니다. 설정 문법·인코딩·읽기·숫자 오류 및 0 이하 값은 5초 기본값으로 복구하도록 했습니다. 카드에 `수신 지연`을 표시하고 정상 수신 시 기존 판정으로 복구하며, Pi 확인 결과에 맞춰 애니메이션 주기를 75ms로 통일했습니다. 당시 테스트 90개와 offscreen 데모 검사를 통과했습니다.
 
 ### 2026-09-29 · 분석 유효성 및 급상승 대응
 
@@ -199,9 +201,9 @@ README에 사용하는 현재 런타임 UI 이미지는 다음 명령으로 다�
 
 방법 논의: 설정값을 UI에 전달하기 전에 유한성과 타이머 범위를 검증하고, 전체화면에만 빈 커서를 적용하는 접근을 선택했습니다. 디자인은 프레임 유무를 비교한 뒤 기존 프레임을 유지했으며, 상세 자동 복귀 시간은 시험용 30초로 조정했습니다. 운영 시간은 별도 설정할 수 있도록 유지했습니다.
 
-해결 방법: 잘못된 시간은 5초 기본값으로 복구하도록 검증을 강화했습니다. `main.py`에서 전체화면 커서를 숨기고 `--windowed`에서는 표시합니다. 프레임은 옵션으로 분리하고 `designs/render_preview_compare.py`, `demo_images/preview_compare.png`를 추가했으며 런타임 기본값은 표시로 유지했습니다. `requirements.txt`에 Windows PySide6와 Pi Buster의 apt PySide2·pySerial 설치 범위를 구분했습니다. 당시 전체 테스트 116개, 데모 통합 검사, 문법 컴파일과 Git diff 검사를 통과했습니다.
+해결 방법: 잘못된 시간은 5초 기본값으로 복구하도록 검증을 강화했습니다. `main.py`에서 전체화면 커서를 숨기고 `--windowed`에서는 표시합니다. 프레임은 옵션으로 분리하고 `previews/render_preview_compare.py`, `previews/images/preview_compare.png`를 추가했으며 런타임 기본값은 표시로 유지했습니다. `requirements.txt`에 Windows PySide6와 Pi Buster의 apt PySide2·pySerial 설치 범위를 구분했습니다. 당시 전체 테스트 116개, 데모 통합 검사, 문법 컴파일과 Git diff 검사를 통과했습니다.
 
-이 항목의 변경을 Raspberry Pi에 반영할 때는 `main.py`, `sensor_data.py`, `app_config.ini`를 복사합니다. 얼굴 프레임 옵션과 분석 코드 문서화 변경까지 동일하게 맞추려면 `robot_ui.py`, `air_quality_analyzer.py`도 함께 복사합니다. `tests/`, `designs/`, `demo_images/`는 운영 실행에 필요하지 않으며 장비 고유의 `sensor_protocol.py`, `sensor_connection_local.py`는 유지합니다. 후속 재연결 변경의 전체 배포 파일은 아래 추가 점검 항목을 참고하세요.
+이 항목의 변경을 Raspberry Pi에 반영할 때는 `main.py`, `sensor_data.py`, `app_config.ini`를 복사합니다. 얼굴 프레임 옵션과 분석 코드 문서화 변경까지 동일하게 맞추려면 `robot_ui.py`, `air_quality_analyzer.py`도 함께 복사합니다. `tests/`, `designs/`, `previews/images/`는 운영 실행에 필요하지 않으며 장비 고유의 `sensor_protocol.py`, `sensor_connection_local.py`는 유지합니다. 후속 재연결 변경의 전체 배포 파일은 아래 추가 점검 항목을 참고하세요.
 
 ### 2026-10-01 · 추가 점검과 재연결 정책 변경
 
@@ -308,5 +310,5 @@ README에 사용하는 현재 런타임 UI 이미지는 다음 명령으로 다�
 
 **V2 UI Animation / WIP.** 센서 분석은 유효 범위, PM 빠른 악화, 항목별 부분 표본 정책을 적용했습니다. 실제 센서의 정확한 제조사 측정 범위·음수 온도 인코딩·무효 코드, Pi의 응답 주기/timeout/터치/폰트·애니메이션 성능과 복구 동작은 장비에서 추가 확인해야 합니다. 외부 이동/정화 통신 규격과 장비 제어는 구현하지 않았습니다.
 
-![Robot home](demo_images/demo_robot_home.png)
-![Sensor detail](demo_images/demo_preview.png)
+![Robot home](previews/images/demo_robot_home.png)
+![Sensor detail](previews/images/demo_preview.png)

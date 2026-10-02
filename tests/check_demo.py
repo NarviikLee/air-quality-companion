@@ -1,10 +1,11 @@
-"""Offscreen smoke check; writes screenshots under demo_images/."""
+"""Offscreen smoke check; writes screenshots under previews/images/."""
 import os
 from pathlib import Path
 import sys
 import time
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
-OUTPUT_DIR = PROJECT_ROOT / 'demo_images'
+OUTPUT_DIR = PROJECT_ROOT / 'previews' / 'images'
+OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 sys.path.insert(0, str(PROJECT_ROOT))
 os.environ['QT_QPA_PLATFORM'] = 'offscreen'
 

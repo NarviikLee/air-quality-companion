@@ -97,7 +97,7 @@ def render():
                              CANVAS_WIDTH - GAP, y + PREVIEW_SIZE[1] + 28)
 
     painter.end()
-    target = ROOT / 'demo_images' / 'preview_compare.png'
+    target = Path(__file__).resolve().parent / 'images' / 'preview_compare.png'
     target.parent.mkdir(exist_ok=True)
     if not sheet.save(str(target)):
         raise RuntimeError('Could not save comparison preview: %s' % target)

@@ -43,10 +43,8 @@ PROGRAM_LOGIC_LOCAL.md
 !/dashboard.py
 !/main.py
 !/port_discovery.py
-!/preview_robot.py
 !/designs/
 /designs/*
-!/designs/render_preview_compare.py
 !/qt_compat.py
 !/repeated_error_log.py
 !/robot_led.py
@@ -75,11 +73,15 @@ PROGRAM_LOGIC_LOCAL.md
 !/tests/test_shutdown_signals.py
 !/tests/test_single_instance.py
 !/tests/test_public_templates.py
-!/demo_images/
-/demo_images/*
-!/demo_images/demo_robot_home.png
-!/demo_images/demo_preview.png
-!/demo_images/preview_compare.png
+!/previews/
+/previews/*
+!/previews/preview_robot.py
+!/previews/render_preview_compare.py
+!/previews/images/
+/previews/images/*
+!/previews/images/demo_robot_home.png
+!/previews/images/demo_preview.png
+!/previews/images/preview_compare.png
 
 # Private implementation, packet fixtures and copies in local records/archives.
 sensor_protocol.py
@@ -112,7 +114,7 @@ demo_states_*hours*.log
 # Machine-specific deployment files and private control-code preparation.
 /deploy/
 /prepare_control_fix.py
-/preview_design.py
+/previews/preview_design.py
 *.original
 *.diff
 *.patch

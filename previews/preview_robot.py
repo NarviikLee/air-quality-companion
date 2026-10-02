@@ -1,7 +1,11 @@
 """Render the current runtime Qt UI to the two README preview images."""
 import os
+import sys
 from pathlib import Path
 from unittest.mock import patch
+ROOT = Path(__file__).resolve().parent.parent
+OUTPUT_DIR = Path(__file__).resolve().parent / 'images'
+sys.path.insert(0, str(ROOT))
 os.environ['QT_QPA_PLATFORM'] = 'offscreen'
 from qt_compat import (QApplication, QImage, QPainter, QPainterPath, QColor,
                        QFont, QFontDatabase, QPen, QRectF, Qt)
@@ -89,7 +93,7 @@ def render_legacy_concept():
             text(28, 426, 744, 30, '공기 수치를 살펴본 뒤에는 에어봇이 다시 인사할게요.', 19, '#6B8275')
         p.end()
         name = 'robot_detail_preview.png' if detail else 'robot_home_preview.png'
-        target = Path(__file__).resolve().parent / 'demo_images' / name
+        target = OUTPUT_DIR / name
         target.parent.mkdir(exist_ok=True)
         assert img.save(str(target))
         print(name)
@@ -120,7 +124,7 @@ def _process_until(app, condition, timeout_sec=3.0):
 
 
 def _save_window(window, filename):
-    target = Path(__file__).resolve().parent / 'demo_images' / filename
+    target = OUTPUT_DIR / filename
     target.parent.mkdir(exist_ok=True)
     image = window.grab()
     if image.isNull() or not image.save(str(target)):
