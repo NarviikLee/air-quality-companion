@@ -175,3 +175,9 @@ id_ed25519*
 !/logs/pi_monitor_20260923_102149.tsv
 !/logs/pi_monitor_20260923_142509.tsv
 !/logs/service_test_afternoon.log
+
+# Reviewed public handover documentation; other internal docs remain private.
+!/docs/
+/docs/*
+!/docs/HANDOVER.md
+!/docs/ARCHITECTURE.md
