@@ -50,7 +50,7 @@ def create_read_request(
     device.  Do not place real register addresses or packet examples in this
     public template.
     """
-    del start_address, quantity
+    del start_address, quantity, slave_id
     raise SensorProtocolNotConfiguredError(
         "Implement create_read_request() from the private sensor specification."
     )

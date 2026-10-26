@@ -12,6 +12,23 @@ BioAerosol Control은 바이오에어로졸 센서 데이터를 수집하고 화
 - MQTT 연결 상태 확인 및 스마트 플러그 제어
 - PyInstaller를 이용한 Windows 실행 파일 생성
 
+## 동작 구조
+
+```text
+센서 모듈
+   │ 시리얼 통신
+   ▼
+sensor_protocol.py
+   │ 측정값 딕셔너리
+   ▼
+bioaerosol_QT_control.py
+   ├─ 화면과 현재 측정 테이블 갱신
+   ├─ dataBase.py → SQLite 측정 이력 저장
+   └─ 임계값 판정 → mqtt_Control.py → 스마트 플러그 제어
+```
+
+시리얼 통신, 화면 표시, 데이터 저장과 MQTT 제어를 모듈별로 분리했습니다. 센서 측정에 실패하면 해당 주기의 저장과 자동 제어를 중단하며, 정상 데이터를 수신한 경우에만 이력 저장과 임계값 판정을 수행합니다.
+
 ## 파일 구성
 
 | 파일 | 역할 |
@@ -42,6 +59,8 @@ BioAerosol Control은 바이오에어로졸 센서 데이터를 수집하고 화
 - pyserial
 - paho-mqtt
 
+`mqtt_Control.py`는 paho-mqtt 2.x의 Callback API를 사용합니다. 정확한 설치 범위는 `requirements.txt`에 명시되어 있습니다.
+
 필요한 패키지를 설치한 뒤 다음 명령으로 실행합니다.
 
 ```bash
@@ -64,3 +83,5 @@ pyinstaller bioaerosol_QT_control.spec
 ## 공개 범위
 
 이 저장소는 GUI, 데이터 저장, MQTT 제어 코드와 센서 프로토콜 인터페이스 템플릿을 공유합니다. 센서 레지스터, 패킷 구조, 체크섬 매개변수, 통신 시험 프레임 등 장비 프로토콜의 세부 구현은 포함하지 않습니다.
+
+현재 공개본으로 확인할 수 있는 범위는 화면 구성, SQLite 이력 관리, MQTT 제어 흐름과 프로토콜 모듈의 연결 구조입니다. 실제 센서 측정 정확도와 장비 통신 성공 여부는 비공개 프로토콜 구현과 실물 센서 환경에서 별도로 검증해야 합니다.

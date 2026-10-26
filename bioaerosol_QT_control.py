@@ -944,7 +944,7 @@ class MainWindow(QMainWindow):
             if self.ser is not None:
                 try:
                     self.ser.close()
-                except:
+                except Exception:
                     pass
             self.ser = None
             QMessageBox.critical(
@@ -958,7 +958,7 @@ class MainWindow(QMainWindow):
             if self.ser is not None:
                 try:
                     self.ser.close()
-                except:
+                except Exception:
                     pass
 
             self.ser = None
@@ -1167,7 +1167,6 @@ class MainWindow(QMainWindow):
             # MQTT 모듈에서 실제 스마트플러그 상태 가져오기 버튼 상태를 정하기 위해 사용하고 버릴거라 지역변수로 사용
             plug_power = get_power_state()
             # 센서 측정 중이 아닐 때만 수동 제어 가능
-            print(plug_power)
             if not self.sensor_timer.isActive():
                 if plug_power == "ON":
                     self.btn_plug_on.setEnabled(False)
