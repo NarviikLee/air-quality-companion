@@ -1,69 +1,66 @@
-# Air Quality Robot Display — V1 / WIP
+# BioAerosol Control
 
-800×480 Qt 화면에서 주변 환경을 로봇 표정과 8개 센서 카드로 표시하는 Python 프로젝트입니다. 실제 로봇 이동이나 공기청정 장비를 제어하지 않습니다.
+BioAerosol Control은 바이오에어로졸 센서 데이터를 수집하고 화면에 표시하는 Windows용 PySide6 애플리케이션입니다. 센서 측정 이력을 SQLite에 저장하며, MQTT를 통해 외부 스마트 플러그의 상태를 확인하고 제어할 수 있습니다.
 
 ## 주요 기능
 
-- QPainter 로봇 얼굴과 Qt 센서 카드, 홈/상세 화면 전환
-- PM1.0, PM2.5, PM10, VOC, NOx, Bioaerosol, 온도, 습도 표시
-- PM 3종과 온습도의 최근 30초 이동평균, 최소 24개 sample, 후보 상태 10초 확인
-- 짧은 수신 오류 허용, stale 표시, worker 취소와 재연결
-- VOC/NOx/Bio는 표시 전용이며 종합 표정에서 제외
-- 데모 모드, 종료 처리, 중복 실행 방지, systemd watchdog 지원
+- 시리얼 포트 검색 및 통신 설정
+- 센서 측정 시작·중지와 실시간 데이터 표시
+- PM1.0, PM2.5, PM10, BioAerosol, 온도, 습도, VOC, NOx 표시
+- 측정 주기와 BioAerosol 임계값 설정
+- 날짜별 측정 이력 조회
+- MQTT 연결 상태 확인 및 스마트 플러그 제어
+- PyInstaller를 이용한 Windows 실행 파일 생성
 
-상세 카드는 최신 수신값, 얼굴은 평균과 확정 결과를 표시합니다. 센서 대기 중 상세 진입은 차단됩니다. 공식 AQI나 건강 안전 판정이 아닙니다. 판정 근거는 [SENSOR_CRITERIA.md](SENSOR_CRITERIA.md)를 참고하세요.
+## 파일 구성
 
-## 기술 스택
+| 파일 | 역할 |
+| --- | --- |
+| `bioaerosol_QT_control.py` | PySide6 화면과 프로그램 동작을 관리하는 메인 모듈 |
+| `dataBase.py` | SQLite 데이터베이스 생성, 설정 저장, 측정 이력 관리 |
+| `mqtt_Control.py` | MQTT 연결과 스마트 플러그 상태·전원 제어 |
+| `sensor_protocol_template.py` | 비공개 센서 프로토콜 구현을 위한 공개 인터페이스 템플릿 |
+| `bioaerosol_QT_control.spec` | PyInstaller 빌드 설정 |
 
-Python, PySide6(Windows 개발), PySide2/Qt 5(기존 Raspberry Pi 환경), QPainter, pySerial, unittest.
+센서 통신 프로토콜 구현과 장비 시험 코드는 장비별 비공개 정보가 포함되어 이 저장소에서 제외됩니다. 프로그램을 실제 센서와 연결하려면 프로젝트와 호환되는 `sensor_protocol.py`를 별도로 준비해야 합니다.
 
-### V1 화면 호환성 보완
+## 센서 프로토콜 연결
 
-Pi의 Qt 5와 Windows Qt 6에서 헤더·상세·홈·종료 화면 및 바깥 여백을 어두운 배경으로 명시합니다. 각 컨테이너에 `WA_StyledBackground`를 적용했습니다. 헤더의 DEMO/연결 알림은 숨기고, 상세 화면 하단에는 갱신 경과시간·수신 지연 안내를 유지합니다. 분석 및 통신 기준은 변경하지 않았습니다. 배포 시 `dashboard.py`, `robot_ui.py`, `robot_led.py`를 함께 복사하세요. 실제 Pi 렌더링은 재확인이 필요합니다.
+저장소에는 실제 프로토콜 대신 `sensor_protocol_template.py`가 포함됩니다. 실제 장비를 연결하는 개발 환경에서는 다음 순서로 준비합니다.
 
-## 데모 실행
+1. `sensor_protocol_template.py`를 `sensor_protocol.py`로 복사합니다.
+2. 제조사 문서에 따라 요청 생성, 응답 검증, 데이터 해석 함수를 구현합니다.
+3. 각 측정값의 주소, 자료형, 부호, 배율, 단위와 무효값을 확인합니다.
+4. 알려진 요청·응답 자료로 단위 테스트한 뒤 실제 장비에서 검증합니다.
 
-Windows PowerShell:
+`sensor_protocol.py`는 `.gitignore`에 등록되어 있어 로컬 구현이 Git에 추가되지 않습니다. 프로그램은 실제 파일이 없으면 자동으로 템플릿을 불러오므로 GUI, 데이터베이스 화면과 MQTT 기능은 확인할 수 있습니다. 이 상태에서 센서 연결을 시도하면 템플릿이 명확한 `SensorProtocolNotConfiguredError`를 발생시키므로, 실제 통신이 준비되지 않은 상태를 정상 측정값으로 오인하지 않습니다.
 
-```powershell
-python -m venv .venv
-.\.venv\Scripts\python.exe -m pip install -r requirements.txt
-.\.venv\Scripts\python.exe main.py --demo --windowed
+## 실행 환경
+
+- Python 3
+- PySide6
+- pyserial
+- paho-mqtt
+
+필요한 패키지를 설치한 뒤 다음 명령으로 실행합니다.
+
+```bash
+pip install -r requirements.txt
+python bioaerosol_QT_control.py
 ```
 
-공개본에는 실제 센서 프로토콜과 통신 값이 없습니다. 먼저 `--demo`로 실행하세요. 전체화면은 `--windowed`를 생략합니다. Linux에서는 해당 환경의 PySide2 또는 PySide6와 pySerial을 별도로 준비하세요. 기존 Raspberry Pi의 Python 3.7/PySide2 호환을 고려하지만 장비에서 직접 검증해야 합니다.
+첫 실행 시 프로그램 폴더에 `BioAerosol_Control.db`가 생성됩니다. 이 파일에는 측정 이력과 로컬 설정이 저장되므로 Git에 포함하지 않습니다.
 
-## 로컬 전용 센서 설정
+## 실행 파일 빌드
 
-없는 파일만 생성하고 기존 장비 설정은 덮어쓰지 않습니다.
+PyInstaller가 설치된 환경에서 다음 명령을 실행합니다.
 
-```powershell
-if (!(Test-Path sensor_protocol.py)) { Copy-Item sensor_protocol_template.py sensor_protocol.py }
-if (!(Test-Path sensor_connection_local.py)) { Copy-Item sensor_connection_example.py sensor_connection_local.py }
+```bash
+pyinstaller bioaerosol_QT_control.spec
 ```
 
-- `sensor_protocol.py`: 실제 장비에 대해 승인된 로컬 구현을 넣습니다. 공개 예제는 함수/예외 인터페이스만 제공하며 패킷을 생성하거나 전송하지 않습니다. placeholder 값만 채워도 완성되는 구현이 아닙니다.
-- `sensor_connection_local.py`: 실제 baudrate, 데이터 비트, 패리티, 정지 비트 등 장비 설정을 로컬에서 입력합니다.
-- 실제 register address, slave/device ID, 요청/응답과 매핑 정보는 공개 저장소에 포함되지 않습니다.
-- 기존 장비의 두 로컬 파일은 유지하세요. 배포 시 공유 코드와 로컬 설정이 함께 필요합니다. Git clone/pull만으로 비공개 파일이 복원되지는 않습니다.
-- `read_sensor_data(ser, cancel_event=None)`는 정상 프레임 전체 검증 후 센서 key의 dict를 반환해야 합니다. CRC/프레임 오류를 부분 성공으로 처리하지 않습니다.
+생성되는 `build/`와 `dist/`는 빌드 결과물이므로 저장소에서 제외합니다.
 
-## 검사
+## 공개 범위
 
-위 예제 복사 후 센서 없이 실행할 수 있습니다.
-
-```powershell
-.\.venv\Scripts\python.exe -m unittest discover -p "test_*.py"
-.\.venv\Scripts\python.exe check_demo.py
-```
-
-테스트는 가짜 포트/데이터와 offscreen Qt를 사용합니다. 실제 장비 전용 패킷 테스트는 공개하지 않습니다. `check_demo.py`는 미리보기 PNG를 생성합니다.
-
-## 공개 범위와 현재 상태
-
-`.gitignore`는 검토한 파일만 공개하는 allowlist입니다. 새 파일을 추가할 때 공개 여부를 검토해야 합니다. 실제 protocol/config, .env, IDE/캐시, 백업 ZIP, 장비 로그, 대화/인계 문서와 이전 제어 프로그램은 제외됩니다. `git add -f`로 제외 파일을 추가하지 마세요.
-
-**V1 / WIP.** 실제 센서의 단위·음수 온도 인코딩·무효값, Pi의 응답 주기/timeout/터치/폰트와 복구 동작은 장비에서 추가 확인해야 합니다. 외부 이동 통신 규격, 장비 제어, V2 얼굴 애니메이션은 구현하지 않았습니다.
-
-![Robot home](demo_robot_home.png)
-![Sensor detail](demo_preview.png)
+이 저장소는 GUI, 데이터 저장, MQTT 제어 코드와 센서 프로토콜 인터페이스 템플릿을 공유합니다. 센서 레지스터, 패킷 구조, 체크섬 매개변수, 통신 시험 프레임 등 장비 프로토콜의 세부 구현은 포함하지 않습니다.
