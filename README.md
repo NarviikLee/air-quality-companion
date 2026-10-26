@@ -29,6 +29,16 @@ bioaerosol_QT_control.py
 
 시리얼 통신, 화면 표시, 데이터 저장과 MQTT 제어를 모듈별로 분리했습니다. 센서 측정에 실패하면 해당 주기의 저장과 자동 제어를 중단하며, 정상 데이터를 수신한 경우에만 이력 저장과 임계값 판정을 수행합니다.
 
+## 실물 연동 결과
+
+BioAerosol 측정값이 설정한 임계값을 초과하면 MQTT를 통해 연결된 장비를 작동시키고, 측정값이 정상 범위로 돌아오면 장비를 정지합니다.
+
+[![BioAerosol MQTT 자동 제어 시연](https://img.youtube.com/vi/OK4IPh2uNic/hqdefault.jpg)](https://youtu.be/OK4IPh2uNic)
+
+> 정상 상태 → 임계값 초과 및 장비 작동 → 정상 복귀
+
+이미지를 클릭하면 YouTube 시연 영상으로 이동합니다.
+
 ## 파일 구성
 
 | 파일 | 역할 |
