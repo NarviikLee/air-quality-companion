@@ -91,9 +91,9 @@ def init_db():
             ?
         )
     """, (
-        "192.168.77.100",
+        "0.0.0.0",
         1883,
-        "Smartplug1"
+        "MQTTTOPIC"
     ))
     cursor.execute("""
                    CREATE TABLE IF NOT EXISTS user_config
