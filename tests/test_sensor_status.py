@@ -1,0 +1,132 @@
+import unittest
+from unittest.mock import patch
+from air_quality_analyzer import AirQualityAnalyzer
+from sensor_status import assess_sensor
+from sensor_data import (DataUnavailableError, DummySensorSource,
+                         DEMO_THERMAL_HOLD_SAMPLES, PortUnavailableError, get_status)
+
+
+class SensorStatusTests(unittest.TestCase):
+    def test_pm_boundaries_and_fractional_values(self):
+        for name, limits in [('PM1.0', (10, 25, 50)), ('PM2.5', (15, 35, 75)), ('PM10', (30, 80, 150))]:
+            for boundary, at, above in zip(limits,
+                    ('좋음', '보통', '나쁨'), ('보통', '나쁨', '매우 나쁨')):
+                with self.subTest(name=name, boundary=boundary):
+                    self.assertEqual(assess_sensor(name, boundary).message, at)
+                    self.assertEqual(assess_sensor(name, boundary + 0.1).message, above)
+            self.assertEqual(assess_sensor(name, 1000).level, 'CARD_SEVERE')
+            self.assertEqual(assess_sensor(name, limits[1] + 0.1).level, 'CARD_WARNING')
+
+    def test_humidity_edges(self):
+        for value, message in [(0, '건조'), (29.9, '건조'), (30, '적정'),
+                               (50, '적정'), (50.1, '다소 습함'), (59.9, '다소 습함'),
+                               (60, '습함'), (100, '습함')]:
+            self.assertEqual(assess_sensor('Humidity', value).message, message)
+
+    def test_humidity_label_uses_temperature_context(self):
+        cases = [
+            (18, 45, '적정·서늘함', 'CARD_GOOD'),
+            (22, 45, '쾌적', 'CARD_GOOD'),
+            (25, 45, '쾌적', 'CARD_GOOD'),
+            (25, 50, '다소 후텁지근', 'CARD_WARNING'),
+            (28, 40, '온도 높음', 'CARD_WARNING'),
+            (28, 50, '후텁지근', 'CARD_WARNING'),
+            (22, 60, '습함', 'CARD_BAD'),
+        ]
+        for temperature, humidity, message, level in cases:
+            with self.subTest(temperature=temperature, humidity=humidity):
+                result = assess_sensor('Humidity', humidity, temperature=temperature)
+                self.assertEqual(result.message, message)
+                self.assertEqual(result.level, level)
+
+    def test_temperature_is_comfort_not_pollution(self):
+        for value, message in [(-5, '낮음'), (19.9, '낮음'), (20, '적정'),
+                               (26, '적정'), (26.1, '높음')]:
+            self.assertEqual(assess_sensor('Temperature', value).message, message)
+
+    def test_unverified_units_never_get_good_or_danger(self):
+        for name in ('VOC', 'NOx', 'Bio'):
+            for value in (0, 100, 500, 65535):
+                self.assertEqual(assess_sensor(name, value).level, 'CARD_UNKNOWN')
+
+    def test_invalid_measurements(self):
+        for name, value in [('PM2.5', -1), ('Humidity', 101),
+                            ('PM10', 5000.1), ('Temperature', -50.1),
+                            ('Temperature', 100.1), ('Temperature', float('nan')),
+                            ('VOC', float('inf'))]:
+            self.assertEqual(assess_sensor(name, value).message, '값 확인')
+
+    def test_sanity_range_boundaries_are_valid(self):
+        for name, values in [('PM1.0', (0, 5000)),
+                             ('PM2.5', (0, 5000)),
+                             ('PM10', (0, 5000)),
+                             ('Temperature', (-50, 100)),
+                             ('Humidity', (0, 100))]:
+            for value in values:
+                with self.subTest(name=name, value=value):
+                    self.assertNotEqual(assess_sensor(name, value).message, '값 확인')
+
+    def test_central_demo_policy_unchanged(self):
+        for value, expected in [(30, 'GOOD'), (55, 'NORMAL'), (80, 'BAD'), (81, 'VERY BAD')]:
+            self.assertEqual(get_status('MAIN', value), expected)
+
+    def test_demo_holds_a_random_thermal_profile(self):
+        source = DummySensorSource()
+        with patch('sensor_data.random.choice', return_value=(25.0, 50.0)), \
+                patch('sensor_data.random.uniform', return_value=0):
+            values, _ = source.read()
+        self.assertEqual(values['Temperature'], 25.0)
+        self.assertEqual(values['Humidity'], 50.0)
+        self.assertEqual(source.thermal_reads_remaining, DEMO_THERMAL_HOLD_SAMPLES - 1)
+        self.assertEqual(
+            assess_sensor('Humidity', values['Humidity'], values['Temperature']).message,
+            '다소 후텁지근')
+
+    def test_demo_partial_error_only_invalidates_humidity(self):
+        with patch('sensor_data.DEMO_DATA_SCENARIO', 'partial_error'):
+            values, _ = DummySensorSource().read()
+        self.assertIsNone(values['Humidity'])
+        self.assertTrue(all(values[name] is not None for name in values if name != 'Humidity'))
+
+    def test_demo_pm_rise_starts_after_initial_confirmation_period(self):
+        with patch('sensor_data.DEMO_DATA_SCENARIO', 'pm_rise'), \
+                patch('sensor_data.AUTO_UPDATE', False):
+            source = DummySensorSource()
+            samples = [source.read()[0] for _ in range(46)]
+        self.assertTrue(all(sample['PM2.5'] != 100 for sample in samples[:41]))
+        self.assertTrue(all(sample['PM2.5'] == 100 for sample in samples[41:46]))
+
+    def test_demo_tour_runs_analysis_and_connection_scenarios(self):
+        with patch('sensor_data.DEMO_DATA_SCENARIO', 'tour'), \
+                patch('sensor_data.AUTO_UPDATE', False):
+            source = DummySensorSource()
+            analyzer = AirQualityAnalyzer()
+            samples = {}
+            errors = {}
+            channel_states = {}
+            for attempt in range(1, 96):
+                try:
+                    samples[attempt] = source.read()[0]
+                except (DataUnavailableError, PortUnavailableError) as error:
+                    errors[attempt] = type(error)
+                    analyzer.record_failure(attempt * 0.99, isinstance(error, PortUnavailableError))
+                else:
+                    analyzer.accept_sample(samples[attempt], attempt * 0.99)
+                if attempt in (57, 58, 87, 88, 90):
+                    channel_states[attempt] = analyzer.channel_display_status('Humidity')
+        self.assertEqual(samples[42]['PM2.5'], 100)
+        self.assertIsNone(samples[52]['Humidity'])
+        self.assertIsNotNone(samples[58]['Humidity'])
+        self.assertEqual(channel_states[57], 'checking')
+        self.assertEqual(channel_states[58], 'recovering')
+        self.assertEqual(channel_states[87], 'recovering')
+        self.assertEqual(channel_states[88], 'recovering')
+        self.assertIsNone(channel_states[90])
+        self.assertTrue(all(samples[91][name] is None for name in
+                            ('PM1.0', 'PM2.5', 'PM10', 'Temperature', 'Humidity')))
+        self.assertIs(errors[94], DataUnavailableError)
+        self.assertIs(errors[95], PortUnavailableError)
+
+
+if __name__ == '__main__':
+    unittest.main()
