@@ -1,0 +1,18 @@
+__pycache__/
+*.py[cod]
+
+.idea/
+.vscode/
+
+build/
+dist/
+
+*.db
+*.sqlite*
+*.zip
+*.log
+.env
+
+# Private device protocol implementation and test frames
+sensor_protocol.py
+Serial_camera_test.py

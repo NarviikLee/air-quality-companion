@@ -1,0 +1,4 @@
+PySide6
+pyserial
+paho-mqtt>=2.0,<3.0
+pyinstaller
